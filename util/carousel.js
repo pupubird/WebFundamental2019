@@ -42,7 +42,6 @@ const Carousel = function ({
     scrollingResizeTransition: scrollingResizeTransition,
     mobileViewSize: mobileViewSize
 }) {
-    console.log(targetItemWidth)
     mobileViewSize = typeof mobileViewSize === "undefined" ? 500 : mobileViewSize;
     this.isMobile = screen.width <= mobileViewSize;
 
@@ -69,13 +68,9 @@ const Carousel = function ({
                 let currentScrollIndex = Math.round(this.carousel.scrollLeft / this.carouselItems[0].offsetWidth);
                 switch (scrollOn) {
                     case "scroll":
-                        if (this.index != currentScrollIndex) {
-                            this.carouselItems[this.index].style.height = this.targetItemHeight;
-                            this.carouselItems[this.index].style.width = this.targetItemWidth;
-                        } else {
-                            this.carouselItems[currentScrollIndex].style.height = this.targetItemHeight;
-                            this.carouselItems[currentScrollIndex].style.width = this.targetItemWidth;
-                        }
+                        let targetIndex = this.index != currentScrollIndex ? this.index:currentScrollIndex;
+                        this.carouselItems[targetIndex].style.height = this.targetItemHeight;
+                        this.carouselItems[targetIndex].style.width = this.targetItemWidth;
                         break;
                     case "click":
                         this.carouselItems[this.index].style.height = this.targetItemHeight;
