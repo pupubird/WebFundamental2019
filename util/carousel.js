@@ -42,6 +42,7 @@ const Carousel = function ({
     scrollingResizeTransition: scrollingResizeTransition,
     mobileViewSize: mobileViewSize
 }) {
+    console.log(targetItemWidth)
     mobileViewSize = typeof mobileViewSize === "undefined" ? 500 : mobileViewSize;
     this.isMobile = screen.width <= mobileViewSize;
 
@@ -55,19 +56,18 @@ const Carousel = function ({
     this.targetItemWidth = typeof targetItemWidth !== "undefined" ? targetItemWidth : this.otherItemWidth;
     this.scrollingResizeTransition = typeof scrollingResizeTransition !== "undefined" ? scrollingResizeTransition : false;
 
+
     this.index = 0;
 
     this.updateItemStyle = (scrollOn) => {
         if (!this.isMobile) {
             if (this.scrollingResizeTransition) {
-                // reset every item size
                 this.carouselItems.forEach(item => {
                     item.style.height = this.otherItemHeight;
                     item.style.width = this.otherItemWidth;
                 })
                 let currentScrollIndex = Math.round(this.carousel.scrollLeft / this.carouselItems[0].offsetWidth);
                 switch (scrollOn) {
-                    // set the target item size
                     case "scroll":
                         if (this.index != currentScrollIndex) {
                             this.carouselItems[this.index].style.height = this.targetItemHeight;
@@ -83,10 +83,9 @@ const Carousel = function ({
                         break;
                 }
             } else {
-                // if not rezise, set to default
                 this.carouselItems.forEach(item => {
-                    item.style.height = this.otherItemHeight;
-                    item.style.width = this.otherItemWidth;
+                    item.style.height = this.targetItemHeight;
+                    item.style.width = this.targetItemWidth;
                 })
             }
         } else {
@@ -124,9 +123,9 @@ const Carousel = function ({
         } else {
             // clicked right, left
             try {
-                this.carouselItems[this.index].scrollIntoView({ block: 'center', inline: 'center' });
+                this.carouselItems[this.index].parentNode.scrollIntoView({ block: 'center', inline: 'center' });
             } catch (ex) {
-                this.carouselItems[this.index].scrollIntoView();
+                this.carouselItems[this.index].parentNode.scrollIntoView();
             }
         }
 
