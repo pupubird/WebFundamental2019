@@ -11,6 +11,8 @@ instanciate a new Carousel class with the parameter
 =>
 carousel: the container of the whole list
 carouselItem: the item inside the container, it can be li or li div etc
+*defaultItemHeight: the default height of non-expanding item
+*defaultItemWidth: the default width of non-expanding item
 *targetItemHeight: the height when the item is expanding, default set to default height
 *targetItemWidth: the width when the item is expanding, default set to default width
 *scollingResizeTransition*: boolean, when true:item is expandable, false:all default
@@ -24,8 +26,10 @@ left: show(-1)
 let carousel = new Carousel({
     carousel: 'ul',
     carouselItem: 'ul li .card',
-    targetItemHeight: '50vh',
-    targetItemWidth: '30vw',
+    defaultItemHeight: '300px',
+    defaultItemWidth: '300px',
+    targetItemHeight: '400px',
+    targetItemWidth: '300px',
     scrollingResizeTransition: true,
     mobileViewSize: 500
 });
@@ -37,6 +41,8 @@ show = carousel.show;
 const Carousel = function ({
     carousel: carousel,
     carouselItem: carouselItem,
+    defaultItemHeight: defaultItemHeight,
+    defaultItemWidth: defaultItemWidth,
     targetItemHeight: targetItemHeight,
     targetItemWidth: targetItemWidth,
     scrollingResizeTransition: scrollingResizeTransition,
@@ -48,8 +54,8 @@ const Carousel = function ({
     this.carousel = document.querySelector(carousel);
     this.carouselItems = document.querySelectorAll(carouselItem);
 
-    this.otherItemHeight = this.carouselItems[0].offsetHeight + "px";
-    this.otherItemWidth = this.carouselItems[0].offsetWidth + "px";
+    this.otherItemHeight = defaultItemHeight;
+    this.otherItemWidth = defaultItemWidth;
 
     this.targetItemHeight = typeof targetItemHeight !== "undefined" ? targetItemHeight : this.otherItemHeight;
     this.targetItemWidth = typeof targetItemWidth !== "undefined" ? targetItemWidth : this.otherItemWidth;
@@ -58,25 +64,15 @@ const Carousel = function ({
 
     this.index = 0;
 
-    this.updateItemStyle = (scrollOn) => {
+    this.updateItemStyle = () => {
         if (!this.isMobile) {
             if (this.scrollingResizeTransition) {
                 this.carouselItems.forEach(item => {
                     item.style.height = this.otherItemHeight;
                     item.style.width = this.otherItemWidth;
                 })
-                let currentScrollIndex = Math.round(this.carousel.scrollLeft / this.carouselItems[0].offsetWidth);
-                let targetIndex;
-                switch (scrollOn) {
-                    case "scroll":
-                        targetIndex = this.index != currentScrollIndex ? this.index : currentScrollIndex;
-                        break;
-                    case "click":
-                        targetIndex = this.index;
-                        break;
-                }
-                this.carouselItems[targetIndex].style.height = this.targetItemHeight;
-                this.carouselItems[targetIndex].style.width = this.targetItemWidth;
+                this.carouselItems[this.index].style.height = this.targetItemHeight;
+                this.carouselItems[this.index].style.width = this.targetItemWidth;
             } else {
                 this.carouselItems.forEach(item => {
                     item.style.height = this.targetItemHeight;
@@ -93,12 +89,7 @@ const Carousel = function ({
 
     }
 
-    this.carousel.addEventListener("scroll", () => {
-        this.updateItemStyle("scroll");
-    });
-
     this.show = (increase) => {
-        let width = this.carouselItems[0].offsetWidth;
         this.index = this.index + increase;
 
         // on most right and click right
@@ -115,11 +106,15 @@ const Carousel = function ({
         }
         // clicked right, left
         try {
-            this.carouselItems[this.index].parentNode.scrollIntoView({ block: 'center', inline: 'center' });
+            if (increase != 0) {
+                this.carouselItems[this.index].parentNode.scrollIntoView({ block: 'center', inline: 'center' });
+            }
         } catch (ex) {
-            this.carouselItems[this.index].parentNode.scrollIntoView();
+            if (increase != 0) {
+                this.carouselItems[this.index].parentNode.scrollIntoView();
+            }
         }
-        this.updateItemStyle("click");
+        this.updateItemStyle();
     }
     this.show(0);
 }
