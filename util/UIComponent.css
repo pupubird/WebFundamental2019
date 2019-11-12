@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Luckiest+Guy|Teko&display=swap');
+:root{
+    --light-primary-color: #6A76C6;
+    --primary-color: #1E2A78;
+    --secondary-color:rgb(255, 216, 42);
+    --darkend-secondary-color:#FFCF71;;
+    --tertiary-color:#FF1F5A;
+    --header-font-color:#5A5A5A;
+    --sub-header-font-color:#848484;
+    --paragraph-font-color:#A8A8A8;
+    --header-font-family:'Luckiest Guy', cursive;
+    --sub-header-font-family: 'Love Ya Like A Sister', cursive;
+    --action-call-font-family:'Teko', sans-serif;
+    --paragraph-font-family:Arial,sans-serif;
+}
+/* typography */
+.header-font{
+    font-family: var(--header-font-family); 
+    color:var(--header-font-color);
+}
+.sub-header-font{
+    font-family:var(--sub-header-font-family);
+    color:var(--sub-header-font-color);
+}
+.action-call-font{
+    font-family: var(--action-call-font-family);
+    color:var(--tertiary-color);
+}
+.paragraph-font{
+    font-family: var(--paragraph-font-family);
+    color:var(--paragraph-font-color);
+}
+/* typography end */
+
+/* color and font size */
+.primary-color{
+    color:var(--primary-color) !important;
+}
+.secondary-color{
+    color: var(--secondary-color) !important;
+}
+.tertiary-color{
+    color:var(--tertiary-color) !important;
+}
+
+
+.xl-font-size{
+    font-size: 90px  !important;
+}
+.l-font-size{
+    font-size: 70px !important;
+}
+.m-font-size{
+    font-size: 50px !important;
+}
+.s-font-size{
+    font-size: 30px !important;
+}
+.xs-font-size{
+    font-size: 18.5px !important;
+}
+
+/* color and font size end*/
+
+/* actionable items (buttons..) */
+button{
+    outline: none;
+}
+
+.large-button{
+    min-width: 60px;
+    width:auto;
+    height: auto;
+    padding:10px 30px;
+    background: #F8F8F8;
+    border:none;
+    border-radius: 70px;
+    color:var(--paragraph-font-color);
+    font-family: var(--action-call-font-family);
+    font-size: 25px;
+}
+
+.medium-button{
+    min-width: 60px;
+    width:auto;
+    height: auto;
+    padding:7px 20px;
+    background: #F8F8F8;
+    border:none;
+    border-radius: 70px;
+    color:var(--paragraph-font-color);
+    font-family: var(--action-call-font-family);
+    font-size: 22px;
+}
+
+.small-button{
+    min-width: 80px !important;
+    width: auto;
+    height: auto;
+    padding:7px 15px;
+    background: #F8F8F8;
+    border:none;
+    border-radius: 15px;
+    color:var(--paragraph-font-color);
+    font-family: var(--action-call-font-family);
+    font-size: 18px;
+}
+
+.highlight-button{
+    background-color: var(--secondary-color);
+    color:var(--primary-color);
+    box-shadow: 0px 0px 5px #737373;
+}
+
+.tag-primary{
+    min-width: 90px;
+    background-color: var(--light-primary-color);
+    color:white;
+    font-family: var(--action-call-font-family);
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.tag-secondary{
+    min-width: 90px;
+    background-color: var(--darkend-secondary-color);
+    color:white;
+    font-family: var(--action-call-font-family);
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* actionable items (buttons..) end*/
+/* Layout */
+.center-horizontal{
+    display: flex;
+    align-content: center;    
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.center-vertical{
+    display: flex;
+    flex-direction: column;
+    align-content: center;    
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    border-radius: 15;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    min-width: 20vw;
+    min-height: auto;
+    margin: auto 20px;
+    transition: all 0.5s;
+}
+.full-screen{
+    width: 99vw;
+    height: 100vh;
+    margin: auto;
+}
+/* Layout end */
+
+@media(max-width:500px){
+    .large-button{
+        padding:10px 20px;
+        font-size: 20px;
+    }
+    .medium-button{
+        padding:7px 16px;
+        font-size: 17.5px;
+    }
+    .small-button{
+        padding:6px 14px;
+        font-size: 15.5px;
+    }
+    .xl-font-size{
+        font-size: 70px  !important;
+    }
+    .l-font-size{
+        font-size: 50px !important;
+    }
+    .m-font-size{
+        font-size: 30px !important;
+    }
+    .s-font-size{
+        font-size: 20px !important;
+    }
+    .xs-font-size{
+        font-size: 16.5px !important;
+    }
+
+    .m-center-vertical{
+        display: flex;
+        flex-direction: column !important;
+        align-content: center;    
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .m-center-horizontal{
+        display: flex;
+        flex-direction: row !important;
+        align-content: center;    
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 80vw;
+    }
+}
