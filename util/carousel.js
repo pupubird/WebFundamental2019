@@ -66,17 +66,17 @@ const Carousel = function ({
                     item.style.width = this.otherItemWidth;
                 })
                 let currentScrollIndex = Math.round(this.carousel.scrollLeft / this.carouselItems[0].offsetWidth);
+                let targetIndex;
                 switch (scrollOn) {
                     case "scroll":
-                        let targetIndex = this.index != currentScrollIndex ? this.index:currentScrollIndex;
-                        this.carouselItems[targetIndex].style.height = this.targetItemHeight;
-                        this.carouselItems[targetIndex].style.width = this.targetItemWidth;
+                        targetIndex = this.index != currentScrollIndex ? this.index : currentScrollIndex;
                         break;
                     case "click":
-                        this.carouselItems[this.index].style.height = this.targetItemHeight;
-                        this.carouselItems[this.index].style.width = this.targetItemWidth;
+                        targetIndex = this.index;
                         break;
                 }
+                this.carouselItems[targetIndex].style.height = this.targetItemHeight;
+                this.carouselItems[targetIndex].style.width = this.targetItemWidth;
             } else {
                 this.carouselItems.forEach(item => {
                     item.style.height = this.targetItemHeight;
@@ -106,24 +106,19 @@ const Carousel = function ({
 
             // back to most left
             this.index = 0;
-            this.carousel.scrollTo(-this.carousel.scrollLeft, 0);
 
             // on most left and click left
         } else if (this.index < 0 && increase == -1) {
 
             // back to most right
             this.index = this.carouselItems.length - 1;
-            this.carousel.scrollBy(width * this.carouselItems.length, 0);
-
-        } else {
-            // clicked right, left
-            try {
-                this.carouselItems[this.index].parentNode.scrollIntoView({ block: 'center', inline: 'center' });
-            } catch (ex) {
-                this.carouselItems[this.index].parentNode.scrollIntoView();
-            }
         }
-
+        // clicked right, left
+        try {
+            this.carouselItems[this.index].parentNode.scrollIntoView({ block: 'center', inline: 'center' });
+        } catch (ex) {
+            this.carouselItems[this.index].parentNode.scrollIntoView();
+        }
         this.updateItemStyle("click");
     }
     this.show(0);
