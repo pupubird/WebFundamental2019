@@ -13,7 +13,12 @@
     left: 0;
     width:100vw;
 }
-.navbar > div:not(.ham-burger){
+.navbar-left{
+    display: flex;
+    align-items: center;
+    margin:30px 45px;
+}
+.navbar-right{
     display: flex;
     align-items: center;
     margin:30px 45px;
@@ -82,7 +87,9 @@
     .navbar-right button{
         display: none;
     }
-    
+    .navbar-left{
+        margin-left: 2px;
+    }
     .logo{
         width:120px;
         height:45px;
