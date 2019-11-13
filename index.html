@@ -5,7 +5,108 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>CheapDrugs | Home</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="util/UIComponent.css">
     </head>
     <body>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <img class="logo" src="assets/logo.svg" alt="logo">
+
+                <ul class="navbar-tab">
+                    <li>
+                        <p class="action-call-font sub-header-font-color
+                            s-font-size">home
+                        </p>
+                    </li>
+                    <li>
+                        <p class="action-call-font paragraph-font-color
+                            s-font-size">shops
+                        </p>
+                    </li>
+                    <li>
+                        <p class="action-call-font paragraph-font-color
+                            s-font-size">cart
+                        </p>
+                    </li>
+                    <li>
+                        <p class="action-call-font paragraph-font-color
+                            s-font-size">about
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar-right">
+                <button class="medium-button primary-color action-call-font">LOGIN/SIGNUP</button>
+            </div>
+
+            <div class="ham-burger">
+                <div class="ham-burger-line"></div>
+                <div class="ham-burger-line"></div>
+                <div class="ham-burger-line"></div>
+            </div>
+        </nav>
+        <div class="carousel">
+            <div class="full-screen center-horizontal m-center-vertical
+                stock-card carousel-item">
+                <img src="assets/stock1.svg" alt="stock1" class="stock-image">
+                <div class="stock-card-description">
+                    <p class="m-font-size sub-header-font-color
+                        sub-header-font">Your
+                        party
+                        choice.</p>
+                    <p class="xs-font-size paragraph-font-color paragraph-font">Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                        id
+                        blandit lorem, non lobortis elit.</p>
+                    <button class="medium-button highlight-button">Check out now</button>
+                </div>
+            </div>
+            <div class="full-screen center-horizontal m-center-vertical
+                stock-card carousel-item">
+                <img src="assets/stock2.svg" alt="stock1" class="stock-image">
+                <div class="stock-card-description">
+                    <p class="m-font-size sub-header-font-color
+                        sub-header-font">Your
+                        party
+                        choice 2.</p>
+                    <p class="xs-font-size paragraph-font-color paragraph-font">Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                        id
+                        blandit lorem, non lobortis elit.</p>
+                    <button class="medium-button highlight-button">Check out now</button>
+                </div>
+            </div>
+            <div class="full-screen center-horizontal m-center-vertical
+                stock-card carousel-item">
+                <img src="assets/logo.svg" alt="stock1" class="stock-image">
+                <div class="stock-card-description">
+                    <p class="m-font-size sub-header-font-color
+                        sub-header-font">Your
+                        party
+                        choice 3.</p>
+                    <p class="xs-font-size paragraph-font-color paragraph-font">Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                        id
+                        blandit lorem, non lobortis elit.</p>
+                    <button class="medium-button highlight-button">Check out now</button>
+                </div>
+            </div>
+        </div>
+        <script src="util/carousel.js"></script>
+        <script>
+            let carousel = new Carousel({
+                carousel: '.carousel',
+                carouselItem: '.carousel-item',
+                defaultItemHeight: '100vh',
+                defaultItemWidth: '85vw',
+                scrollingResizeTransition: false,
+                mobileViewSize: 500
+            });
+            setInterval(()=>{
+                carousel.show(1);
+            },3000);
+        </script>
     </body>
 </html>
