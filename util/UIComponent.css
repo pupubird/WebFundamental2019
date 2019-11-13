@@ -43,6 +43,15 @@
     color:var(--tertiary-color) !important;
 }
 
+.header-font-color{
+    color:var(--header-font-color)!important;
+}
+.sub-header-font-color{
+    color:var(--sub-header-font-color)!important;
+}
+.paragraph-font-color{
+    color:var(--paragraph-font-color)!important;
+}
 
 .xl-font-size{
     font-size: 90px  !important;
