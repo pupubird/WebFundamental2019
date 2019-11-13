@@ -4,8 +4,123 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>CheapDrugs | Home</title>
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css"><link rel="stylesheet"
+            href="UIComponent.css">
     </head>
     <body>
+        <!-- table of content -->
+        <div class="center-vertical full-screen">
+            <h1 class="header-font l-font-size">Contents</h1>
+            <p class="paragraph-font s-font-size">Click to navigate:</p>
+            <a href="#carousel" class="action-call-font secondary-color
+                m-font-size">Carousel</a>
+            <a href="#typography" class="action-call-font secondary-color
+                m-font-size">Typography</a>
+            <a href="#buttons" class="action-call-font secondary-color
+                m-font-size">Buttons & Tags, Actionable items</a>
+            <a href="#buttons" class="action-call-font secondary-color
+                m-font-size">Layout</a>
+        </div>
+        <!-- carousel sample -->
+        <h1 class="sub-header-font center-horizontal l-font-size" id="carousel">Carousel</h1>
+        <div class="carousel-wrapper">
+            <ul>
+                <li>
+                    <div class="card center-vertical">
+                        <img class="img1"
+                            src="//picsum.photos/300/200?1">
+                    </div>
+                </li>
+                <li>
+                    <div class="card center-vertical">
+                        <img class="img1" src="//picsum.photos/300/200?1">
+                    </div>
+                </li>
+                <li>
+                    <div class="card center-vertical">
+                        <img class="img1" src="//picsum.photos/300/200?1">
+                    </div>
+                </li>
+                <li>
+                    <div class="card center-vertical">
+                        <img class="img1" src="//picsum.photos/300/200?1">
+                    </div>
+                </li>
+                <li>
+                    <div class="card center-vertical">
+                        <img class="img1" src="//picsum.photos/300/200?1">
+                    </div>
+                </li>
+            </ul>
+            <button class="medium-button s-font-size tertiary-color" id="left"
+                onclick="show(-1)">&lt;</button>
+            <button class="medium-button s-font-size tertiary-color" id="right"
+                onclick="show(1)">&gt;</button>
+        </div>
+        <script src="carousel.js"></script>
+        <!-- carausel sample end -->
+        <div class="space"></div>
+        <!-- UI Component -->
+        <!-- typography -->
+        <h1 class="sub-header-font center-horizontal l-font-size"
+            id="typography">Typography</h1>
+        <div class="center-horizontal m-center-vertical padding">
+            <div class="card center-vertical padding">
+                <h1 class="header-font">header-font</h1>
+                <h2 class="sub-header-font">sub-header-font</h2>
+                <h3 class="action-call-font">action-call-font</h3>
+                <h4 class="paragraph-font">paragraph-font</h4>
+            </div>
+            <div class="card center-vertical padding">
+                <h1 class="header-font primary-color">header-font primary-color</h1>
+                <h2 class="sub-header-font secondary-color">sub-header-font
+                    secondary-color</h2>
+                <h3 class="action-call-font primary-color">action-call-font
+                    primary-color</h3>
+                <h4 class="paragraph-font tertiary-color">paragraph-font
+                    tertiary-color</h4>
+            </div>
+            <div class="card center-vertical padding">
+                <h1 class="xl-font-size">xl-font-size</h1>
+                <h1 class="l-font-size">l-font-size</h1>
+                <h1 class="m-font-size">m-font-size</h1>
+                <h1 class="s-font-size">s-font-size</h1>
+                <h1 class="xs-font-size">xs-font-size</h1>
+            </div>
+        </div>
+        <!-- Typography end -->
+        <div class="space"></div>
+        <!-- Buttons & Tags -->
+        <h1 class="sub-header-font center-horizontal l-font-size" id="buttons">Buttons
+            & Tags</h1>
+        <div class="center-horizontal m-center-vertical add-margin">
+            <button class="large-button">large-button</button>
+            <button class="large-button highlight-button">large-button
+                highlight-button</button>
+            <button class="medium-button">medium-button</button>
+            <button class="medium-button primary-color">medium-button
+                secondary-color</button>
+            <button class="small-button">small-button</button>
+            <button class="small-button primary-color">small-button
+                secondary-color</button>
+            <h1 class="tag-primary s-font-size">tag-primary s-font-size</h1>
+            <h1 class="tag-secondary xs-font-size">tag-secondary xs-font-size</h1>
+            <h1 class="tag-tertiary">tag-tertiary</h1>
+        </div>
+        <div class="center-vertical m-center-horizontal add-margin">
+            <h1 class="sub-header-font s-font-size">Example:</h1>
+            <button class="small-button">cancel</button>
+            <button class="small-button primary-color">view</button>
+            <h1 class="tag-primary s-font-size">new</h1>
+            <h1 class="tag-secondary s-font-size">10% off</h1>
+        </div>
+        <!-- Buttons & Tags end -->
+        <div class="space"></div>
+        <!-- Layout -->
+        <h1 class="sub-header-font center-horizontal l-font-size" id="layout">Layout</h1>
+        <!-- Layout end -->
+        <div class="space"></div>
+        <div class="space"></div>
     </body>
 </html>

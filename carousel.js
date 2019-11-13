@@ -118,3 +118,14 @@ const Carousel = function ({
     }
     this.show(0);
 }
+let carousel = new Carousel({
+    carousel: 'ul',
+    carouselItem: 'ul li .card',
+    defaultItemHeight: '300px',
+    defaultItemWidth: '300px',
+    targetItemHeight: '400px',
+    targetItemWidth: '300px',
+    scrollingResizeTransition: true,
+    mobileViewSize: 500
+});
+show = carousel.show;

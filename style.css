@@ -1,0 +1,51 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.carousel-wrapper{
+    position: relative;
+}
+.padding{
+    padding: 20px;
+}
+ul{ 
+    display: flex;
+    margin: auto; 
+    padding: 0; 
+    overflow: hidden;
+    scroll-behavior: smooth;
+    height: 100vh;
+    transition: all 0.5s;
+}
+li { 
+    display: flex; 
+    list-style: none; 
+    margin: auto 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+#left{
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+#right{
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.space{
+    height: 30vh;
+}
+.add-margin > *{
+    margin: 10px;
+}

@@ -131,6 +131,8 @@ button{
     padding-right: 5px;
 }
 
+
+
 /* actionable items (buttons..) end*/
 /* Layout */
 .center-horizontal{
@@ -158,9 +160,7 @@ button{
     transition: all 0.5s;
 }
 .full-screen{
-    width: 99vw;
     height: 100vh;
-    margin: auto;
 }
 /* Layout end */
 
