@@ -77,6 +77,9 @@
         max-width: 65vw;
         text-align: center;
     }
+    .stock-image{
+        width:60vw;
+    }
     
     .navbar{
         align-items: center;
@@ -90,6 +93,7 @@
     .navbar-left{
         margin-left: 2px;
     }
+
     .logo{
         width:120px;
         height:45px;

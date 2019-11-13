@@ -109,8 +109,20 @@ const Carousel = function ({
                 this.carouselItems[this.index].scrollIntoView({ block: 'center', inline: 'center' });
             }
         } catch (ex) {
-            if (increase != 0) {
-                this.carouselItems[this.index].scrollIntoView();
+            try {
+                if (increase != 0) {
+                    this.carouselItems[this.index].scrollIntoView({ block: 'center', inline: 'center' });
+                }
+            } catch (err) {
+                try {
+                    if (increase != 0) {
+                        this.carouselItems[this.index].parentNode.scrollIntoView();
+                    }
+                } catch (err) {
+                    if (increase != 0) {
+                        this.carouselItems[this.index].scrollIntoView();
+                    }
+                }
             }
         }
         this.updateItemStyle();
