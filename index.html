@@ -10,7 +10,7 @@
     </head>
     <body>
         <!-- table of content -->
-        <div class="center-vertical full-screen">
+        <div class="center-vertical full-screen" id="table">
             <h1 class="header-font l-font-size">Contents</h1>
             <p class="paragraph-font s-font-size">Click to navigate:</p>
             <a href="#carousel" class="action-call-font secondary-color
@@ -19,9 +19,10 @@
                 m-font-size">Typography</a>
             <a href="#buttons" class="action-call-font secondary-color
                 m-font-size">Buttons & Tags, Actionable items</a>
-            <a href="#buttons" class="action-call-font secondary-color
+            <a href="#layout" class="action-call-font secondary-color
                 m-font-size">Layout</a>
         </div>
+        <a class="floatingButton" href="#table"></a>
         <!-- carousel sample -->
         <h1 class="sub-header-font center-horizontal l-font-size" id="carousel">Carousel</h1>
         <div class="carousel-wrapper">
@@ -61,16 +62,18 @@
         <script src="carousel.js"></script>
         <!-- carausel sample end -->
         <div class="space"></div>
-        <!-- UI Component -->
         <!-- typography -->
         <h1 class="sub-header-font center-horizontal l-font-size"
             id="typography">Typography</h1>
         <div class="center-horizontal m-center-vertical padding">
             <div class="card center-vertical padding">
+
+                <!-- fonts -->
                 <h1 class="header-font">header-font</h1>
                 <h2 class="sub-header-font">sub-header-font</h2>
                 <h3 class="action-call-font">action-call-font</h3>
                 <h4 class="paragraph-font">paragraph-font</h4>
+
             </div>
             <div class="card center-vertical padding">
                 <h1 class="header-font primary-color">header-font primary-color</h1>
@@ -82,18 +85,29 @@
                     tertiary-color</h4>
             </div>
             <div class="card center-vertical padding">
+
+                <!-- font size -->
                 <h1 class="xl-font-size">xl-font-size</h1>
                 <h1 class="l-font-size">l-font-size</h1>
                 <h1 class="m-font-size">m-font-size</h1>
                 <h1 class="s-font-size">s-font-size</h1>
                 <h1 class="xs-font-size">xs-font-size</h1>
+
             </div>
+
+            <!-- underline -->
+            <p class="underline action-call-font paragraph-font-color
+                s-font-size">underline action-call-font paragraph-font-color
+                s-font-size</p>
+
         </div>
         <!-- Typography end -->
         <div class="space"></div>
         <!-- Buttons & Tags -->
         <h1 class="sub-header-font center-horizontal l-font-size" id="buttons">Buttons
             & Tags</h1>
+
+        <!-- buttons -->
         <div class="center-horizontal m-center-vertical add-margin">
             <button class="large-button">large-button</button>
             <button class="large-button highlight-button">large-button
@@ -101,12 +115,40 @@
             <button class="medium-button">medium-button</button>
             <button class="medium-button primary-color">medium-button
                 secondary-color</button>
+            <button class="medium-button secondary-highlight-button">medium-button
+                secondary-highlight-button</button>
             <button class="small-button">small-button</button>
             <button class="small-button primary-color">small-button
                 secondary-color</button>
+
+            <!-- tags -->
             <h1 class="tag-primary s-font-size">tag-primary s-font-size</h1>
             <h1 class="tag-secondary xs-font-size">tag-secondary xs-font-size</h1>
-            <h1 class="tag-tertiary">tag-tertiary</h1>
+            <h1 class="tag-tertiary s-font-size">tag-tertiary s-font-size</h1>
+            <div class="center-vertical m-center-horizontal add-margin">
+
+                <!-- dropdown -->
+                <p class="sub-header-font primary-color s-font-size">With div:
+                    dropdown-wrapper</p>
+                <div class="dropdown-wrapper">
+                    <select class="dropdown s-font-size">
+                        <option value="0">dropdown s-font-size</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- checkbox -->
+            <label class="checkbox s-font-size action-call-font
+                sub-header-font-color">Checkbox
+                <input type="checkbox" checked="checked">
+                <span class="tick"></span>
+            </label>
+
         </div>
         <div class="center-vertical m-center-horizontal add-margin">
             <h1 class="sub-header-font s-font-size">Example:</h1>
@@ -115,12 +157,50 @@
             <h1 class="tag-primary s-font-size">new</h1>
             <h1 class="tag-secondary s-font-size">10% off</h1>
         </div>
+        <div class="center-vertical m-center-horizontal add-margin">
+            <div class="dropdown-wrapper">
+                <select class="dropdown s-font-size">
+                    <option value="0">Dropdown hehehehehehe</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                </select>
+            </div>
+        </div>
         <!-- Buttons & Tags end -->
         <div class="space"></div>
         <!-- Layout -->
         <h1 class="sub-header-font center-horizontal l-font-size" id="layout">Layout</h1>
+        <!-- centering -->
+        <div class="center-vertical m-center-horizontal card paragraph-font
+            m-font-size full-screen">
+            <p>center-vertical m-center-horizontal card full-screen</p>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+        </div>
+        <div class="space center-horizontal">
+            <p class="sub-header-font l-font-size
+                tertiary-color">
+                divider
+            </p>
+        </div>
+        <div class="center-horizontal m-center-vertical card paragraph-font
+            m-font-size full-screen">
+            <p>center-horizontal m-center-vertical card full-screen</p>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+        </div>
         <!-- Layout end -->
         <div class="space"></div>
+        <h1 class="header-font xl-font-size primary-color center-horizontal">END</h1>
         <div class="space"></div>
     </body>
 </html>
