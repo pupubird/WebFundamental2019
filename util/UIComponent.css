@@ -4,6 +4,7 @@
     --primary-color: #1E2A78;
     --secondary-color:rgb(255, 216, 42);
     --darkend-secondary-color:#FFCF71;;
+    --light-tertiary-color:#F8EAEA;
     --tertiary-color:#FF1F5A;
     --header-font-color:#5A5A5A;
     --sub-header-font-color:#848484;
@@ -14,6 +15,7 @@
     --paragraph-font-family:Arial,sans-serif;
 }
 /* typography */
+/* FONT */
 .header-font{
     font-family: var(--header-font-family); 
     color:var(--header-font-color);
@@ -30,9 +32,25 @@
     font-family: var(--paragraph-font-family);
     color:var(--paragraph-font-color);
 }
+.underline{
+    padding-bottom: 10px;
+    border-bottom: 3.5px solid var(--secondary-color);
+    display: inline;
+}
 /* typography end */
 
 /* color and font size */
+/* FONT COLOR */
+.paragraph-font-color{
+    color:var(--paragraph-font-color) !important;
+}
+.sub-header-font-color{
+    color:var(--sub-header-font-color)!important;
+}
+.header-font-color{
+    color:var(--header-font-color)!important;
+}
+
 .primary-color{
     color:var(--primary-color) !important;
 }
@@ -43,16 +61,7 @@
     color:var(--tertiary-color) !important;
 }
 
-.header-font-color{
-    color:var(--header-font-color)!important;
-}
-.sub-header-font-color{
-    color:var(--sub-header-font-color)!important;
-}
-.paragraph-font-color{
-    color:var(--paragraph-font-color)!important;
-}
-
+/* FONT SIZE */
 .xl-font-size{
     font-size: 90px  !important;
 }
@@ -72,6 +81,8 @@
 /* color and font size end*/
 
 /* actionable items (buttons..) */
+
+/* BUTTONS */
 button{
     outline: none;
 }
@@ -121,6 +132,12 @@ button{
     box-shadow: 0px 0px 5px #737373;
 }
 
+.secondary-highlight-button{
+    background-color: var(--light-tertiary-color);
+    color:var(--tertiary-color);
+}
+
+/* TAGS */
 .tag-primary{
     min-width: 90px;
     background-color: var(--light-primary-color);
@@ -139,6 +156,85 @@ button{
     padding-left: 5px;
     padding-right: 5px;
 }
+.tag-tertiary{
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: var(--secondary-color);
+    padding:5px 10px;
+    font-family: var(--action-call-font-family);
+    color:var(--primary-color);
+}
+
+/* DROPDOWN */
+.dropdown-wrapper{
+    background: url(arrow.svg) no-repeat right;
+    background-size: 30px 30px;
+    background-position-x: 100%;
+
+}
+.dropdown{
+    background: none;
+    border: none;
+    outline: none;
+    font-family: var(--action-call-font-family);
+    font-size: 18.5px;
+    color:var(--paragraph-font-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-width: 150px;
+    text-align: center;
+    padding-right: 30px;
+}
+
+/* CHECKBOX */
+.checkbox{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    height: auto;
+}
+.checkbox > input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+}
+.tick{
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    box-shadow: 0px 0px 5px #A8A8A8;
+    border-radius:10px;
+}
+.checkbox input:checked ~ .tick {
+    background-color: white;
+}
+.tick:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox input:checked ~ .tick:after {
+     display: block;
+}
+.checkbox .tick:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--secondary-color);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 
 /* actionable items (buttons..) end*/
 /* Layout */
@@ -167,9 +263,7 @@ button{
     transition: all 0.5s;
 }
 .full-screen{
-    width: 99vw;
     height: 100vh;
-    margin: auto;
 }
 /* Layout end */
 
@@ -219,6 +313,9 @@ button{
         flex-wrap: wrap;
     }
     .card{
-        width: 80vw;
+        min-width: 80vw;
+    }
+    .tick{
+        top:0;
     }
 }
