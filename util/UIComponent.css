@@ -255,6 +255,7 @@ button{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0%;
 }
 
 .center-vertical{
@@ -264,6 +265,7 @@ button{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0%;
 }
 .card{
     border-radius: 15;
@@ -314,6 +316,7 @@ button{
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        padding: 0%;
     }
     .m-center-horizontal{
         display: flex;
@@ -322,6 +325,7 @@ button{
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        padding: 0%;
     }
     .card{
         min-width: 80vw;

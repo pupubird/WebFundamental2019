@@ -90,11 +90,11 @@ a{
     .navbar-tab{
         display: none;
     }
-    .navbar-right button{
-        display: none;
+    .navbar-right {
+        margin:0px 10px;
     }
     .navbar-left{
-        margin-left: 2px;
+        margin-left: 10px;
     }
 
     .logo{
@@ -105,7 +105,7 @@ a{
     .ham-burger{
         display: flex;
         flex-direction: column;
-        margin-right: 15px;
+        margin-right: 7px;
         cursor: pointer;
     }
     .ham-burger-line{
