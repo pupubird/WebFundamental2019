@@ -41,12 +41,6 @@ a{
     width:180px;
     height:68px;
 }
-.carousel{
-    display: flex;
-    margin: auto; 
-    padding: 0; 
-    overflow: hidden;
-}
 @media(max-width:1000px){
     .navbar > div{
         margin:15px;
@@ -67,7 +61,7 @@ a{
         margin:0px 10px;
     }
     .navbar-left{
-        margin-left: 2px;
+        margin-left: 10px;
     }
 
     .logo{
@@ -94,10 +88,11 @@ a{
         right: -80vw;
         height: 100vh;
         background-color:white;
-        display: block;
+        display: flex;
         text-align: center;
     }
     .mobile-side-nav a{
+        display: block;
         margin-bottom: 10%;
     }
 }
