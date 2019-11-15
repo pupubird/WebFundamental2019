@@ -53,6 +53,7 @@ const Carousel = function ({
 
     this.carousel = document.querySelector(carousel);
     this.carouselItems = document.querySelectorAll(carouselItem);
+
     this.otherItemHeight = defaultItemHeight;
     this.otherItemWidth = defaultItemWidth;
 
@@ -109,23 +110,10 @@ const Carousel = function ({
                 this.carouselItems[this.index].scrollIntoView({ block: 'center', inline: 'center' });
             }
         } catch (ex) {
-            try {
-                if (increase != 0) {
-                    this.carouselItems[this.index].scrollIntoView({ block: 'center', inline: 'center' });
-                }
-            } catch (err) {
-                try {
-                    if (increase != 0) {
-                        this.carouselItems[this.index].parentNode.scrollIntoView();
-                    }
-                } catch (err) {
-                    if (increase != 0) {
-                        this.carouselItems[this.index].scrollIntoView();
-                    }
-                }
+            if (increase != 0) {
+                this.carouselItems[this.index].scrollIntoView();
             }
         }
         this.updateItemStyle();
     }
-    this.show(0);
 }
