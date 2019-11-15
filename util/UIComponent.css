@@ -16,6 +16,19 @@
 }
 /* typography */
 /* FONT */
+*{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0%;
+    padding: 0%;
+    word-wrap: break-word;
+    scroll-behavior: smooth;
+    transition: all 0.5s;
+}
 .header-font{
     font-family: var(--header-font-family); 
     color:var(--header-font-color);

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>CheapDrugs | Home</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="indexPage.css">
         <link rel="stylesheet" href="util/UIComponent.css">
     </head>
     <body>
@@ -15,7 +15,7 @@
 
                 <ul class="navbar-tab">
                     <li>
-                        <a href="#" class="action-call-font
+                        <a href="template.html" class="action-call-font
                             sub-header-font-color
                             s-font-size underline">home
                         </a>
@@ -42,15 +42,26 @@
             </div>
 
             <div class="navbar-right">
-                <button class="medium-button primary-color action-call-font">LOGIN/SIGNUP</button>
+                <a href="loginSignup.html" class="medium-button
+                    primary-color action-call-font">LOGIN/SIGNUP</a>
             </div>
-
-            <div class="ham-burger">
+            <div class="ham-burger" onclick="expandSideNav();">
                 <div class="ham-burger-line"></div>
                 <div class="ham-burger-line"></div>
                 <div class="ham-burger-line"></div>
             </div>
         </nav>
+
+        <!-- side nav for mobile view -->
+        <div class="mobile-side-nav center-vertical m-font-size
+            action-call-font">
+            <a href="#" class="tertiary-color">&#10007;</a>
+            <a href="#" class="primary-color underline">home</a>
+            <a href="shops.html" class="primary-color">shops</a>
+            <a href="cart.html" class="primary-color">cart</a>
+            <a href="about.html" class="primary-color">about</a>
+        </div>
+
         <div class="carousel">
             <div class="full-screen center-horizontal m-center-vertical
                 stock-card carousel-item">
@@ -99,6 +110,7 @@
             </div>
         </div>
         <script src="util/carousel.js"></script>
+        <script src="mobile_side_nav.js"></script>
         <script>
             let carousel = new Carousel({
                 carousel: '.carousel',
