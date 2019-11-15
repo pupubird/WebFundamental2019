@@ -82,10 +82,10 @@ a{
         background-color:rgb(98, 113, 212);
     }
     .mobile-side-nav{
-        width:80vw;
+        width:50vw;
         position: fixed;
         top: 0px;
-        right: -80vw;
+        right: -50vw;
         height: 100vh;
         background-color:white;
         display: flex;
