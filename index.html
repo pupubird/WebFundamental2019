@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>CheapDrugs | Home</title>
+        <link rel="stylesheet" href="util/UIComponent.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     </head>
+
     <body>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <img class="logo" src="assets/logo.svg" alt="logo">
+
+                <ul class="navbar-tab">
+                    <li>
+                        <a href="#" class="action-call-font
+                            sub-header-font-color
+                            s-font-size underline">home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shops.html" class="action-call-font
+                            paragraph-font-color
+                            s-font-size">shops
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cart.html" class="action-call-font
+                            paragraph-font-color
+                            s-font-size">cart
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="action-call-font
+                            paragraph-font-color
+                            s-font-size">about
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="center-horizontal">
+                <div class="navbar-right">
+                    <a href="loginSignup.html" class="medium-button
+                        primary-color action-call-font">LOGIN/SIGNUP</a>
+                </div>
+                <div class="ham-burger" onclick="expandSideNav();">
+                    <div class="ham-burger-line"></div>
+                    <div class="ham-burger-line"></div>
+                    <div class="ham-burger-line"></div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- side nav for mobile view -->
+        <div class="mobile-side-nav center-vertical m-font-size
+            action-call-font">
+            <a href="#" class="tertiary-color">&#10007;</a>
+            <a href="#" class="primary-color underline">home</a>
+            <a href="shops.html" class="primary-color">shops</a>
+            <a href="cart.html" class="primary-color">cart</a>
+            <a href="about.html" class="primary-color">about</a>
+        </div>
+
+        <script>
+        // javascript for mobile side nav
+        let mobileSideNav = document.querySelector('.mobile-side-nav');
+        document.body.addEventListener('click', (e) => {
+            if (!e.target.className.includes('mobile-side-nav')
+                && !e.target.className.includes('ham-burger')) {
+                collapseSideNav();
+            }
+        })
+        function expandSideNav() {
+            mobileSideNav.style.right = '0px';
+            mobileSideNav.style.boxShadow = '0px 0px 100px rgba(0, 0, 0, 0.25)';
+        }
+        function collapseSideNav() {
+            mobileSideNav.style.right = '-50vw';
+            mobileSideNav.style.boxShadow = 'none';
+        }
+    </script>
     </body>
+
 </html>
