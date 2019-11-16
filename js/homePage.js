@@ -84,9 +84,9 @@ function homePage() {
             scrollingResizeTransition: false,
             mobileViewSize: 500
         });
-        setInterval(()=>{
-            carousel.show(0);
-        },3000);
+        interval = setInterval(() => {
+                carousel.show(1);
+        }, 3000);
     `;
     state.appendChild(carouselScript);
 }

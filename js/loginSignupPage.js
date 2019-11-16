@@ -1,4 +1,5 @@
 function loginSignupPage() {
+    clearInterval(interval);
     title.innerText = 'CheapDrugs | Login/Sign Up';
     themeColor.content = '#6A76C6';
 

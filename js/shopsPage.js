@@ -1,4 +1,5 @@
 function shopsPage() {
+    clearInterval(interval);
     title.innerText = 'CheapDrugs | Shops';
     themeColor.content = '#FF1F5A';
 

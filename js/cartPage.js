@@ -1,4 +1,5 @@
 function cartPage() {
+    clearInterval(interval);
     title.innerText = 'CheapDrugs | Cart';
     themeColor.content = 'rgb(243, 199, 4)';
 
