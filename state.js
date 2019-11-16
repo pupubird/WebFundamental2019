@@ -4,6 +4,7 @@ let navbarTabLinks = document.querySelectorAll('.navbar-tab-link');
 let mobileNavBarTabLinks = document.querySelectorAll('.mobile-navbar-tab-link');
 
 let title = document.getElementById('title');
+let themeColor = document.getElementById('themeColor')
 // change state of the page so that it becomes a single page application
 
 // import home page
