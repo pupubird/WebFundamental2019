@@ -124,29 +124,29 @@
                 </div>
             </div>
         </div>
+        <script src="util/carousel.js"></script>
         <script>
                 // javascript for carousel
-                carousel = new Carousel({
-                    carousel: '.carousel',
-                    carouselItem: '.carousel-item',
-                    defaultItemHeight: '100vh',
-                    defaultItemWidth: '85vw',
-                    scrollingResizeTransition: false,
-                    mobileViewSize: 500
-                });
-                setInterval(() => {
-                    carousel.show(1);
-                }, 3000);
-                // load other pages after the landing page is loaded, to decrease the load time of the other pages to nearly instant.
-                function loadStateJs() {
-                    stateScript = document.createElement('script');
-                    stateScript.type = 'text/javascript';
-                    stateScript.async = true;
-                    stateScript.src = 'state.js';
-                    document.body.appendChild(stateScript);
-                }
+            carousel = new Carousel({
+                carousel: '.carousel',
+                carouselItem: '.carousel-item',
+                defaultItemHeight: '100vh',
+                defaultItemWidth: '85vw',
+                scrollingResizeTransition: false,
+                mobileViewSize: 500
+            });
+            setInterval(() => {
+                carousel.show(1);
+            }, 3000);
+            // load other pages after the landing page is loaded, to decrease the load time of the other pages to nearly instant.
+            function loadStateJs() {
+                stateScript = document.createElement('script');
+                stateScript.type = 'text/javascript';
+                stateScript.async = true;
+                stateScript.src = 'state.js';
+                document.body.appendChild(stateScript);
+            }
             </script>
-        <script src="util/carousel.js"></script>
         <script src="util/mobileSideNav.js"></script>
     </body>
 
