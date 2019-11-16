@@ -14,23 +14,23 @@
     <body onload="loadStateJs();">
         <nav class="navbar">
             <div class="navbar-left">
-                <a href="#" onclick="homePage();">
+                <a onclick="loadHomePage();">
                     <img class="logo" src="assets/logo.png" alt="logo">
                 </a>
                 <ul class="navbar-tab">
-                    <li><a href="#" onclick="homePage();"
+                    <li><a onclick="loadHomePage();"
                             class="action-call-font
-                            sub-header-font-color
+                            paragraph-font-color
                             s-font-size underline navbar-tab-link">home</a></li>
-                    <li><a href="#" onclick="shopsPage();"
+                    <li><a onclick="loadShopsPage();"
                             class="action-call-font
                             paragraph-font-color
                             s-font-size navbar-tab-link">shops</a></li>
-                    <li><a href="#" onclick="cartPage();"
+                    <li><a onclick="loadCartPage();"
                             class="action-call-font
                             paragraph-font-color
                             s-font-size navbar-tab-link">cart</a></li>
-                    <li><a href="#" onclick="aboutPage();"
+                    <li><a onclick="loadAboutPage();"
                             class="action-call-font
                             paragraph-font-color
                             s-font-size navbar-tab-link">about</a></li>
@@ -38,9 +38,9 @@
             </div>
             <div class="center-horizontal">
                 <div class="navbar-right">
-                    <a href="#" onclick="loginSignupPage();"
+                    <a onclick="loadLoginSignupPage();"
                         class="medium-button
-                        primary-color action-call-font">LOGIN/SIGNUP</a>
+                        primary-color action-call-font navbar-tab-link">LOGIN/SIGNUP</a>
                 </div>
                 <div class="ham-burger" onclick="expandSideNav();">
                     <div class="ham-burger-line"></div>
@@ -63,107 +63,43 @@
             <a href="#" onclick="aboutPage();" class="primary-color
                 mobile-navbar-tab-link">about</a>
         </div>
-
-        <div class="content-wrapper">
-            <div class="carousel">
-                <div class="full-screen center-horizontal m-center-vertical
-                    stock-card carousel-item">
-                    <img src="assets/stock1.jpg" alt="stock1"
-                        class="stock-image">
-                    <div class="stock-card-description">
-                        <p class="m-font-size sub-header-font-color
-                            sub-header-font">Your
-                            party
-                            choice.</p>
-                        <p class="xs-font-size paragraph-font-color
-                            paragraph-font">Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit.
-                            Etiam
-                            id
-                            blandit lorem, non lobortis elit.</p>
-                        <button class="medium-button highlight-button">Check out
-                            now</button>
-                    </div>
-                </div>
-                <div class="full-screen center-horizontal m-center-vertical
-                    stock-card carousel-item">
-                    <img src="assets/stock2.jpg" alt="stock2"
-                        class="stock-image">
-                    <div class="stock-card-description">
-                        <p class="m-font-size sub-header-font-color
-                            sub-header-font">Your
-                            personal
-                            choice.</p>
-                        <p class="xs-font-size paragraph-font-color
-                            paragraph-font">Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit.
-                            Etiam
-                            id
-                            blandit lorem, non lobortis elit.</p>
-                        <button class="medium-button highlight-button">Check out
-                            now</button>
-                    </div>
-                </div>
-                <div class="full-screen center-horizontal m-center-vertical
-                    stock-card carousel-item">
-                    <img src="assets/stock3.jpg" alt="stock3"
-                        class="stock-image">
-                    <div class="stock-card-description">
-                        <p class="m-font-size sub-header-font-color
-                            sub-header-font">Your
-                            healthcare
-                            choice.</p>
-                        <p class="xs-font-size paragraph-font-color
-                            paragraph-font">Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit.
-                            Etiam
-                            id
-                            blandit lorem, non lobortis elit.</p>
-                        <button class="medium-button highlight-button">Check out
-                            now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="loading" id="loadingDiv"></div>
+        <div class="content-wrapper"></div>
         <script src="util/carousel.js"></script>
         <script>
-            // javascript for carousel
-            carousel = new Carousel({
-                carousel: '.carousel',
-                carouselItem: '.carousel-item',
-                defaultItemHeight: '100vh',
-                defaultItemWidth: '85vw',
-                scrollingResizeTransition: false,
-                mobileViewSize: 500
-            });
-            let interval = setInterval(() => {
-                carousel.show(1);
-            }, 3000);
+            let interval = 0;
             // load other pages after the landing page is loaded, to decrease the load time of the other pages to nearly instant.
+            let loadHomePage = Function;
+            let loadShopsPage = Function;
+            let loadCartPage = Function;
+            let loadAboutPage = Function;
+            let loadLoginSignupPage = Function;
+
             function loadStateJs() {
                 stateScript = document.createElement('script');
                 stateScript.type = 'text/javascript';
                 stateScript.async = true;
+                stateScript.type = 'module';
                 stateScript.src = 'state.js';
-                document.body.appendChild(stateScript);
+                document.body.appendChild(stateScript);               
             }
+
             // javascript for mobile side nav
-                let mobileSideNav = document.querySelector('.mobile-side-nav');
-                document.body.addEventListener('click', (e) => {
-                    if (!e.target.className.includes('mobile-side-nav')
-                        && !e.target.className.includes('ham-burger')) {
-                        collapseSideNav();
-                    }
-                })
-                function expandSideNav() {
-                    mobileSideNav.style.right = '0px';
-                    mobileSideNav.style.boxShadow = '0px 0px 100px rgba(0, 0, 0, 0.25)';
+            let mobileSideNav = document.querySelector('.mobile-side-nav');
+            document.body.addEventListener('click', (e) => {
+                if (!e.target.className.includes('mobile-side-nav')
+                    && !e.target.className.includes('ham-burger')) {
+                    collapseSideNav();
                 }
-                function collapseSideNav() {
-                    mobileSideNav.style.right = '-50vw';
-                    mobileSideNav.style.boxShadow = 'none';
-                }
+            })
+            function expandSideNav() {
+                mobileSideNav.style.right = '0px';
+                mobileSideNav.style.boxShadow = '0px 0px 100px rgba(0, 0, 0, 0.25)';
+            }
+            function collapseSideNav() {
+                mobileSideNav.style.right = '-50vw';
+                mobileSideNav.style.boxShadow = 'none';
+            }
         </script>
     </body>
-
 </html>

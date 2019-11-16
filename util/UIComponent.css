@@ -14,13 +14,7 @@
     --action-call-font-family:'Teko', sans-serif;
     --paragraph-font-family:Arial,sans-serif;
 }
-*{
-    margin: 0%;
-    padding: 0%;
-    transition: all 0.5s;
-}
-/* typography */
-/* FONT */
+
 *{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -34,6 +28,11 @@
     scroll-behavior: smooth;
     transition: all 0.5s;
 }
+a{
+    cursor: pointer;
+}
+/* typography */
+/* FONT */
 .header-font{
     font-family: var(--header-font-family); 
     color:var(--header-font-color);
@@ -286,6 +285,27 @@ button{
 .full-screen{
     height: 100vh;
 }
+.loading {
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  border-radius: 50%;
+  border: 6px solid;
+  border-color: rgb(218, 184, 36) #1E2A78 #FF1F5A transparent;
+  animation: loadingSpin 8s linear infinite;
+}
+@keyframes loadingSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Layout end */
 
 @media(max-width:500px){
