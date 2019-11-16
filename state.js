@@ -1,5 +1,7 @@
 let navbar = document.querySelector('.navbar');
 let state = document.querySelector('.content-wrapper');
+let navbarTabLinks = document.querySelectorAll('.navbar-tab-link');
+let mobileNavBarTabLinks = document.querySelectorAll('.mobile-navbar-tab-link');
 // change state of the page so that it becomes a single page application
 function templatePage() {
     navbar.classList.add('navbar-shadow');
@@ -7,6 +9,11 @@ function templatePage() {
 }
 // state to home page
 function homePage() {
+    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
+    navbarTabLinks[0].classList.add('underline');
+    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
+    mobileNavBarTabLinks[0].classList.add('underline');
+
     navbar.classList.remove('navbar-shadow');
     state.innerHTML = `
             <div class="carousel">
@@ -68,18 +75,56 @@ function homePage() {
                     </div>
                 </div>
                 `;
+    let carouselScript = document.createElement('script');
+    carouselScript.type = 'text/javascript';
+    carouselScript.async = true;
+    carouselScript.innerHTML = `
+        // javascript for carousel
+        carousel = new Carousel({
+            carousel: '.carousel',
+            carouselItem: '.carousel-item',
+            defaultItemHeight: '100vh',
+            defaultItemWidth: '85vw',
+            scrollingResizeTransition: false,
+            mobileViewSize: 500
+        });
+        setInterval(()=>{
+            carousel.show(0);
+        },3000);
+    `;
+    state.appendChild(carouselScript);
+    console.log(state.innerHTML);
 }
 function shopsPage() {
+    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
+    navbarTabLinks[1].classList.add('underline');
+    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
+    mobileNavBarTabLinks[1].classList.add('underline');
+    navbar.classList.add('navbar-shadow');
+    state.innerHTML = '';
+
+}
+function cartPage() {
+    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
+    navbarTabLinks[2].classList.add('underline');
+    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
+    mobileNavBarTabLinks[2].classList.add('underline');
     navbar.classList.add('navbar-shadow');
     state.innerHTML = '';
 
 }
 function aboutPage() {
+    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
+    navbarTabLinks[3].classList.add('underline');
+    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
+    mobileNavBarTabLinks[3].classList.add('underline');
     navbar.classList.remove('navbar-shadow');
     state.innerHTML = '';
 
 }
 function loginSignupPage() {
+    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
+    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline'); });
     navbar.classList.add('navbar-shadow');
     state.innerHTML = '';
 
