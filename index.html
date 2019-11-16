@@ -63,19 +63,90 @@
                 mobile-navbar-tab-link">about</a>
         </div>
 
-        <div class="content-wrapper"></div>
-        <script src="util/carousel.js"></script>
-        <script src="util/mobileSideNav.js"></script>
-        <script>           
-            // load other pages after the landing page is loaded, to decrease the load time of the other pages to nearly instant.
-            function loadStateJs(){
-                stateScript = document.createElement('script');
-                stateScript.type = 'text/javascript';
-                stateScript.async = true;
-                stateScript.src = 'state.js';
-                document.body.appendChild(stateScript);
-            }
-        </script>
-    </body>
+        <div class="content-wrapper">
+            <div class="carousel">
+                <div class="full-screen center-horizontal m-center-vertical
+                    stock-card carousel-item">
+                    <img src="assets/stock1.svg" alt="stock1"
+                        class="stock-image">
+                    <div class="stock-card-description">
+                        <p class="m-font-size sub-header-font-color
+                            sub-header-font">Your
+                            party
+                            choice.</p>
+                        <p class="xs-font-size paragraph-font-color
+                            paragraph-font">Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam
+                            id
+                            blandit lorem, non lobortis elit.</p>
+                        <button class="medium-button highlight-button">Check out
+                            now</button>
+                    </div>
+                </div>
+                <div class="full-screen center-horizontal m-center-vertical
+                    stock-card carousel-item">
+                    <img src="assets/stock2.svg" alt="stock2"
+                        class="stock-image">
+                    <div class="stock-card-description">
+                        <p class="m-font-size sub-header-font-color
+                            sub-header-font">Your
+                            personal
+                            choice.</p>
+                        <p class="xs-font-size paragraph-font-color
+                            paragraph-font">Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam
+                            id
+                            blandit lorem, non lobortis elit.</p>
+                        <button class="medium-button highlight-button">Check out
+                            now</button>
+                    </div>
+                </div>
+                <div class="full-screen center-horizontal m-center-vertical
+                    stock-card carousel-item">
+                    <img src="assets/stock3.svg" alt="stock3"
+                        class="stock-image">
+                    <div class="stock-card-description">
+                        <p class="m-font-size sub-header-font-color
+                            sub-header-font">Your
+                            healthcare
+                            choice.</p>
+                        <p class="xs-font-size paragraph-font-color
+                            paragraph-font">Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam
+                            id
+                            blandit lorem, non lobortis elit.</p>
+                        <button class="medium-button highlight-button">Check out
+                            now</button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                // javascript for carousel
+                carousel = new Carousel({
+                    carousel: '.carousel',
+                    carouselItem: '.carousel-item',
+                    defaultItemHeight: '100vh',
+                    defaultItemWidth: '85vw',
+                    scrollingResizeTransition: false,
+                    mobileViewSize: 500
+                });
+                setInterval(() => {
+                    carousel.show(1);
+                }, 3000);
+                // load other pages after the landing page is loaded, to decrease the load time of the other pages to nearly instant.
+                function loadStateJs() {
+                    stateScript = document.createElement('script');
+                    stateScript.type = 'text/javascript';
+                    stateScript.async = true;
+                    stateScript.src = 'state.js';
+                    document.body.appendChild(stateScript);
+                }
+            </script>
+            <script src="util/carousel.js"></script>
+            <script src="util/mobileSideNav.js"></script>
+        </body>
 
-</html>
+    </html>
