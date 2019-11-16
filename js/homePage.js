@@ -87,3 +87,4 @@ function homePage() {
     `;
     state.appendChild(carouselScript);
 }
+homePage();
