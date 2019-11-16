@@ -1,6 +1,5 @@
 function cartPage() {
     title.innerText = 'CheapDrugs | Cart';
-    themeColor.content = '#848484';
 
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
     navbarTabLinks[2].classList.add('underline');
