@@ -3,129 +3,39 @@ let state = document.querySelector('.content-wrapper');
 let navbarTabLinks = document.querySelectorAll('.navbar-tab-link');
 let mobileNavBarTabLinks = document.querySelectorAll('.mobile-navbar-tab-link');
 // change state of the page so that it becomes a single page application
-function templatePage() {
-    navbar.classList.add('navbar-shadow');
-    state.innerHTML = '';
-}
-// state to home page
-function homePage() {
-    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
-    navbarTabLinks[0].classList.add('underline');
-    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
-    mobileNavBarTabLinks[0].classList.add('underline');
 
-    navbar.classList.remove('navbar-shadow');
-    state.innerHTML = `
-            <div class="carousel">
-                <div class="full-screen center-horizontal m-center-vertical
-                    stock-card carousel-item">
-                    <img src="assets/stock1.svg" alt="stock1"
-                        class="stock-image">
-                    <div class="stock-card-description">
-                        <p class="m-font-size sub-header-font-color
-                            sub-header-font">Your
-                            party
-                            choice.</p>
-                        <p class="xs-font-size paragraph-font-color
-                            paragraph-font">Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit.
-                            Etiam
-                            id
-                            blandit lorem, non lobortis elit.</p>
-                        <button class="medium-button highlight-button">Check out
-                            now</button>
-                    </div>
-                </div>
-                <div class="full-screen center-horizontal m-center-vertical
-                    stock-card carousel-item">
-                    <img src="assets/stock2.svg" alt="stock2"
-                        class="stock-image">
-                    <div class="stock-card-description">
-                        <p class="m-font-size sub-header-font-color
-                            sub-header-font">Your
-                            personal
-                            choice.</p>
-                        <p class="xs-font-size paragraph-font-color
-                            paragraph-font">Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit.
-                            Etiam
-                            id
-                            blandit lorem, non lobortis elit.</p>
-                        <button class="medium-button highlight-button">Check out
-                            now</button>
-                    </div>
-                </div>
-                <div class="full-screen center-horizontal m-center-vertical
-                    stock-card carousel-item">
-                    <img src="assets/stock3.svg" alt="stock3"
-                        class="stock-image">
-                    <div class="stock-card-description">
-                        <p class="m-font-size sub-header-font-color
-                            sub-header-font">Your
-                            healthcare
-                            choice.</p>
-                        <p class="xs-font-size paragraph-font-color
-                            paragraph-font">Lorem
-                            ipsum dolor sit amet, consectetur adipiscing elit.
-                            Etiam
-                            id
-                            blandit lorem, non lobortis elit.</p>
-                        <button class="medium-button highlight-button">Check out
-                            now</button>
-                    </div>
-                </div>
-                `;
-    let carouselScript = document.createElement('script');
-    carouselScript.type = 'text/javascript';
-    carouselScript.async = true;
-    carouselScript.innerHTML = `
-        // javascript for carousel
-        carousel = new Carousel({
-            carousel: '.carousel',
-            carouselItem: '.carousel-item',
-            defaultItemHeight: '100vh',
-            defaultItemWidth: '85vw',
-            scrollingResizeTransition: false,
-            mobileViewSize: 500
-        });
-        setInterval(()=>{
-            carousel.show(0);
-        },3000);
-    `;
-    state.appendChild(carouselScript);
-    console.log(state.innerHTML);
-}
-function shopsPage() {
-    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
-    navbarTabLinks[1].classList.add('underline');
-    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
-    mobileNavBarTabLinks[1].classList.add('underline');
-    navbar.classList.add('navbar-shadow');
-    state.innerHTML = '';
+shopsPageScript = document.createElement('script');
+shopsPageScript.type = 'text/javascript';
+shopsPageScript.async = true;
+shopsPageScript.src = 'js/shopsPage.js';
+document.body.appendChild(shopsPageScript);
 
-}
-function cartPage() {
-    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
-    navbarTabLinks[2].classList.add('underline');
-    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
-    mobileNavBarTabLinks[2].classList.add('underline');
-    navbar.classList.add('navbar-shadow');
-    state.innerHTML = '';
+homePageScript = document.createElement('script');
+homePageScript.type = 'text/javascript';
+homePageScript.async = true;
+homePageScript.src = 'js/homePage.js';
+document.body.appendChild(homePageScript);
 
-}
-function aboutPage() {
-    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
-    navbarTabLinks[3].classList.add('underline');
-    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
-    mobileNavBarTabLinks[3].classList.add('underline');
-    navbar.classList.remove('navbar-shadow');
-    state.innerHTML = '';
+shopsPageScript = document.createElement('script');
+shopsPageScript.type = 'text/javascript';
+shopsPageScript.async = true;
+shopsPageScript.src = 'js/shopsPage.js';
+document.body.appendChild(shopsPageScript);
 
-}
-function loginSignupPage() {
-    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
-    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline'); });
-    navbar.classList.add('navbar-shadow');
-    state.innerHTML = '';
+cartPageScript = document.createElement('script');
+cartPageScript.type = 'text/javascript';
+cartPageScript.async = true;
+cartPageScript.src = 'js/cartPage.js';
+document.body.appendChild(cartPageScript);
 
-}
+aboutPageScript = document.createElement('script');
+aboutPageScript.type = 'text/javascript';
+aboutPageScript.async = true;
+aboutPageScript.src = 'js/aboutPage.js';
+document.body.appendChild(aboutPageScript);
+
+loginSignupPageScript = document.createElement('script');
+loginSignupPageScript.type = 'text/javascript';
+loginSignupPageScript.async = true;
+loginSignupPageScript.src = 'js/loginSignupPage.js';
+document.body.appendChild(loginSignupPageScript);
