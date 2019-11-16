@@ -1,10 +1,24 @@
+let navbar = document.querySelector('.navbar');
+let state = document.querySelector('.content-wrapper');
+let navbarTabLinks = document.querySelectorAll('.navbar-tab-link');
+let mobileNavBarTabLinks = document.querySelectorAll('.mobile-navbar-tab-link');
+
+let title = document.getElementById('title');
+let themeColor = document.getElementById('themeColor');
+
 // state of home page
-function homePage() {
+export function homePage() {
+    localStorage.setItem('currentPage', 'home');
     title.innerText = 'CheapDrugs | Home';
     themeColor.content = '#1E2A78';
+    document.querySelector('.navbar').style.position = "fixed";
+
 
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
+    navbarTabLinks.forEach(item => { item.classList.remove('sub-header-font-color'); });
+
     navbarTabLinks[0].classList.add('underline');
+    navbarTabLinks[0].classList.add('sub-header-font-color');
 
     mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
     mobileNavBarTabLinks[0].classList.add('underline');

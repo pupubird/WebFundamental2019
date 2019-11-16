@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 .stock-card{
     min-width:100vw;
 }
@@ -16,6 +19,9 @@
     margin: auto; 
     padding: 0; 
     overflow: hidden;
+}
+.content-wrapper{
+    display: none;
 }
 @media(max-width:1000px){
     .stock-image{
