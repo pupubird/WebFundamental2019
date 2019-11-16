@@ -4,6 +4,7 @@ function homePage() {
 
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
     navbarTabLinks[0].classList.add('underline');
+
     mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
     mobileNavBarTabLinks[0].classList.add('underline');
 
