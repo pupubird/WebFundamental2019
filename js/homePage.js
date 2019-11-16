@@ -12,7 +12,7 @@ function homePage() {
             <div class="carousel">
                 <div class="full-screen center-horizontal m-center-vertical
                     stock-card carousel-item">
-                    <img src="assets/stock1.svg" alt="stock1"
+                    <img src="assets/stock1.jpg" alt="stock1"
                         class="stock-image">
                     <div class="stock-card-description">
                         <p class="m-font-size sub-header-font-color
@@ -31,7 +31,7 @@ function homePage() {
                 </div>
                 <div class="full-screen center-horizontal m-center-vertical
                     stock-card carousel-item">
-                    <img src="assets/stock2.svg" alt="stock2"
+                    <img src="assets/stock2.jpg" alt="stock2"
                         class="stock-image">
                     <div class="stock-card-description">
                         <p class="m-font-size sub-header-font-color
@@ -50,7 +50,7 @@ function homePage() {
                 </div>
                 <div class="full-screen center-horizontal m-center-vertical
                     stock-card carousel-item">
-                    <img src="assets/stock3.svg" alt="stock3"
+                    <img src="assets/stock3.jpg" alt="stock3"
                         class="stock-image">
                     <div class="stock-card-description">
                         <p class="m-font-size sub-header-font-color
