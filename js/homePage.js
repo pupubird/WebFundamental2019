@@ -1,7 +1,7 @@
-
-
 // state of home page
 function homePage() {
+    title.innerText = 'CheapDrugs | Home';
+
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
     navbarTabLinks[0].classList.add('underline');
     mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
