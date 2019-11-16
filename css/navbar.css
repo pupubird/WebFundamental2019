@@ -47,7 +47,7 @@ a{
     display: none;
 }
 .logo{
-    width:180px;
+    width:160px;
     height:68px;
 }
 @media(max-width:1000px){
@@ -74,7 +74,7 @@ a{
     }
 
     .logo{
-        width:120px;
+        width:106px;
         height:45px;
     }
 
