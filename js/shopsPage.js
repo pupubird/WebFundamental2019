@@ -2,7 +2,6 @@ function shopsPage() {
     title.innerText = 'CheapDrugs | Shops';
     themeColor.content = '#FF1F5A';
 
-
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
     navbarTabLinks[1].classList.add('underline');
 
