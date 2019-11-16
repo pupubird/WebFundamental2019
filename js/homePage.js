@@ -82,7 +82,7 @@ function homePage() {
             mobileViewSize: 500
         });
         setInterval(()=>{
-            carousel.show(0);
+            carousel.show(1);
         },3000);
     `;
     state.appendChild(carouselScript);
