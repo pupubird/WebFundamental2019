@@ -3,7 +3,7 @@
     --light-primary-color: #6A76C6;
     --primary-color: #1E2A78;
     --secondary-color:rgb(255, 216, 42);
-    --darkend-secondary-color:#FFCF71;
+    --light-secondary-color:#FFCF71;
     --light-tertiary-color:#F8EAEA;
     --tertiary-color:#FF1F5A;
     --header-font-color:#5A5A5A;
@@ -74,7 +74,7 @@
     color: var(--secondary-color) !important;
 }
 .darken-secondary-color{
-    color:var(--darkend-secondary-color) !important;
+    color:var(--light-secondary-color) !important;
 }
 .tertiary-color{
     color:var(--tertiary-color) !important;
@@ -168,7 +168,7 @@ button{
 }
 .tag-secondary{
     min-width: 90px;
-    background-color: var(--darkend-secondary-color);
+    background-color: var(--light-secondary-color);
     color:white;
     font-family: var(--action-call-font-family);
     text-align: center;
