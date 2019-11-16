@@ -1,10 +1,15 @@
 let navbar = document.querySelector('.navbar');
 let state = document.querySelector('.content-wrapper');
-//state of the page
-function indexPage() {
+// change state of the page so that it becomes a single page application
+function templatePage() {
+    navbar.classList.add('navbar-shadow');
+    state.innerHTML = '';
+}
+// state to home page
+function homePage() {
     navbar.classList.remove('navbar-shadow');
     state.innerHTML = `
-<div class="carousel">
+            <div class="carousel">
                 <div class="full-screen center-horizontal m-center-vertical
                     stock-card carousel-item">
                     <img src="assets/stock1.svg" alt="stock1"
@@ -64,7 +69,18 @@ function indexPage() {
                 </div>
                 `;
 }
-function templatePage() {
+function shopsPage() {
     navbar.classList.add('navbar-shadow');
     state.innerHTML = '';
+
+}
+function aboutPage() {
+    navbar.classList.remove('navbar-shadow');
+    state.innerHTML = '';
+
+}
+function loginSignupPage() {
+    navbar.classList.add('navbar-shadow');
+    state.innerHTML = '';
+
 }
