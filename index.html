@@ -6,37 +6,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>CheapDrugs | Home</title>
+        <link rel="stylesheet" href="css/indexPage.css">
         <link rel="stylesheet" href="util/UIComponent.css">
-        <link rel="stylesheet" href="navbar.css">
         <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/navbar.css">
     </head>
-
-    <body>
+    <body onload="loadStateJs();">
         <nav class="navbar">
             <div class="navbar-left">
-                <img class="logo" src="assets/logo.svg" alt="logo">
-
+                <a href="#" onclick="homePage();">
+                    <img class="logo" src="assets/logo.svg" alt="logo">
+                </a>
                 <ul class="navbar-tab">
                     <li>
-                        <a href="#" class="action-call-font
+                        <a href="#" onclick="indexPage();"
+                            class="action-call-font
                             sub-header-font-color
                             s-font-size underline">home
                         </a>
                     </li>
                     <li>
-                        <a href="shops.html" class="action-call-font
+                        <a href="#" onclick="shopsPage();"
+                            class="action-call-font
                             paragraph-font-color
                             s-font-size">shops
                         </a>
                     </li>
                     <li>
-                        <a href="cart.html" class="action-call-font
+                        <a href="#" onclick="cartPage();"
+                            class="action-call-font
                             paragraph-font-color
                             s-font-size">cart
                         </a>
                     </li>
                     <li>
-                        <a href="about.html" class="action-call-font
+                        <a href="#" onclick="aboutPage();"
+                            class="action-call-font
                             paragraph-font-color
                             s-font-size">about
                         </a>
@@ -45,7 +50,8 @@
             </div>
             <div class="center-horizontal">
                 <div class="navbar-right">
-                    <a href="loginSignup.html" class="medium-button
+                    <a href="#" onclick="loginSignupPage();"
+                        class="medium-button
                         primary-color action-call-font">LOGIN/SIGNUP</a>
                 </div>
                 <div class="ham-burger" onclick="expandSideNav();">
@@ -60,30 +66,97 @@
         <div class="mobile-side-nav center-vertical m-font-size
             action-call-font">
             <a href="#" class="tertiary-color">&#10007;</a>
-            <a href="#" class="primary-color underline">home</a>
-            <a href="shops.html" class="primary-color">shops</a>
-            <a href="cart.html" class="primary-color">cart</a>
-            <a href="about.html" class="primary-color">about</a>
+            <a href="#" onclick="homePage();" class="primary-color
+                underline">home</a>
+            <a href="#" onclick="shopsPage();" class="primary-color">shops</a>
+            <a href="#" onclick="cartPage();" class="primary-color">cart</a>
+            <a href="#" onclick="aboutPage();" class="primary-color">about</a>
         </div>
+        <div class="content-wrapper">
+            <div class="carousel">
+                <div class="full-screen center-horizontal m-center-vertical
+                    stock-card carousel-item">
+                    <img src="assets/stock1.svg" alt="stock1"
+                        class="stock-image">
+                    <div class="stock-card-description">
+                        <p class="m-font-size sub-header-font-color
+                            sub-header-font">Your
+                            party
+                            choice.</p>
+                        <p class="xs-font-size paragraph-font-color
+                            paragraph-font">Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam
+                            id
+                            blandit lorem, non lobortis elit.</p>
+                        <button class="medium-button highlight-button">Check out
+                            now</button>
+                    </div>
+                </div>
+                <div class="full-screen center-horizontal m-center-vertical
+                    stock-card carousel-item">
+                    <img src="assets/stock2.svg" alt="stock2"
+                        class="stock-image">
+                    <div class="stock-card-description">
+                        <p class="m-font-size sub-header-font-color
+                            sub-header-font">Your
+                            personal
+                            choice.</p>
+                        <p class="xs-font-size paragraph-font-color
+                            paragraph-font">Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam
+                            id
+                            blandit lorem, non lobortis elit.</p>
+                        <button class="medium-button highlight-button">Check out
+                            now</button>
+                    </div>
+                </div>
+                <div class="full-screen center-horizontal m-center-vertical
+                    stock-card carousel-item">
+                    <img src="assets/stock3.svg" alt="stock3"
+                        class="stock-image">
+                    <div class="stock-card-description">
+                        <p class="m-font-size sub-header-font-color
+                            sub-header-font">Your
+                            healthcare
+                            choice.</p>
+                        <p class="xs-font-size paragraph-font-color
+                            paragraph-font">Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam
+                            id
+                            blandit lorem, non lobortis elit.</p>
+                        <button class="medium-button highlight-button">Check out
+                            now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="util/carousel.js"></script>
+        <script src="util/mobileSideNav.js"></script>
+        <script>            
+            // javascript for carousel
+            let carousel = new Carousel({
+                carousel: '.carousel',
+                carouselItem: '.carousel-item',
+                defaultItemHeight: '100vh',
+                defaultItemWidth: '85vw',
+                scrollingResizeTransition: false,
+                mobileViewSize: 500
+            });
+            setInterval(()=>{
+                carousel.show(1);
+            },3000);
 
-        <script>
-        // javascript for mobile side nav
-        let mobileSideNav = document.querySelector('.mobile-side-nav');
-        document.body.addEventListener('click', (e) => {
-            if (!e.target.className.includes('mobile-side-nav')
-                && !e.target.className.includes('ham-burger')) {
-                collapseSideNav();
+            function loadStateJs(){
+                stateScript = document.createElement('script');
+                stateScript.type = 'text/javascript';
+                stateScript.async = true;
+                stateScript.src = 'state.js';
+                document.body.appendChild(stateScript);
             }
-        })
-        function expandSideNav() {
-            mobileSideNav.style.right = '0px';
-            mobileSideNav.style.boxShadow = '0px 0px 100px rgba(0, 0, 0, 0.25)';
-        }
-        function collapseSideNav() {
-            mobileSideNav.style.right = '-50vw';
-            mobileSideNav.style.boxShadow = 'none';
-        }
-    </script>
+        </script>
     </body>
 
 </html>

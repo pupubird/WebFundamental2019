@@ -21,6 +21,19 @@
 }
 /* typography */
 /* FONT */
+*{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0%;
+    padding: 0%;
+    word-wrap: break-word;
+    scroll-behavior: smooth;
+    transition: all 0.5s;
+}
 .header-font{
     font-family: var(--header-font-family); 
     color:var(--header-font-color);
@@ -38,9 +51,7 @@
     color:var(--paragraph-font-color);
 }
 .underline{
-    padding-bottom: 10px;
     border-bottom: 3.5px solid var(--secondary-color);
-    display: inline;
 }
 /* typography end */
 
@@ -249,6 +260,7 @@ button{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0%;
 }
 
 .center-vertical{
@@ -258,6 +270,7 @@ button{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0%;
 }
 .card{
     border-radius: 15;
@@ -308,6 +321,7 @@ button{
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        padding: 0%;
     }
     .m-center-horizontal{
         display: flex;
@@ -316,6 +330,7 @@ button{
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        padding: 0%;
     }
     .card{
         min-width: 80vw;

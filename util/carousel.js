@@ -107,25 +107,13 @@ const Carousel = function ({
         // clicked right, left
         try {
             if (increase != 0) {
-                this.carouselItems[this.index].parentNode.scrollIntoView({ block: 'center', inline: 'center' });
+                this.carouselItems[this.index].scrollIntoView({ block: 'center', inline: 'center' });
             }
         } catch (ex) {
             if (increase != 0) {
-                this.carouselItems[this.index].parentNode.scrollIntoView();
+                this.carouselItems[this.index].scrollIntoView();
             }
         }
         this.updateItemStyle();
     }
-    this.show(0);
 }
-let carousel = new Carousel({
-    carousel: 'ul',
-    carouselItem: 'ul li .card',
-    defaultItemHeight: '300px',
-    defaultItemWidth: '300px',
-    targetItemHeight: '400px',
-    targetItemWidth: '300px',
-    scrollingResizeTransition: true,
-    mobileViewSize: 500
-});
-show = carousel.show;

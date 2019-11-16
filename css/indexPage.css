@@ -1,0 +1,131 @@
+a{
+    text-decoration: none;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100vw;
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
+    margin:15px 35px;
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    margin:15px 25px;
+}
+.navbar-tab{
+    list-style: none;
+    display: flex;
+    margin-left:10vw;
+}
+.navbar-tab > li{
+    margin:20px;
+}
+.ham-burger{
+    display: none;
+}
+.mobile-side-nav{
+    display: none;
+}
+.mobile-side-nav a{
+    display: none;
+}
+.logo{
+    width:180px;
+    height:68px;
+}
+.stock-card{
+    min-width:100vw;
+}
+.stock-image{
+    width:30vw;
+}
+.stock-card-description{
+    max-width: 30vw;
+    margin: 0px 45px;
+}
+.stock-card-description > p{
+    padding-bottom: 15px;
+}
+.carousel{
+    display: flex;
+    margin: auto; 
+    padding: 0; 
+    overflow: hidden;
+}
+@media(max-width:1000px){
+    .navbar > div{
+        margin:15px;
+    }
+    .stock-image{
+        width:40vw;
+    }
+    .stock-card-description{
+        max-width: 40vw;
+    }
+}
+@media(max-width:750px){
+    .m-center-vertical{
+        flex-direction: column;
+    }
+    .stock-card-description{
+        margin:20px;
+        max-width: 65vw;
+        text-align: center;
+    }
+    .stock-image{
+        width:60vw;
+    }
+    
+    .navbar{
+        align-items: center;
+    }
+    .navbar-tab{
+        display: none;
+    }
+    .navbar-right {
+        margin:0px 10px;
+    }
+    .navbar-left{
+        margin-left: 10px;
+    }
+
+    .logo{
+        width:120px;
+        height:45px;
+    }
+
+    .ham-burger{
+        display: flex;
+        flex-direction: column;
+        margin-right: 7px;
+        cursor: pointer;
+    }
+    .ham-burger-line{
+        margin: 2px;
+        height: 5px;
+        width: 30px;
+        background-color:rgb(98, 113, 212);
+    }
+    .mobile-side-nav{
+        width:50vw;
+        position: fixed;
+        top: 0px;
+        right: -50vw;
+        height: 100vh;
+        background-color:white;
+        display: flex;
+        text-align: center;
+    }
+    .mobile-side-nav a{
+        display: block;
+        margin-bottom: 10%;
+    }
+}
