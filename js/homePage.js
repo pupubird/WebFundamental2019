@@ -67,6 +67,7 @@ function homePage() {
                             now</button>
                     </div>
                 </div>
+            </div>
                 `;
     let carouselScript = document.createElement('script');
     carouselScript.type = 'text/javascript';
