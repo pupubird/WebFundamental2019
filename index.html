@@ -8,16 +8,18 @@
         <link rel="stylesheet" href="indexPage.css">
         <link rel="stylesheet" href="util/UIComponent.css">
         <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="navbar.css">
     </head>
-    <body>
+    <body onload="loadStateJs();">
         <nav class="navbar">
             <div class="navbar-left">
-                <a href="index.html">
+                <a href="#" onclick="indexPage();">
                     <img class="logo" src="assets/logo.svg" alt="logo">
                 </a>
                 <ul class="navbar-tab">
                     <li>
-                        <a href="template.html" class="action-call-font
+                        <a href="#" onclick="templatePage();"
+                            class="action-call-font
                             sub-header-font-color
                             s-font-size underline">home
                         </a>
@@ -59,78 +61,76 @@
         <div class="mobile-side-nav center-vertical m-font-size
             action-call-font">
             <a href="#" class="tertiary-color">&#10007;</a>
-            <a href="template.html" class="primary-color underline">home</a>
+            <a href="#" onclick="templatePage();" class="primary-color
+                underline">home</a>
             <a href="shops.html" class="primary-color">shops</a>
             <a href="cart.html" class="primary-color">cart</a>
             <a href="about.html" class="primary-color">about</a>
         </div>
-
-        <div class="carousel">
-            <div class="full-screen center-horizontal m-center-vertical
-                stock-card carousel-item">
-                <img src="assets/stock1.svg" alt="stock1" class="stock-image">
-                <div class="stock-card-description">
-                    <p class="m-font-size sub-header-font-color
-                        sub-header-font">Your
-                        party
-                        choice.</p>
-                    <p class="xs-font-size paragraph-font-color paragraph-font">Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                        id
-                        blandit lorem, non lobortis elit.</p>
-                    <button class="medium-button highlight-button">Check out now</button>
+        <div class="content-wrapper">
+            <div class="carousel">
+                <div class="full-screen center-horizontal m-center-vertical
+                    stock-card carousel-item">
+                    <img src="assets/stock1.svg" alt="stock1"
+                        class="stock-image">
+                    <div class="stock-card-description">
+                        <p class="m-font-size sub-header-font-color
+                            sub-header-font">Your
+                            party
+                            choice.</p>
+                        <p class="xs-font-size paragraph-font-color
+                            paragraph-font">Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam
+                            id
+                            blandit lorem, non lobortis elit.</p>
+                        <button class="medium-button highlight-button">Check out
+                            now</button>
+                    </div>
                 </div>
-            </div>
-            <div class="full-screen center-horizontal m-center-vertical
-                stock-card carousel-item">
-                <img src="assets/stock2.svg" alt="stock2" class="stock-image">
-                <div class="stock-card-description">
-                    <p class="m-font-size sub-header-font-color
-                        sub-header-font">Your
-                        personal
-                        choice.</p>
-                    <p class="xs-font-size paragraph-font-color paragraph-font">Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                        id
-                        blandit lorem, non lobortis elit.</p>
-                    <button class="medium-button highlight-button">Check out now</button>
+                <div class="full-screen center-horizontal m-center-vertical
+                    stock-card carousel-item">
+                    <img src="assets/stock2.svg" alt="stock2"
+                        class="stock-image">
+                    <div class="stock-card-description">
+                        <p class="m-font-size sub-header-font-color
+                            sub-header-font">Your
+                            personal
+                            choice.</p>
+                        <p class="xs-font-size paragraph-font-color
+                            paragraph-font">Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam
+                            id
+                            blandit lorem, non lobortis elit.</p>
+                        <button class="medium-button highlight-button">Check out
+                            now</button>
+                    </div>
                 </div>
-            </div>
-            <div class="full-screen center-horizontal m-center-vertical
-                stock-card carousel-item">
-                <img src="assets/stock3.svg" alt="stock3" class="stock-image">
-                <div class="stock-card-description">
-                    <p class="m-font-size sub-header-font-color
-                        sub-header-font">Your
-                        healthcare
-                        choice.</p>
-                    <p class="xs-font-size paragraph-font-color paragraph-font">Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                        id
-                        blandit lorem, non lobortis elit.</p>
-                    <button class="medium-button highlight-button">Check out now</button>
+                <div class="full-screen center-horizontal m-center-vertical
+                    stock-card carousel-item">
+                    <img src="assets/stock3.svg" alt="stock3"
+                        class="stock-image">
+                    <div class="stock-card-description">
+                        <p class="m-font-size sub-header-font-color
+                            sub-header-font">Your
+                            healthcare
+                            choice.</p>
+                        <p class="xs-font-size paragraph-font-color
+                            paragraph-font">Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit.
+                            Etiam
+                            id
+                            blandit lorem, non lobortis elit.</p>
+                        <button class="medium-button highlight-button">Check out
+                            now</button>
+                    </div>
                 </div>
             </div>
         </div>
         <script src="util/carousel.js"></script>
-        <script>
-        // javascript for mobile side nav
-            let mobileSideNav = document.querySelector('.mobile-side-nav');
-            document.body.addEventListener('click', (e) => {
-                if (!e.target.className.includes('mobile-side-nav')
-                    && !e.target.className.includes('ham-burger')) {
-                    collapseSideNav();
-                }
-            })
-            function expandSideNav() {
-                mobileSideNav.style.right = '0px';
-                mobileSideNav.style.boxShadow = '0px 0px 100px rgba(0, 0, 0, 0.25)';
-            }
-            function collapseSideNav() {
-                mobileSideNav.style.right = '-50vw';
-                mobileSideNav.style.boxShadow = 'none';
-            }
-            
+        <script src="util/mobileSideNav.js"></script>
+        <script>            
             // javascript for carousel
             let carousel = new Carousel({
                 carousel: '.carousel',
@@ -143,6 +143,14 @@
             setInterval(()=>{
                 carousel.show(1);
             },3000);
+
+            function loadStateJs(){
+                stateScript = document.createElement('script');
+                stateScript.type = 'text/javascript';
+                stateScript.async = true;
+                stateScript.src = 'state.js';
+                document.body.appendChild(stateScript);
+            }
         </script>
     </body>
 </html>
