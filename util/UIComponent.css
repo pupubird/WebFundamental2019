@@ -73,6 +73,9 @@
 .secondary-color{
     color: var(--secondary-color) !important;
 }
+.darken-secondary-color{
+    color:var(--darkend-secondary-color) !important;
+}
 .tertiary-color{
     color:var(--tertiary-color) !important;
 }
