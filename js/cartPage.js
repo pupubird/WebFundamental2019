@@ -10,6 +10,8 @@ export function cartPage() {
     clearInterval(interval);
     localStorage.setItem('currentPage', 'cart');
 
+    document.querySelector('.navbar').style.position = "relative";
+
     title.innerText = 'CheapDrugs | Cart';
     themeColor.content = 'rgb(204, 173, 33)';
 
@@ -23,5 +25,12 @@ export function cartPage() {
     mobileNavBarTabLinks[2].classList.add('underline');
 
     navbar.classList.add('navbar-shadow');
-    state.innerHTML = '';
+    state.innerHTML = `
+        <div class="center-vertical card" style="margin-top: 4%; padding: 4%;">
+            <a onclick="loadShopsPage();">
+                <div class="underline"><img src="assets/cat.png" alt="empty"></div>
+                <p class="s-font-size">Discover Your Own Drugs</p>
+            </a> 
+        </div>
+    `;
 }
