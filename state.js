@@ -45,4 +45,5 @@ window.addEventListener('popstate', (e) => {
     document.getElementById('loadingDiv').style.display = 'none';
     document.querySelector('.content-wrapper').style.display = "block";
     document.querySelector('.navbar').style.display = "flex";
+    document.querySelector('.content-wrapper').style.marginTop = document.querySelector('.navbar').offsetHeight + 'px';
 })();

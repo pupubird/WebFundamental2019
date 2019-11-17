@@ -28,9 +28,7 @@
     scroll-behavior: smooth;
     transition: all 0.5s;
 }
-a{
-    cursor: pointer;
-}
+
 /* typography */
 /* FONT */
 .header-font{
@@ -101,8 +99,13 @@ a{
 /* actionable items (buttons..) */
 
 /* BUTTONS */
+a {
+    cursor: pointer;
+}
+
 button{
     outline: none;
+    cursor: pointer;
 }
 
 .large-button{
@@ -285,27 +288,6 @@ button{
 .full-screen{
     height: 100vh;
 }
-.loading {
-  display: block;
-  width: 80px;
-  height: 80px;
-  position: fixed;
-  top: calc(50vh - 40px);
-  left: calc(50vw - 40px);
-  border-radius: 50%;
-  border: 6px solid;
-  border-color: rgb(218, 184, 36) #1E2A78 #FF1F5A transparent;
-  animation: loadingSpin 8s linear infinite;
-}
-@keyframes loadingSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /* Layout end */
 
 @media(max-width:500px){
