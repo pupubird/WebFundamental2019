@@ -1,0 +1,167 @@
+.about-layout {
+    margin-top: 10%;
+}
+
+.about-logo {
+    height: 120px;
+}
+
+.about-header {
+    margin-top: 20px;
+}
+
+.about-paragraph {
+    margin-top: 50px;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: justify;
+}
+
+.about-team {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+}
+
+.team-header {
+    margin-top: 50px;
+}
+
+.team-card {
+    height: 200px;
+    width: 225px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 10%;
+    cursor: pointer;
+    border: 1.5px solid #737373;
+    border-bottom: 0;
+    border-radius: 10px;
+    transition: none;
+}
+
+.team-paragraph {
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+}
+
+.activate {
+    height: 225px;
+    width: 250px;
+}
+
+.team-card .activate {
+    display: none;
+}
+
+.team-card:hover .activate {
+    display: inline;
+} 
+
+.team-card:hover .activator {
+    display: none;
+}
+
+.about-profile {
+    transition: none;
+    margin: 5% 0 0 5%;
+    text-align: center;
+}
+
+.team-card:hover {
+    color: #1E2A78;
+    font-weight: bold;
+}
+
+.contact-header {
+    margin: 10px 0 50px 0;
+    color: #5A5A5A;
+    font-weight: 500;
+}
+
+@media (min-width: 1800px) {
+    .team-card {
+        margin-bottom: 5%;
+    }
+} 
+
+@media (max-width: 1000px) {
+    .about-layout {
+        margin-top: 15%;
+    }
+}
+
+@media (max-width: 800px) {
+    .about-layout {
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 750px) {
+    .team-card {
+        margin-bottom: 15%;
+    }
+}
+
+@media (max-width: 350px) {
+    .about-layout {
+        margin-top: 30%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input, textarea { 
+    outline: none;
+}
+
+form {
+    position: relative;
+    width: 80%;
+    border-radius: 30px;
+    background: #eeeeee;
+}
+
+.form-inner {
+    padding: 40px;
+}
+
+.form-inner input,
+.form-inner textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #737373;
+    border-radius: 20px;
+}
+
+.form-inner textarea {
+resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    border-bottom: 4px solid #5966BE;
+    background: #1E2A78; 
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+button:hover {
+    background: #FF1F5A;
+    border-bottom: 4px solid #FF648D;    
+} 
+@media (min-width: 1000px) {
+    form {
+        width: 50%;
+    }
+}
