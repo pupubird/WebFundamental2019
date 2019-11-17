@@ -107,26 +107,13 @@ const Carousel = function ({
         // clicked right, left
         try {
             if (increase != 0) {
-                this.carouselItems[this.index].parentNode.scrollIntoView({ block: 'center', inline: 'center' });
+                this.carouselItems[this.index].scrollIntoView({ block: 'center', inline: 'center' });
             }
         } catch (ex) {
-            try {
-                if (increase != 0) {
-                    this.carouselItems[this.index].scrollIntoView({ block: 'center', inline: 'center' });
-                }
-            } catch (err) {
-                try {
-                    if (increase != 0) {
-                        this.carouselItems[this.index].parentNode.scrollIntoView();
-                    }
-                } catch (err) {
-                    if (increase != 0) {
-                        this.carouselItems[this.index].scrollIntoView();
-                    }
-                }
+            if (increase != 0) {
+                this.carouselItems[this.index].scrollIntoView();
             }
         }
         this.updateItemStyle();
     }
-    this.show(0);
 }

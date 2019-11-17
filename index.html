@@ -4,8 +4,102 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>CheapDrugs | Home</title>
+        <meta id="themeColor" name="theme-color" content="#1E2A78">
+        <title id="title">CheapDrugs | Home</title>
+        <link rel="stylesheet" href="css/indexPage.css">
+        <link rel="stylesheet" href="util/UIComponent.css">
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/navbar.css">
     </head>
-    <body>
+    <body onload="loadStateJs();">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a onclick="loadHomePage();">
+                    <img class="logo" src="assets/logo.png" alt="logo">
+                </a>
+                <ul class="navbar-tab">
+                    <li><a onclick="loadHomePage();"
+                            class="action-call-font
+                            paragraph-font-color
+                            s-font-size underline navbar-tab-link">home</a></li>
+                    <li><a onclick="loadShopsPage();"
+                            class="action-call-font
+                            paragraph-font-color
+                            s-font-size navbar-tab-link">shops</a></li>
+                    <li><a onclick="loadCartPage();"
+                            class="action-call-font
+                            paragraph-font-color
+                            s-font-size navbar-tab-link">cart</a></li>
+                    <li><a onclick="loadAboutPage();"
+                            class="action-call-font
+                            paragraph-font-color
+                            s-font-size navbar-tab-link">about</a></li>
+                </ul>
+            </div>
+            <div class="center-horizontal">
+                <div class="navbar-right">
+                    <a onclick="loadLoginSignupPage();"
+                        class="medium-button
+                        primary-color action-call-font navbar-tab-link">LOGIN/SIGNUP</a>
+                </div>
+                <div class="ham-burger" onclick="expandSideNav();">
+                    <div class="ham-burger-line"></div>
+                    <div class="ham-burger-line"></div>
+                    <div class="ham-burger-line"></div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- side nav for mobile view -->
+        <div class="mobile-side-nav center-vertical m-font-size
+            action-call-font">
+            <a href="#" class="tertiary-color">&#10007;</a>
+            <a href="#" onclick="loadHomePage();" class="primary-color
+                underline mobile-navbar-tab-link">home</a>
+            <a href="#" onclick="loadShopsPage();" class="primary-color
+                mobile-navbar-tab-link">shops</a>
+            <a href="#" onclick="loadCartPage();" class="primary-color
+                mobile-navbar-tab-link">cart</a>
+            <a href="#" onclick="loadAboutPage();" class="primary-color
+                mobile-navbar-tab-link">about</a>
+        </div>
+        <div class="loading" id="loadingDiv"></div>
+        <div class="content-wrapper"></div>
+        <script src="util/carousel.js"></script>
+        <script>
+            let interval = 0;
+            // load other pages after the landing page is loaded, to decrease the load time of the other pages to nearly instant.
+            let loadHomePage = Function;
+            let loadShopsPage = Function;
+            let loadCartPage = Function;
+            let loadAboutPage = Function;
+            let loadLoginSignupPage = Function;
+
+            function loadStateJs() {
+                stateScript = document.createElement('script');
+                stateScript.type = 'text/javascript';
+                stateScript.async = true;
+                stateScript.type = 'module';
+                stateScript.src = 'state.js';
+                document.body.appendChild(stateScript);               
+            }
+
+            // javascript for mobile side nav
+            let mobileSideNav = document.querySelector('.mobile-side-nav');
+            document.body.addEventListener('click', (e) => {
+                if (!e.target.className.includes('mobile-side-nav')
+                    && !e.target.className.includes('ham-burger')) {
+                    collapseSideNav();
+                }
+            })
+            function expandSideNav() {
+                mobileSideNav.style.right = '0px';
+                mobileSideNav.style.boxShadow = '0px 0px 100px rgba(0, 0, 0, 0.25)';
+            }
+            function collapseSideNav() {
+                mobileSideNav.style.right = '-50vw';
+                mobileSideNav.style.boxShadow = 'none';
+            }
+        </script>
     </body>
 </html>
