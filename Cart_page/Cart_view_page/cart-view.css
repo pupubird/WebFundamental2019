@@ -1,0 +1,23 @@
+.content{
+    margin: 77px 4px 0px 4px;
+    background-color: black;
+}
+
+.empty{
+    margin: 0% 0% 0% 25%;
+    padding: 9% 0% 9% 0%;
+    width: 50%;
+}
+
+.empty img{
+    margin: 5% 0% 0% 35%;
+    width: 30%;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.empty h3{
+    margin-top: 0%;
+    text-align: center;
+    color: white;
+}
