@@ -6,3 +6,6 @@ For bug issue/feature suggest, please open an [issue](https://github.com/pupubir
 
 For UI Component functionality and documentation:
 https://webfund.netlify.com/
+
+For landing page prototype:
+[Landing page](http://webfundlanding.com.s3-website-ap-southeast-1.amazonaws.com/)
