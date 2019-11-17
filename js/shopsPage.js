@@ -10,7 +10,7 @@ export function shopsPage() {
     clearInterval(interval);
     localStorage.setItem('currentPage', 'shops');
 
-    document.querySelector('.navbar').style.position = "fixed";
+    document.querySelector('.navbar-padding').style.minHeight = document.querySelector('.navbar').offsetHeight + 'px';
 
     title.innerText = 'CheapDrugs | Shops';
     themeColor.content = '#FF1F5A';

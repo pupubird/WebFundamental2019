@@ -9,7 +9,8 @@ let themeColor = document.getElementById('themeColor');
 export function aboutPage() {
     clearInterval(interval);
     localStorage.setItem('currentPage', 'about');
-    document.querySelector('.navbar').style.position = "fixed";
+
+    document.querySelector('.navbar-padding').style.minHeight = '0px';
 
     title.innerText = 'CheapDrugs | About';
     themeColor.content = '#1E2A78';

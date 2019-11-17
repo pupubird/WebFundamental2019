@@ -11,8 +11,8 @@ export function homePage() {
     localStorage.setItem('currentPage', 'home');
     title.innerText = 'CheapDrugs | Home';
     themeColor.content = '#1E2A78';
-    document.querySelector('.navbar').style.position = "fixed";
 
+    document.querySelector('.navbar-padding').style.minHeight = '0px';
 
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
     navbarTabLinks.forEach(item => { item.classList.remove('sub-header-font-color'); });

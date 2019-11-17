@@ -10,6 +10,8 @@ export function cartPage() {
     clearInterval(interval);
     localStorage.setItem('currentPage', 'cart');
 
+    document.querySelector('.navbar-padding').style.minHeight = document.querySelector('.navbar').offsetHeight + 'px';
+
     title.innerText = 'CheapDrugs | Cart';
     themeColor.content = 'rgb(204, 173, 33)';
 
