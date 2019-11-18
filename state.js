@@ -1,8 +1,3 @@
-window.addEventListener('popstate', (e) => {
-    e.preventDefault();
-    console.log('I am called');
-});
-
 (async function importPages() {
     await import('/js/homePage.js')
         .then(({ homePage }) => {
@@ -44,5 +39,4 @@ window.addEventListener('popstate', (e) => {
     }
     document.getElementById('loadingDiv').style.display = 'none';
     document.querySelector('.content-wrapper').style.display = "block";
-    document.querySelector('.navbar').style.display = "flex";
 })();

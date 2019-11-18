@@ -18,4 +18,8 @@ export function loginSignupPage() {
 
     navbar.classList.add('navbar-shadow');
     state.innerHTML = '';
+
+    navbar.style.display = "flex";
+    navbar.style.position = 'fixed';
+    document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
 }
