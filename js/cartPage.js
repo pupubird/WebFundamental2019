@@ -10,7 +10,7 @@ export function cartPage() {
     clearInterval(interval);
     localStorage.setItem('currentPage', 'cart');
 
-    document.querySelector('.navbar').style.position = "relative";
+    document.querySelector('.navbar-padding').style.minHeight = document.querySelector('.navbar').offsetHeight + 'px';
 
     title.innerText = 'CheapDrugs | Cart';
     themeColor.content = 'rgb(204, 173, 33)';
@@ -27,10 +27,22 @@ export function cartPage() {
     navbar.classList.add('navbar-shadow');
     state.innerHTML = `
         <div class="center-vertical card" style="margin-top: 4%; padding: 4%;">
-            <a onclick="loadShopsPage();">
-                <div class="underline"><img src="assets/cat.png" alt="empty"></div>
-                <p class="s-font-size">Discover Your Own Drugs</p>
-            </a> 
+            <div class="card" style="margin-top: 2%; padding: 1%; width: 95%;">
+                <img src="assets/cat.png" alt="added" style="width: 10%; border: 1px solid black;">
+                <p class="s-font-size" style="display: inline;">item</p>
+                <div style="margin-top: 9%; float: right;">
+                    <input type="number" min="0" max="99" step="1" value="1">
+                </div>
+            </div>
+            <button style="margin: 5% 0% 0% 88%; padding: 5px; width: 100px;">Ship</button>
         </div>
     `;
 }
+
+        // Empty Cart
+        // <div class="center-vertical card" style="margin-top: 4%; padding: 4%;">
+        //     <a onclick="loadShopsPage();">
+        //         <div class="underline"><img src="assets/cat.png" alt="empty"></div>
+        //         <p class="s-font-size">Discover Your Own Drugs</p>
+        //     </a> 
+        // </div>

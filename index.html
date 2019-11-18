@@ -10,8 +10,33 @@
         <link rel="stylesheet" href="util/UIComponent.css">
         <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/navbar.css">
+        <!-- critical loading material, to prevent unstyled loading circle due to fetch from network, use embbed styling method -->
+        <style>
+            .loading {
+                display: block;
+                width: 80px;
+                height: 80px;
+                position: fixed;
+                top: calc(50vh - 40px);
+                left: calc(50vw - 40px);
+                border-radius: 50%;
+                border: 6px solid;
+                border-color: rgb(218, 184, 36) #1E2A78 #FF1F5A transparent;
+                animation: loadingSpin 8s linear infinite;
+            }
+            @keyframes loadingSpin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+        </style>
     </head>
     <body onload="loadStateJs();">
+        <div class="navbar-padding"></div>
         <nav class="navbar">
             <div class="navbar-left">
                 <a onclick="loadHomePage();">
@@ -49,7 +74,6 @@
                 </div>
             </div>
         </nav>
-
         <!-- side nav for mobile view -->
         <div class="mobile-side-nav center-vertical m-font-size
             action-call-font">
@@ -67,6 +91,7 @@
         <div class="content-wrapper"></div>
         <script src="util/carousel.js"></script>
         <script>
+
             let interval = 0;
             // load other pages after the landing page is loaded, to decrease the load time of the other pages to nearly instant.
             let loadHomePage = Function;
