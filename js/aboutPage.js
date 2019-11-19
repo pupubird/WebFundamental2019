@@ -88,7 +88,7 @@ function aboutPage() {
                 <div class="center-horizontal team-header header-font m-font-size">
                     - Contact Us -
                 </div>
-                    <div class="center-horizontal about-team">
+                    <div class="center-horizontal form-message">
                         <form action="/" class="decor card">
                             <div class="form-inner center-horizontal">
                             <div class="paragraph-font contact-header s-font-size">Drop a message</div>

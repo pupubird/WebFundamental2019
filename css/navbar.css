@@ -27,7 +27,7 @@ a{
 .navbar-right{
     display: flex;
     align-items: center;
-    margin:15px 25px;
+    margin:15px 50px;
 }
 .navbar-tab{
     list-style: none;

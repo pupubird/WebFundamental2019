@@ -143,6 +143,13 @@ form {
 resize: none;
 }
 
+.form-message {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+    margin: 100px 10% 100px 10%;
+}
+
 button {
     width: 100%;
     padding: 10px;
@@ -156,7 +163,7 @@ button {
     color: #fff;
 }
 
-button:hover {
+.about-page button:hover {
     background: #FF1F5A;
     border-bottom: 4px solid #FF648D;    
 } 

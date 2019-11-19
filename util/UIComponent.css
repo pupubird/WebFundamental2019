@@ -289,7 +289,7 @@ button{
 }
 /* Layout end */
 
-@media(max-width:500px){
+@media(max-width:850px){
     .large-button{
         padding:10px 20px;
         font-size: 20px;
