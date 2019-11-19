@@ -22,6 +22,7 @@ body{
 }
 .content-wrapper{ 
     display: none;
+    padding: 0% 0% 10% 0%;
 }
 .content-wrapper > div{
     z-index: 1;
