@@ -16,6 +16,7 @@ export function shopsPage() {
     title.innerText = 'CheapDrugs | Shops';
     themeColor.content = '#FF1F5A';
     footer.style.display = 'block';
+    navbar.style.position = 'fixed';
 
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
     navbarTabLinks.forEach(item => { item.classList.remove('sub-header-font-color'); });

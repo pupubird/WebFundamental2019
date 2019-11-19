@@ -10,6 +10,7 @@ let themeColor = document.getElementById('themeColor');
 export function cartPage() {
     clearInterval(interval);
     localStorage.setItem('currentPage', 'cart');
+    navbar.style.position = 'fixed';
 
     document.querySelector('.navbar-padding').style.minHeight = document.querySelector('.navbar').offsetHeight + 'px';
 

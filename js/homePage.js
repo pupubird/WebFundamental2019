@@ -13,6 +13,7 @@ export function homePage() {
     title.innerText = 'CheapDrugs | Home';
     themeColor.content = '#1E2A78';
     footer.style.display = 'none';
+    navbar.style.position = 'absolute';
 
     document.querySelector('.navbar-padding').style.minHeight = '0px';
 
@@ -92,6 +93,9 @@ export function homePage() {
     carouselScript.async = true;
     carouselScript.innerHTML = `
         // javascript for carousel
+        if(interval){
+            clearInterval(interval);
+        }
         carousel = new Carousel({
             carousel: '.carousel',
             carouselItem: '.carousel-item',

@@ -12,6 +12,7 @@ export function aboutPage() {
     localStorage.setItem('currentPage', 'about');
 
     document.querySelector('.navbar-padding').style.minHeight = '0px';
+    navbar.style.position = 'absolute';
 
     title.innerText = 'CheapDrugs | About';
     themeColor.content = '#1E2A78';
