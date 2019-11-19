@@ -80,16 +80,16 @@
 
 /* FONT SIZE */
 .xl-font-size{
-    font-size: 90px  !important;
+    font-size: 58px  !important;
 }
 .l-font-size{
-    font-size: 70px !important;
+    font-size: 48px !important;
 }
 .m-font-size{
-    font-size: 50px !important;
+    font-size: 38px !important;
 }
 .s-font-size{
-    font-size: 30px !important;
+    font-size: 28px !important;
 }
 .xs-font-size{
     font-size: 18.5px !important;
@@ -195,9 +195,8 @@ a{
 /* DROPDOWN */
 .dropdown-wrapper{
     background: url(arrow.svg) no-repeat right;
-    background-size: 30px 30px;
+    background-size: 25px 25px;
     background-position-x: 100%;
-    max-width: 150px;
 }
 .dropdown{
     background: none;
@@ -209,9 +208,8 @@ a{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    min-width: 150px;
     text-align: right;
-    padding-right: 30px;
+    min-width: 150px;
 }
 
 /* CHECKBOX */
@@ -308,19 +306,19 @@ a{
         font-size: 15.5px;
     }
     .xl-font-size{
-        font-size: 65px  !important;
+        font-size: 45px  !important;
     }
     .l-font-size{
-        font-size: 45px !important;
-    }
-    .m-font-size{
         font-size: 35px !important;
     }
-    .s-font-size{
+    .m-font-size{
         font-size: 25px !important;
     }
+    .s-font-size{
+        font-size: 19px !important;
+    }
     .xs-font-size{
-        font-size: 17.5px !important;
+        font-size: 14.5px !important;
     }
 
     .m-center-vertical{

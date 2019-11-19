@@ -1,0 +1,211 @@
+.shops-container{
+    width: 80vw;
+    padding-top: 3.5vh;
+}
+.items-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 5% 65%;
+}
+.category{
+    margin: 1vh 0 3.5vh 0;
+}
+.category-list{
+    display: flex;
+    list-style: none;
+    max-width: 60%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.mobile-category-accordion{
+    display: none;
+}
+
+
+/* shops item */
+.expand-item{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    max-width: 320px;
+    margin-bottom: 5%;
+}
+.expand-item-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.expand-item-header h1{
+    text-align: center;
+    margin-top: 15px;
+}
+.expand-item-image{
+    width: 90%;
+    margin: auto;
+}
+.expand-item-description{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+.expand-item-description *{
+    margin: auto;
+    margin-bottom: 5%;
+}
+.expand-item-description hr{
+    border:1px solid #E6E6E6;
+    width: 100%;
+}
+.expand-item-description p{
+    width: 250px;
+    text-align: justify;
+}
+.expand-item-description-buttons .medium-button{
+    width: 100px;
+}
+.show-on-mobile{
+    display: none;
+}
+/* collapsed item */
+.collapsedItems{
+    display: flex;
+    flex-wrap: wrap;
+}
+.collapsed-item-card{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:0% 1% 2%;
+}
+.collapsed-item-card-image{
+    width: 90%;
+    margin: auto;
+}
+.collapsed-item-card h1, .collapsed-item-card p{
+    text-align: center;
+}
+.collapsed-item-card *{
+    margin: auto;
+    margin-bottom: 5%;
+}
+/* show more */
+.showmore{
+    margin-top: 1em;
+}
+.showmore-button{
+    display: table;
+    margin: auto;
+}
+.showmore-button p{
+    text-align: center;
+}
+.showmore-button img{
+    width: 30px;
+    display: block;
+    margin: auto;
+}
+
+@media(max-width:1500px){
+    .category-list{
+        max-width: 80%;
+    }
+}
+@media(max-width:1300px){
+    .shops-container{
+        width: 90vw;
+    }
+}
+@media(max-width:1100px){
+    .category-list{
+        max-width: 100%;
+    }
+}
+@media(max-width:1000px){
+    .category-list{
+        flex-direction: column;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        display: none;
+        opacity: 0;
+        height: 0px;
+        max-width: 80%;
+        border-radius: 20px;
+        padding:15px;
+        margin: auto;
+        transform: translateY(-10px);
+    }
+    .category-list > *{
+        opacity: 0;
+    }
+    .mobile-category-accordion{
+        display: block;
+        padding:10px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        text-align: center;
+        cursor: pointer;
+        background-color: white;
+        animation: expandAccordion 1s ease-out 1s 1; 
+    }
+    .dropdown-wrapper{
+        max-width: 100%;
+    }
+    .category{
+        margin: 1vh 0 5vh 0;
+    }
+    
+    .items-container{
+        grid-template-columns: 100%;
+    }
+    .expand-item{
+        flex-direction: row;
+        max-width: 100%;
+        max-height: 40vh;
+    }
+    .expand-item *{
+        margin-bottom: 1.5%;
+    }
+    .expand-item hr{
+        display: none;
+    }
+    .expand-item-header{
+        max-height: 40vh;
+        min-width: 40%;
+    }
+    .expand-item-description{
+        max-height: 40vh;
+        min-width: 60%;
+    }
+}
+@media(max-width:700px){
+    .expand-item{
+        flex-direction: row;
+        max-width: 100%;
+        max-height: 30vh;
+    }
+    .expand-item-description p{
+        width: 70%;
+    }
+    .expand-item-description-buttons .medium-button{
+        width: 45%;
+        margin: 0;
+    }
+    .expand-item-description-buttons{
+        margin: 5%;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+    .collapsed-item-card{
+        width:45%;
+        margin:2%;
+    }
+    
+    .show-on-mobile{
+        display: inline;
+    }
+}
