@@ -187,6 +187,12 @@
         max-width: 100%;
         max-height: 30vh;
     }
+    .expand-item-image{
+        margin-top: 0;
+    }
+    .social-media-group {
+        display: none;
+    }
     .expand-item-description p{
         width: 70%;
     }
