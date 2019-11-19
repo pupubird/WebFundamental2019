@@ -33,7 +33,7 @@
     margin-right: 2%;
     margin-bottom: 10%;
     cursor: pointer;
-    border: 1.5px solid #737373;
+    border: 1.5px solid #6A76C6;
     border-bottom: 0;
     border-radius: 10px;
     transition: none;
@@ -93,7 +93,7 @@
 
 @media (max-width: 800px) {
     .about-layout {
-        margin-top: 20%;
+        margin-top: 10%;
     }
 }
 
@@ -143,10 +143,7 @@ resize: none;
 }
 
 .form-message {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 100px;
-    margin: 100px 10% 100px 10%;
+    margin: 8% 10%;
 }
 
 button {

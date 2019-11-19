@@ -11,7 +11,6 @@ export function aboutPage() {
     clearInterval(interval);
     localStorage.setItem('currentPage', 'about');
 
-    document.querySelector('.navbar-padding').style.minHeight = '0px';
     navbar.style.position = 'absolute';
 
     title.innerText = 'CheapDrugs | About';
@@ -149,4 +148,8 @@ export function aboutPage() {
         </div>
 
     `;
+
+    document.querySelector('.navbar').style.display = "flex";
+    document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
+
 }
