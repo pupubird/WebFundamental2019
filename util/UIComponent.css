@@ -105,6 +105,10 @@
 /* BUTTONS */
 button{
     outline: none;
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
 }
 
 .large-button{
