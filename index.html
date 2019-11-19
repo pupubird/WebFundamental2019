@@ -144,7 +144,10 @@
                 <script>
                     // for login sign up model------------------
                     function showLoginSignup(){
-                        document.getElementById('signup').style.display = 'block'
+                        document.getElementById('signup').style.display = 'block';
+                        setTimeout(()=>{
+                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
+                        },50);
                     }
                     // Get the modal
                     var modal1 = document.getElementById('signup');
@@ -153,10 +156,16 @@
                     // When the user clicks anywhere outside of the modal, close it
                     window.onclick = function(event) {
                       if (event.target == modal1) {
-                        closeModal1();
+                        document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
+                        setTimeout(() => {
+                              closeModal1();
+                        }, 150);
                       }
                       if (event.target == modal2) {
-                        closeModal2();
+                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
+                        setTimeout(() => {
+                            closeModal2();
+                        }, 150);
                       }
                     }
 

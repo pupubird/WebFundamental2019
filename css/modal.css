@@ -46,6 +46,8 @@
     margin: auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid rgb(223, 223, 223);
     width: 80%; /* Could be more or less, depending on screen size */
+    
+    opacity: 0;
 }
 
 /* Style the horizontal ruler */
