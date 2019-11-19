@@ -11,8 +11,6 @@ export function shopsPage() {
     clearInterval(interval);
     localStorage.setItem('currentPage', 'shops');
 
-    document.querySelector('.navbar-padding').style.minHeight = document.querySelector('.navbar').offsetHeight + 'px';
-
     title.innerText = 'CheapDrugs | Shops';
     themeColor.content = '#FF1F5A';
     footer.style.display = 'block';
@@ -28,22 +26,11 @@ export function shopsPage() {
     mobileNavBarTabLinks[1].classList.add('underline');
 
     navbar.classList.add('navbar-shadow');
-    state.innerHTML = `
-        <div class="center-vertical">
-            <p class="header-font primary-color m-font-size">Testing for perfomance</p>
-            <div class="card"><img src="//picsum.photos/300/200?1" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?2" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?3" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?4" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?5" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?6" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?7" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?8" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?9" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?10" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?11" alt="test"></div>
-            <div class="card"><img src="//picsum.photos/300/200?12" alt="test"></div>
-        </div>
-    `;
+    // state.innerHTML = `
+    // `;
 
+    navbar.style.display = "flex";
+    navbar.style.position = 'fixed';
+
+    document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
 }
