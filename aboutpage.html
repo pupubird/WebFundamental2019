@@ -1,33 +1,70 @@
-let navbar = document.querySelector('.navbar');
-let footer = document.querySelector('.footer');
-let state = document.querySelector('.content-wrapper');
-let navbarTabLinks = document.querySelectorAll('.navbar-tab-link');
-let mobileNavBarTabLinks = document.querySelectorAll('.mobile-navbar-tab-link');
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CheapDrugs | Some Page</title>
+        <link rel="stylesheet" href="util/UIComponent.css">
+        <link rel="stylesheet" href="css/aboutPage.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="#" onclick="homePage();">
+                    <img class="logo" src="assets/logo.png" alt="logo">
+                </a>
+                <ul class="navbar-tab">
+                    <li><a href="#" onclick="homePage();"
+                            class="action-call-font
+                            sub-header-font-color
+                            s-font-size underline navbar-tab-link">home</a></li>
+                    <li><a href="#" onclick="shopsPage();"
+                            class="action-call-font
+                            paragraph-font-color
+                            s-font-size navbar-tab-link">shops</a></li>
+                    <li><a href="#" onclick="cartPage();"
+                            class="action-call-font
+                            paragraph-font-color
+                            s-font-size navbar-tab-link">cart</a></li>
+                    <li><a href="#" onclick="aboutPage();"
+                            class="action-call-font
+                            paragraph-font-color
+                            s-font-size navbar-tab-link">about</a></li>
+                </ul>
+            </div>
+            <div class="center-horizontal">
+                <div class="navbar-right">
+                    <a href="#" onclick="loginSignupPage();"
+                        class="medium-button
+                        primary-color action-call-font">LOGIN/SIGNUP</a>
+                </div>
+                <div class="ham-burger" onclick="expandSideNav();">
+                    <div class="ham-burger-line"></div>
+                    <div class="ham-burger-line"></div>
+                    <div class="ham-burger-line"></div>
+                </div>
+            </div>
+        </nav>
 
-let title = document.getElementById('title');
-let themeColor = document.getElementById('themeColor');
+        <!-- side nav for mobile view -->
+        <div class="mobile-side-nav center-vertical m-font-size
+            action-call-font">
+            <a href="#" class="tertiary-color">&#10007;</a>
+            <a href="#" onclick="homePage();" class="primary-color
+                underline mobile-navbar-tab-link">home</a>
+            <a href="#" onclick="shopsPage();" class="primary-color
+                mobile-navbar-tab-link">shops</a>
+            <a href="#" onclick="cartPage();" class="primary-color
+                mobile-navbar-tab-link">cart</a>
+            <a href="#" onclick="aboutPage();" class="primary-color
+                mobile-navbar-tab-link">about</a>
+        </div>
+        <script src="util/mobileSideNav.js"></script>
 
-export function aboutPage() {
-    clearInterval(interval);
-    localStorage.setItem('currentPage', 'about');
-
-    document.querySelector('.navbar-padding').style.minHeight = '0px';
-
-    title.innerText = 'CheapDrugs | About';
-    themeColor.content = '#1E2A78';
-    navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
-    navbarTabLinks.forEach(item => { item.classList.remove('sub-header-font-color'); });
-    footer.style.display = 'block';
-
-    navbarTabLinks[3].classList.add('underline');
-    navbarTabLinks[3].classList.add('sub-header-font-color');
-
-    mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
-    mobileNavBarTabLinks[3].classList.add('underline');
-
-    navbar.classList.remove('navbar-shadow');
-    state.innerHTML = `
-                    <div>
+        <div>
             <div class="center-horizontal about-layout">
                 <div>
                     <div class="center-horizontal">
@@ -131,7 +168,7 @@ export function aboutPage() {
                     <div class="center-horizontal form-message">
                         <form action="/" class="decor card">
                             <div class="form-inner center-horizontal">
-                                <div class="sub-header-font contact-header
+                                <div class="paragraph-font contact-header
                                     s-font-size">Drop a message</div>
                                 <input class="paragraph-font" type="text"
                                     placeholder="Username">
@@ -139,7 +176,7 @@ export function aboutPage() {
                                     placeholder="Email">
                                 <textarea class="paragraph-font"
                                     placeholder="Message..." rows="5"></textarea>
-                                <button type="submit" href="/" class="action-call-font s-font-size secondary-color">Submit</button>
+                                <button type="submit" href="/">Submit</button>
                             </div>
                         </form>
                     </div>
@@ -147,5 +184,5 @@ export function aboutPage() {
             </div>
         </div>
 
-    `;
-}
+    </body>
+</html>

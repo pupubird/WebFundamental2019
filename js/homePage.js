@@ -1,4 +1,5 @@
 let navbar = document.querySelector('.navbar');
+let footer = document.querySelector('.footer');
 let state = document.querySelector('.content-wrapper');
 let navbarTabLinks = document.querySelectorAll('.navbar-tab-link');
 let mobileNavBarTabLinks = document.querySelectorAll('.mobile-navbar-tab-link');
@@ -11,6 +12,7 @@ export function homePage() {
     localStorage.setItem('currentPage', 'home');
     title.innerText = 'CheapDrugs | Home';
     themeColor.content = '#1E2A78';
+    footer.style.display = 'none';
 
     document.querySelector('.navbar-padding').style.minHeight = '0px';
 

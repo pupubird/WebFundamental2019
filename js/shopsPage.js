@@ -1,5 +1,6 @@
 let navbar = document.querySelector('.navbar');
 let state = document.querySelector('.content-wrapper');
+let footer = document.querySelector('.footer');
 let navbarTabLinks = document.querySelectorAll('.navbar-tab-link');
 let mobileNavBarTabLinks = document.querySelectorAll('.mobile-navbar-tab-link');
 
@@ -14,6 +15,7 @@ export function shopsPage() {
 
     title.innerText = 'CheapDrugs | Shops';
     themeColor.content = '#FF1F5A';
+    footer.style.display = 'block';
 
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
     navbarTabLinks.forEach(item => { item.classList.remove('sub-header-font-color'); });
