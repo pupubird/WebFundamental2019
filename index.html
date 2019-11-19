@@ -8,10 +8,11 @@
         <title id="title">CheapDrugs | Home</title>
         <link rel="stylesheet" href="css/indexPage.css">
         <link rel="stylesheet" href="util/UIComponent.css">
+        <link rel="stylesheet" href="css/aboutPage.css">
         <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="css/navbar.css">
-        <link rel="stylesheet" href="css/aboutPage.css">
         <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/modal.css">
         <!-- critical loading material, to prevent unstyled loading circle due to fetch from network, use embbed styling method -->
         <style>
             .loading {
@@ -65,10 +66,119 @@
             </div>
             <div class="center-horizontal">
                 <div class="navbar-right">
-                    <a onclick="loadLoginSignupPage();"
+                    <a href="#"
+                        onclick="showLoginSignup();"
                         class="medium-button
                         primary-color action-call-font navbar-tab-link">LOGIN/SIGNUP</a>
                 </div>
+                <div id="signup" class="modal center-vertical">
+                    <span onclick="closeModal1()" class="close" title="Close
+                        Modal">&times;</span>
+                    <form class="modal-content" action="#">
+                        <div class="container">
+                            <p class="header-font m-font-size">Sign Up</p>
+                            <p class="sub-header-font xs-font-size">Please fill
+                                in this form to create an account.</p>
+                            <hr>
+                            <label class="sub-header-font s-font-size"
+                                for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email"
+                                name="email" required>
+
+                            <label class="sub-header-font s-font-size"
+                                for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password"
+                                name="psw" required>
+
+                            <label class="sub-header-font s-font-size"
+                                for="psw-repeat"><b>Repeat Password</b></label>
+                            <input type="password" placeholder="Repeat Password"
+                                name="psw-repeat" required>
+
+                            <p class="sub-header-font xs-font-size">By creating
+                                an account you agree to our <a href="#"
+                                    style="color:dodgerblue">Terms & Privacy</a>.</p>
+                            <div class="clearfix">
+                                <button type="submit" class="signupbtn
+                                    medium-button highlight-button">Sign Up</button>
+                                <button type="button" onclick="closeModal1()"
+                                    class="cancelbtn medium-button">Cancel</button>
+                            </div>
+                            <a onclick="logIn()" class="loginbtn paragraph-font
+                                center-horizontal">Already have an account?</a>
+                        </div>
+                    </form>
+                </div>
+                <div id="login" class="modal">
+                    <span class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content" action="#">
+                        <div class="container">
+                            <p class="header-font m-font-size">Log In</p>
+                            <hr>
+                            <label class="sub-header-font s-font-size"
+                                for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email"
+                                name="email" required>
+
+                            <label class="sub-header-font s-font-size"
+                                for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password"
+                                name="psw" required>
+
+                            <label class="sub-header-font xs-font-size">
+                                <input type="checkbox" checked="checked"
+                                    name="remember" style="margin-bottom:15px">
+                                Remember me
+                            </label>
+
+                            <div class="clearfix">
+                                <button class="medium-button signupbtn
+                                    highlight-button" type="submit">Log In</button>
+                            </div>
+                            <a onclick="SignUp()" class="loginbtn paragraph-font
+                                center-horizontal">Don't have an account?
+                                Register now.</a>
+                        </div>
+                    </form>
+                </div>
+                <script>
+                    // for login sign up model------------------
+                    function showLoginSignup(){
+                        document.getElementById('signup').style.display = 'block'
+                    }
+                    // Get the modal
+                    var modal1 = document.getElementById('signup');
+                    var modal2 = document.getElementById('login');
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                      if (event.target == modal1) {
+                        closeModal1();
+                      }
+                      if (event.target == modal2) {
+                        closeModal2();
+                      }
+                    }
+
+                    function closeModal1() {
+                        document.getElementById('signup').style.display='none';
+                    }
+
+                    function closeModal2() {
+                        document.getElementById('login').style.display='none';
+                    }
+
+                    function logIn() {
+                        document.getElementById('login').style.display='block';
+                        document.getElementById('signup').style.display='none';
+                    }
+
+                    function SignUp() {
+                        document.getElementById('signup').style.display='block';
+                        document.getElementById('login').style.display='none';
+                    }
+                    // end login sign up model------------------
+                    </script>
                 <div class="ham-burger" onclick="expandSideNav();">
                     <div class="ham-burger-line"></div>
                     <div class="ham-burger-line"></div>
