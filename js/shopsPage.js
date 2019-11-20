@@ -161,6 +161,10 @@ export function shopsPage() {
                                 <h1 class="sub-header-font m-font-size">ecstasy</h1>
                                 <img src="assets/stock1.jpg" alt="stock1"
                                     class="expand-item-image">
+                                <div class="tag-group">
+                                    <p class="tag-primary">new</p>
+                                    <p class="tag-secondary">10% off</p>
+                                </div>
                             </div>
                             <div class="expand-item-description">
                                 <p class="paragraph-font xs-font-size">Lorem
@@ -201,8 +205,13 @@ export function shopsPage() {
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
+                                        
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
+                                    <div class="tag-group">
+                                        <p class="tag-primary">new</p>
+                                    </div>
+
                                 </div>
                                 <div class="collapsed-item-card">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
@@ -210,6 +219,9 @@ export function shopsPage() {
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
+                                    <div class="tag-group">
+                                        <p class="tag-primary">new</p>
+                                    </div>
                                 </div>
                                 <div class="collapsed-item-card">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
@@ -217,6 +229,9 @@ export function shopsPage() {
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
+                                    <div class="tag-group">
+                                        <p class="tag-primary">new</p>
+                                    </div>
                                 </div>
                                 <div class="collapsed-item-card">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
@@ -224,6 +239,9 @@ export function shopsPage() {
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
+                                    <div class="tag-group">
+                                        <p class="tag-secondary">20% off</p>
+                                    </div>
                                 </div>
                                 <div class="collapsed-item-card">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
@@ -231,6 +249,9 @@ export function shopsPage() {
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
+                                    <div class="tag-group">
+                                        <p class="tag-secondary">10% off</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="showmore">
