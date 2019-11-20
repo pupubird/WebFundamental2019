@@ -163,7 +163,6 @@
         text-align: center;
         cursor: pointer;
         background-color: white;
-        animation: expandAccordion 1s ease-out 1s 1; 
     }
     .dropdown-wrapper{
         max-width: 100%;
@@ -174,7 +173,7 @@
     
     .items-container{
         grid-template-columns: 100%;
-
+        position: relative;
     }
     .expand-item{
         flex-direction: row;
