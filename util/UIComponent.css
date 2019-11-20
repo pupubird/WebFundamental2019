@@ -83,13 +83,13 @@
     font-size: 58px  !important;
 }
 .l-font-size{
-    font-size: 48px !important;
+    font-size: 52px !important;
 }
 .m-font-size{
-    font-size: 38px !important;
+    font-size: 46px !important;
 }
 .s-font-size{
-    font-size: 28px !important;
+    font-size: 32px !important;
 }
 .xs-font-size{
     font-size: 18.5px !important;
@@ -135,7 +135,7 @@ a{
     border-radius: 70px;
     color:var(--paragraph-font-color);
     font-family: var(--action-call-font-family);
-    font-size: 22px;
+    font-size: 28px;
 }
 
 .small-button{
