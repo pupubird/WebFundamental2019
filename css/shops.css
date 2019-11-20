@@ -31,6 +31,7 @@
     border-radius: 15px;
     max-width: 320px;
     margin-bottom: 5%;
+    padding:10px;
 }
 .expand-item-header{
     display: flex;
@@ -81,6 +82,7 @@
     justify-content: center;
     flex-direction: column;
     margin:0% 1% 2%;
+    padding:15px;
 }
 .collapsed-item-card-image{
     width: 90%;
