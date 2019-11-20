@@ -1,5 +1,4 @@
 // javascript for accordion
-
 let isExpand = true;
 function categoryAccordion() {
     let categoryList = document.querySelector('.category-list');
@@ -42,4 +41,36 @@ function categoryAccordion() {
 
 
     isExpand = !isExpand;
+}
+// javascript for showmore -> generator
+
+function showmore() {
+    let collapsedItems = document.querySelector('.collapsedItems');
+    for (let i = 0; i < 5; i++) {
+        collapsedItems.innerHTML += itemsGenerator();
+    }
+}
+function itemsGenerator() {
+    return `
+    <div class="collapsed-item-card">
+        <h1 class="sub-header-font s-font-size">ecstasy</h1>
+        <img src="assets/stock2.jpg" alt="stock2"
+            class="collapsed-item-card-image">
+        <p class="paragraph-font xs-font-size">RM
+            1.00</p>
+        <div class="tag-group" style="display:${tagsGenerator()}">
+        <p class="tag-primary" style="display:${tagsGenerator()}">new</p>
+        <p class="tag-secondary" style="display:${tagsGenerator()}">${Math.round((Math.random() * 30)) + 2}% off</p>
+        </div>
+    </div >
+    `;
+}
+function tagsGenerator() {
+    let tag = Math.round((Math.random() * 2));
+    switch (tag) {
+        case 0:
+            return 'none';
+        case 1:
+            return 'block';
+    }
 }

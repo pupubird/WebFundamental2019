@@ -1,6 +1,6 @@
 .shops-container{
     width: 80vw;
-    padding-top: 3.5vh;
+    padding: 3.5vh 0 10vh;
 }
 .items-container{
     width: 100%;
@@ -118,6 +118,7 @@
 .showmore-button{
     display: table;
     margin: auto;
+    cursor: pointer;
 }
 .showmore-button p{
     text-align: center;

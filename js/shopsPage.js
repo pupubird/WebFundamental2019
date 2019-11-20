@@ -255,7 +255,7 @@ export function shopsPage() {
                                 </div>
                             </div>
                             <div class="showmore">
-                                <div class="showmore-button">
+                                <div class="showmore-button" onclick="showmore();">
                                     <p class="action-call-font
                                         s-font-size paragraph-font-color">show
                                         more</p>
@@ -275,12 +275,13 @@ export function shopsPage() {
     if (!document.querySelector('.accordionscript')) {
         let accordionScript = document.createElement('script');
         accordionScript.type = 'text/javascript';
-        accordionScript.src = 'util/accordion.js';
+        accordionScript.src = 'util/accordionShowmoreGenerator.js';
         accordionScript.className = 'accordionscript';
         document.body.appendChild(accordionScript);
-    } else {
-        categoryAccordion();
     }
+    window.addEventListener('scroll', (e) => {
+        console.log(document.body.scrollHeight);
+    })
 
     document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
 }
