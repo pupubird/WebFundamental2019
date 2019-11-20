@@ -1,9 +1,10 @@
 // javascript for accordion
+
 let isExpand = true;
-let categoryList = document.querySelector('.category-list');
-let categoryListDropdowns = document.querySelectorAll('.category-list > *');
-let height;
 function categoryAccordion() {
+    let categoryList = document.querySelector('.category-list');
+    let categoryListDropdowns = document.querySelectorAll('.category-list > *');
+    let height;
     if (isExpand) {
 
         // show div

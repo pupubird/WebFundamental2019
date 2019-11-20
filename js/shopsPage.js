@@ -272,10 +272,15 @@ export function shopsPage() {
     navbar.style.display = "flex";
     navbar.style.position = 'fixed';
 
-    let accordionScript = document.createElement('script');
-    accordionScript.type = 'text/javascript';
-    accordionScript.src = 'util/accordion.js';
-    document.body.appendChild(accordionScript);
+    if (!document.querySelector('.accordionscript')) {
+        let accordionScript = document.createElement('script');
+        accordionScript.type = 'text/javascript';
+        accordionScript.src = 'util/accordion.js';
+        accordionScript.className = 'accordionscript';
+        document.body.appendChild(accordionScript);
+    } else {
+        categoryAccordion();
+    }
 
     document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
 }
