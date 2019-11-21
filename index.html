@@ -380,9 +380,7 @@
             }
 
             function logout(){
-                url_string = window.location.href;
-                url.pathname = ''; 
-                window.location.href = url.href;
+                window.location.href = url.origin;
             }
             
         </script>
