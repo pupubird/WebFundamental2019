@@ -156,6 +156,8 @@
                     
                     // When the user clicks anywhere outside of the modal, close it
                     window.onclick = function(event) {
+                        
+                      let itemModal = document.getElementById('ItemDesc');
                       if (event.target == modal1) {
                         document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
                         setTimeout(() => {
@@ -166,6 +168,12 @@
                             document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
                         setTimeout(() => {
                             closeModal2();
+                        }, 150);
+                      }
+                      if (event.target == itemModal) {
+                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
+                            setTimeout(() => {
+                                closeModal();
                         }, 150);
                       }
                     }
