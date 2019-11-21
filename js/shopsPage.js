@@ -159,7 +159,7 @@ export function shopsPage() {
                         <div class="expand-item">
                             <div class="expand-item-header">
                                 <h1 class="sub-header-font m-font-size">ecstasy</h1>
-                                <img src="assets/stock1.jpg" alt="stock1"
+                                <img src="assets/stock5.jpg" alt="stock1"
                                     class="expand-item-image">
                                 <div class="tag-group">
                                     <p class="tag-primary">new</p>
@@ -167,17 +167,14 @@ export function shopsPage() {
                                 </div>
                             </div>
                             <div class="expand-item-description">
-                                <p class="paragraph-font xs-font-size">Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing
-                                    elit. <span class="hide-on-mobile">Nam
-                                        molestie sit amet turpis sit amet
-                                        iaculis. Quisque
-                                        ante
-                                        orci, imperdiet non ornare at, suscipit
-                                        sed
-                                        quam. Orci varius natoque penatibus et
-                                        magnis dis parturient montes,
-                                        nascetur ridiculus mus. Praesent mollis</span><a
+                                <p class="paragraph-font xs-font-size">
+                                3,4-methylenedioxy-methamphetamine (MDMA) is a synthetic 
+                                    drug that alters mood and perception
+                                <span class="hide-on-mobile">
+                                        (awareness of surrounding objects and conditions). 
+                                        It is chemically similar to both stimulants and hallucinogens, 
+                                        producing feelings of increased energy, pleasure, emotional warmth, 
+                                        and distorted sensory and time perception.</span><a
                                         href="#" class="show-on-mobile
                                         tertiary-color action-call-font">read
                                         more</a></p>
@@ -202,8 +199,8 @@ export function shopsPage() {
                         <div class="collapsedItemsDiv">
                             <div class="collapsedItems">
                                 <div class="collapsed-item-card"  onclick="showItemDesc();">
-                                    <h1 class="sub-header-font s-font-size">ecstasy</h1>
-                                    <img src="assets/stock2.jpg" alt="stock2"
+                                    <h1 class="sub-header-font s-font-size">oploid</h1>
+                                    <img src="assets/stock6.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
                                         
                                     <p class="paragraph-font xs-font-size">RM
@@ -214,8 +211,8 @@ export function shopsPage() {
 
                                 </div>
                                 <div class="collapsed-item-card"  onclick="showItemDesc();">
-                                    <h1 class="sub-header-font s-font-size">ecstasy</h1>
-                                    <img src="assets/stock2.jpg" alt="stock2"
+                                    <h1 class="sub-header-font s-font-size">cannabis</h1>
+                                    <img src="assets/stock4.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
@@ -224,8 +221,8 @@ export function shopsPage() {
                                     </div>
                                 </div>
                                 <div class="collapsed-item-card"  onclick="showItemDesc();">
-                                    <h1 class="sub-header-font s-font-size">ecstasy</h1>
-                                    <img src="assets/stock2.jpg" alt="stock2"
+                                    <h1 class="sub-header-font s-font-size">speed</h1>
+                                    <img src="assets/stock7.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
@@ -234,8 +231,8 @@ export function shopsPage() {
                                     </div>
                                 </div>
                                 <div class="collapsed-item-card" onclick="showItemDesc();">
-                                    <h1 class="sub-header-font s-font-size">ecstasy</h1>
-                                    <img src="assets/stock2.jpg" alt="stock2"
+                                    <h1 class="sub-header-font s-font-size">poppers</h1>
+                                    <img src="assets/stock8.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
@@ -244,8 +241,8 @@ export function shopsPage() {
                                     </div>
                                 </div>
                                 <div class="collapsed-item-card" onclick="showItemDesc();">
-                                    <h1 class="sub-header-font s-font-size">ecstasy</h1>
-                                    <img src="assets/stock2.jpg" alt="stock2"
+                                    <h1 class="sub-header-font s-font-size">cocaine</h1>
+                                    <img src="assets/stock9.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>

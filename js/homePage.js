@@ -9,22 +9,15 @@ let themeColor = document.getElementById('themeColor');
 
 // state of home page
 export function homePage() {
-    console.log('i am called')
     if (interval) {
         clearInterval(interval);
-    }
-    console.log(footer);
-    if (footer) {
-        footer = document.querySelector('.footer');
-        footer.style.display = 'none';
     }
     localStorage.setItem('currentPage', 'home');
     title.innerText = 'CheapDrugs | Home';
     themeColor.content = '#1E2A78';
-    footer.style.display = "none";
+    footer.style.display = 'none';
     navbar.style.position = 'absolute';
 
-    console.log(footer);
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
     navbarTabLinks.forEach(item => { item.classList.remove('sub-header-font-color'); });
 
@@ -39,18 +32,17 @@ export function homePage() {
             <div class="carousel">
             <div class="full-screen center-horizontal m-center-vertical
                 stock-card carousel-item">
-                <img src="assets/stock1.jpg" alt="stock1" class="stock-image">
+                <img src="assets/stock4.jpg" alt="stock1" class="stock-image">
                 <div class="stock-card-description">
                     <p class="m-font-size sub-header-font-color
                         sub-header-font">Your
                         party
                         choice.</p>
                     <p class="xs-font-size paragraph-font-color
-                        paragraph-font">Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam
-                        id
-                        blandit lorem, non lobortis elit.</p>
+                        paragraph-font">
+                        Discover our most exciting products that
+                        takes your party game to another level.
+                        </p>
                     <button onclick="loadShopsPage();" class="medium-button
                         highlight-button">Check out
                         now</button>
@@ -65,11 +57,10 @@ export function homePage() {
                         personal
                         choice.</p>
                     <p class="xs-font-size paragraph-font-color
-                        paragraph-font">Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam
-                        id
-                        blandit lorem, non lobortis elit.</p>
+                        paragraph-font">
+                        Explore our collection of personal use drugs
+                        ranging from painkillers to sleeping pills.
+                        </p>
                     <button onclick="loadShopsPage();" class="medium-button
                         highlight-button">Check out
                         now</button>
@@ -77,18 +68,17 @@ export function homePage() {
             </div>
             <div class="full-screen center-horizontal m-center-vertical
                 stock-card carousel-item">
-                <img src="assets/stock3.jpg" alt="stock3" class="stock-image">
+                <img src="assets/bottle.png" alt="stock3" class="stock-image">
                 <div class="stock-card-description">
                     <p class="m-font-size sub-header-font-color
                         sub-header-font">Your
                         healthcare
                         choice.</p>
                     <p class="xs-font-size paragraph-font-color
-                        paragraph-font">Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam
-                        id
-                        blandit lorem, non lobortis elit.</p>
+                        paragraph-font">
+                        Looking for some specific drugs that treats your
+                        specific medical condition?
+                        </p>
                     <button onclick="loadShopsPage();" class="medium-button
                         highlight-button">Check out
                         now</button>
