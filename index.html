@@ -381,7 +381,8 @@
 
             function logout(){
                 url_string = window.location.href;
-                window.location.href = window.location.href.split('/?')[0]; 
+                url.pathname = ''; 
+                window.location.href = url.href;
             }
             
         </script>
