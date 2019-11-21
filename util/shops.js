@@ -73,7 +73,7 @@ function itemsGenerator() {
             stockDesc = 'oploid';
             break;
         case 7:
-            stockDesc = 'spped';
+            stockDesc = 'speed';
             break;
         case 8:
             stockDesc = 'poppers';
