@@ -51,10 +51,41 @@ function showmore() {
     }
 }
 function itemsGenerator() {
+    let stockImage = Math.round((Math.random() * 8)) + 1;
+    let stockDesc;
+    switch (stockImage) {
+        case 1:
+            stockDesc = 'Fun pill';
+            break;
+        case 2:
+            stockDesc = 'happy pill';
+            break;
+        case 3:
+            stockDesc = 'laughing pill';
+            break;
+        case 4:
+            stockDesc = 'cannabis';
+            break;
+        case 5:
+            stockDesc = 'ecstacy';
+            break;
+        case 6:
+            stockDesc = 'oploid';
+            break;
+        case 7:
+            stockDesc = 'spped';
+            break;
+        case 8:
+            stockDesc = 'poppers';
+            break;
+        case 9:
+            stockDesc = 'cocaine';
+            break;
+    }
     return `
     <div class="collapsed-item-card" onclick="showItemDesc();">
-        <h1 class="sub-header-font s-font-size">ecstasy</h1>
-        <img src="assets/stock${Math.round((Math.random() * 8)) + 1}.jpg" alt="stock"
+        <h1 class="sub-header-font s-font-size">${stockDesc}</h1>
+        <img src="assets/stock${stockImage}.jpg" alt="stock"
             class="collapsed-item-card-image">
         <p class="paragraph-font xs-font-size">RM
             1.00</p>
