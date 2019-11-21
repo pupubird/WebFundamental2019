@@ -32,7 +32,7 @@ export function homePage() {
             <div class="carousel">
             <div class="full-screen center-horizontal m-center-vertical
                 stock-card carousel-item">
-                <img src="assets/cannabis.jpg" alt="stock1" class="stock-image">
+                <img src="assets/stock4.jpg" alt="stock1" class="stock-image">
                 <div class="stock-card-description">
                     <p class="m-font-size sub-header-font-color
                         sub-header-font">Your

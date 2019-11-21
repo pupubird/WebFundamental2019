@@ -159,7 +159,7 @@ export function shopsPage() {
                         <div class="expand-item">
                             <div class="expand-item-header">
                                 <h1 class="sub-header-font m-font-size">ecstasy</h1>
-                                <img src="assets/ecstasy.jpg" alt="stock1"
+                                <img src="assets/stock5.jpg" alt="stock1"
                                     class="expand-item-image">
                                 <div class="tag-group">
                                     <p class="tag-primary">new</p>
@@ -200,7 +200,7 @@ export function shopsPage() {
                             <div class="collapsedItems">
                                 <div class="collapsed-item-card"  onclick="showItemDesc();">
                                     <h1 class="sub-header-font s-font-size">oploid</h1>
-                                    <img src="assets/oploid.jpg" alt="stock2"
+                                    <img src="assets/stock6.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
                                         
                                     <p class="paragraph-font xs-font-size">RM
@@ -212,7 +212,7 @@ export function shopsPage() {
                                 </div>
                                 <div class="collapsed-item-card"  onclick="showItemDesc();">
                                     <h1 class="sub-header-font s-font-size">cannabis</h1>
-                                    <img src="assets/cannabis.jpg" alt="stock2"
+                                    <img src="assets/stock4.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
@@ -222,7 +222,7 @@ export function shopsPage() {
                                 </div>
                                 <div class="collapsed-item-card"  onclick="showItemDesc();">
                                     <h1 class="sub-header-font s-font-size">speed</h1>
-                                    <img src="assets/speed.jpg" alt="stock2"
+                                    <img src="assets/stock7.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
@@ -232,7 +232,7 @@ export function shopsPage() {
                                 </div>
                                 <div class="collapsed-item-card" onclick="showItemDesc();">
                                     <h1 class="sub-header-font s-font-size">poppers</h1>
-                                    <img src="assets/poppers.jpg" alt="stock2"
+                                    <img src="assets/stock8.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
@@ -242,7 +242,7 @@ export function shopsPage() {
                                 </div>
                                 <div class="collapsed-item-card" onclick="showItemDesc();">
                                     <h1 class="sub-header-font s-font-size">cocaine</h1>
-                                    <img src="assets/cocaine.jpg" alt="stock2"
+                                    <img src="assets/stock9.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
                                     <p class="paragraph-font xs-font-size">RM
                                         1.00</p>
