@@ -63,23 +63,18 @@
 }
 
 .modal-content .item-desc {
-    width: 50%;
+    width: 100%;
+    height: 50%;
     text-align: justify;
     margin-bottom: 4%;
 }
-
+.item-image{
+    width: 30vw;
+}
 .modal-content .item-button {
     width: 50%;
     margin-bottom: 5%;
 }
-
-.modal-content .item-image {
-    width: 50%;
-    position: absolute;
-    right: 0;
-    top: 30%;
-}
-
 .modal-content .prev-next-button {
     width: 100%;
 }

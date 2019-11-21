@@ -74,8 +74,3 @@ function tagsGenerator() {
             return 'block';
     }
 }
-
-// for item modal
-function closeModal() {
-    document.getElementById('ItemDesc').style.display = 'none';
-}

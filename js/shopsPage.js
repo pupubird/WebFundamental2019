@@ -148,8 +148,8 @@ export function shopsPage() {
                                 </select>
                             </div>
                             <!-- filter button -->
-                            <button class="medium-button
-                                tertiary-color">FILTER</but>
+                            <a class="medium-button
+                                tertiary-color" onclick="#">FILTER</a>
                         </div>
                     </div>
 
@@ -191,10 +191,10 @@ export function shopsPage() {
                                         class="social-icon">
                                 </div>
                                 <div class="expand-item-description-buttons">
-                                    <button class="medium-button" onclick="showItemDesc()">view</button>
-                                    <button class="medium-button
-                                        secondary-highlight-button">+cart
-                                    </button>
+                                    <a class="medium-button" onclick="showItemDesc()">view</a>
+                                    <a class="medium-button
+                                        secondary-highlight-button" href="#">+cart
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -280,9 +280,6 @@ export function shopsPage() {
         accordionScript.className = 'accordionscript';
         document.body.appendChild(accordionScript);
     }
-    window.addEventListener('scroll', (e) => {
-        console.log(document.body.scrollHeight);
-    })
 
     document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
 }
