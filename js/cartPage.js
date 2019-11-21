@@ -38,7 +38,7 @@ export function cartPage() {
             <tr class="table-row">
                 <td class="table-product">
                     <p class="sub-header-font s-font-size">ecstasy</p>
-                    <img src="assets/stock3.jpg">
+                    <img src="assets/ecstasy.jpg">
                 </td>
                 <td class="table-price">
                     <p class="primary-color s-font-size action-call-font" >RM100</p>
@@ -54,8 +54,8 @@ export function cartPage() {
             </tr>
             <tr class="table-row">
                 <td class="table-product">
-                    <p class="sub-header-font s-font-size">ecstasy</p>
-                    <img src="assets/stock3.jpg">
+                    <p class="sub-header-font s-font-size">cannabis</p>
+                    <img src="assets/cannabis.jpg">
                 </td>
                 <td class="table-price">
                     <p class="primary-color s-font-size action-call-font" >RM100</p>
@@ -71,8 +71,8 @@ export function cartPage() {
             </tr>
             <tr class="table-row">
                 <td class="table-product">
-                    <p class="sub-header-font s-font-size">ecstasy</p>
-                    <img src="assets/stock3.jpg">
+                    <p class="sub-header-font s-font-size">poppers</p>
+                    <img src="assets/poppers.jpg">
                 </td>
                 <td class="table-price">
                     <p class="primary-color s-font-size action-call-font" >RM100</p>

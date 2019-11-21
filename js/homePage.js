@@ -39,18 +39,17 @@ export function homePage() {
             <div class="carousel">
             <div class="full-screen center-horizontal m-center-vertical
                 stock-card carousel-item">
-                <img src="assets/stock1.jpg" alt="stock1" class="stock-image">
+                <img src="assets/cannabis.jpg" alt="stock1" class="stock-image">
                 <div class="stock-card-description">
                     <p class="m-font-size sub-header-font-color
                         sub-header-font">Your
                         party
                         choice.</p>
                     <p class="xs-font-size paragraph-font-color
-                        paragraph-font">Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam
-                        id
-                        blandit lorem, non lobortis elit.</p>
+                        paragraph-font">
+                        Discover our most exciting products that
+                        takes your party game to another level.
+                        </p>
                     <button onclick="loadShopsPage();" class="medium-button
                         highlight-button">Check out
                         now</button>
@@ -65,11 +64,10 @@ export function homePage() {
                         personal
                         choice.</p>
                     <p class="xs-font-size paragraph-font-color
-                        paragraph-font">Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam
-                        id
-                        blandit lorem, non lobortis elit.</p>
+                        paragraph-font">
+                        Explore our collection of personal use drugs
+                        ranging from painkillers to sleeping pills.
+                        </p>
                     <button onclick="loadShopsPage();" class="medium-button
                         highlight-button">Check out
                         now</button>
@@ -77,18 +75,17 @@ export function homePage() {
             </div>
             <div class="full-screen center-horizontal m-center-vertical
                 stock-card carousel-item">
-                <img src="assets/stock3.jpg" alt="stock3" class="stock-image">
+                <img src="assets/bottle.png" alt="stock3" class="stock-image">
                 <div class="stock-card-description">
                     <p class="m-font-size sub-header-font-color
                         sub-header-font">Your
                         healthcare
                         choice.</p>
                     <p class="xs-font-size paragraph-font-color
-                        paragraph-font">Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam
-                        id
-                        blandit lorem, non lobortis elit.</p>
+                        paragraph-font">
+                        Looking for some specific drugs that treats your
+                        specific medical condition?
+                        </p>
                     <button onclick="loadShopsPage();" class="medium-button
                         highlight-button">Check out
                         now</button>
