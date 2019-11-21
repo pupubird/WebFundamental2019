@@ -187,7 +187,7 @@
                     function showLoginSignup(){
                         document.getElementById('signup').style.display = 'block';
                         setTimeout(()=>{
-                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
+                            document.querySelectorAll('#signup .modal-content').forEach(item => item.style.opacity = '1');
                         },50);
                     }
                     // Get the modal
@@ -199,23 +199,23 @@
                         
                       let itemModal = document.getElementById('ItemDesc');
                       if (event.target == modal1) {
-                        document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
+                        document.querySelectorAll('#signup .modal-content').forEach(item => item.style.opacity = '0');
                         setTimeout(() => {
                               closeModal1();
                         }, 150);
                       }
                       if (event.target == modal2) {
-                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
+                            document.querySelectorAll('#login .modal-content').forEach(item => item.style.opacity = '0');
                         setTimeout(() => {
                             closeModal2();
                         }, 150);
                       }
-                      if (event.target == itemModal) {
-                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
+                        if (event.target == itemModal) {
+                            document.querySelectorAll('#ItemDesc .modal-content').forEach(item => item.style.opacity = '0');
                             setTimeout(() => {
-                                closeModal();
-                        }, 150);
-                      }
+                                closeItemModal();
+                            }, 150);
+                        }
                     }
 
                     function closeModal1() {
@@ -236,6 +236,17 @@
                         document.getElementById('login').style.display='none';
                     }
                     // end login sign up model------------------
+                    
+                        function showItemDesc() {
+                            document.getElementById('ItemDesc').style.display = 'block';
+                            setTimeout(() => {
+                                document.querySelectorAll('#ItemDesc .modal-content').forEach(item => item.style.opacity = '1');
+                            }, 50);
+                        }
+
+                        function closeItemModal() {
+                            document.getElementById('ItemDesc').style.display = 'none';
+                        }
                     </script>
                 <div class="ham-burger" onclick="expandSideNav();">
                     <div class="ham-burger-line"></div>
@@ -332,28 +343,6 @@
                 mobileSideNav.style.boxShadow = 'none';
             }
 
-            function showItemDesc(){
-                document.getElementById('ItemDesc').style.display = 'block';
-                setTimeout(()=>{
-                    document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
-                },50);
-            }
-            // Get the modal
-            var itemModal = document.getElementById('ItemDesc');
-            
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-            if (event.target == itemModal) {
-                document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
-                setTimeout(() => {
-                    closeItemModal();
-                }, 150);
-            }
-            }
-
-            function closeItemModal() {
-                document.getElementById('ItemDesc').style.display='none';
-            }
 
         </script>
     </body>
