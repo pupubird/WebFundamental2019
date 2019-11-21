@@ -231,7 +231,7 @@
     }
     
     .collapsed-item-card .tag-group{
-        transform: translateX(-18px) translateY(-5px);
+        transform: translateX(-20px) translateY(50px);
     }
     .tag-group p{
         font-size: 18px;
