@@ -197,6 +197,12 @@
     }
 }
 @media(max-width:700px){
+    .hide-on-mobile{
+        display: none;
+    }
+    .show-on-mobile{
+        display: block;
+    }
     .expand-item{
         flex-direction: row;
         max-width: 100%;
