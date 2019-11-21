@@ -223,6 +223,7 @@
     .collapsed-item-card{
         width:45%;
         margin: auto;
+        cursor: pointer;
     }
     
     .show-on-mobile{

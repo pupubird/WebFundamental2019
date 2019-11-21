@@ -111,7 +111,7 @@
                     </form>
                 </div>
                 <div id="login" class="modal">
-                    <span class="close" title="Close Modal">&times;</span>
+                    <span class="close" title="Close Modal" onclick="closeModal2()">&times;</span>
                     <form class="modal-content" action="#">
                         <div class="container">
                             <p class="header-font m-font-size">Log In</p>
@@ -148,27 +148,20 @@
                     <form class="modal-content" action="#">
                         <div class="container">
                             <p class="header-font m-font-size item-header">ecstasy</p>
-                            <p class="sub-header-font s-font-size
-                                item-subheader">Sensation of Paradise</p>
-                            <p class="sub-header-font s-font-size item-price">RM1.00
-                                ***** <small>11 reviews</small></p>
+                            <p class="sub-header-font s-font-size item-subheader">Sensation of Paradise</p>
+                            <p class="sub-header-font s-font-size item-price">RM1.00 ***** <small>11 reviews</small></p>
                             <p class="paragraph-font xs-font-size item-desc">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit.
-                                Mauris sollicitudin est quis urna lacinia
-                                sodales.
-                                Curabitur et tempus nulla. Fusce rhoncus at eros
-                                id vehicula.
-                                Vivamus eu quam ac metus posuere tempor.
-                                Nullam vel metus eget arcu mollis fringilla.
-                                Ut luctus efficitur sem id dignissim.
-                                Sed id metus aliquam mi imperdiet scelerisque.
-                                Nulla eleifend tellus sed nunc suscipit cursus.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Mauris sollicitudin est quis urna lacinia sodales. 
+                                Curabitur et tempus nulla. Fusce rhoncus at eros id vehicula. 
+                                Vivamus eu quam ac metus posuere tempor. 
+                                Nullam vel metus eget arcu mollis fringilla. 
+                                Ut luctus efficitur sem id dignissim. 
+                                Sed id metus aliquam mi imperdiet scelerisque. 
+                                Nulla eleifend tellus sed nunc suscipit cursus. 
                             </p>
-                            <button class="medium-button
-                                secondary-highlight-button item-button">+cart</button>
-                            <img src="assets/stock1.jpg" alt="stock1"
-                                class="expand-item-image item-image">
+                            <button class="medium-button secondary-highlight-button item-button">+cart</button>
+                            <img src="assets/stock1.jpg" alt="stock1" class="expand-item-image item-image">
                             <div class="prev-next-button center-horizontal">
                                 <button class="small-button button-left">Prev</button>
                                 <button class="small-button button-right">Next</button>
@@ -190,8 +183,6 @@
                     
                     // When the user clicks anywhere outside of the modal, close it
                     window.onclick = function(event) {
-                        
-                      let itemModal = document.getElementById('ItemDesc');
                       if (event.target == modal1) {
                         document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
                         setTimeout(() => {
@@ -202,12 +193,6 @@
                             document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
                         setTimeout(() => {
                             closeModal2();
-                        }, 150);
-                      }
-                      if (event.target == itemModal) {
-                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
-                            setTimeout(() => {
-                                closeItemModal();
                         }, 150);
                       }
                     }
@@ -229,19 +214,6 @@
                         document.getElementById('signup').style.display='block';
                         document.getElementById('login').style.display='none';
                     }
-                    
-                    function showItemDesc() {
-                        document.getElementById('ItemDesc').style.display = 'block';
-                        setTimeout(() => {
-                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
-                        }, 50);
-                    }
-
-
-                    function closeItemModal() {
-                        document.getElementById('ItemDesc').style.display = 'none';
-                    }
-
                     // end login sign up model------------------
                     </script>
                 <div class="ham-burger" onclick="expandSideNav();">
@@ -338,6 +310,30 @@
                 mobileSideNav.style.right = '-50vw';
                 mobileSideNav.style.boxShadow = 'none';
             }
+
+            function showItemDesc(){
+                document.getElementById('ItemDesc').style.display = 'block';
+                setTimeout(()=>{
+                    document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
+                },50);
+            }
+            // Get the modal
+            var itemModal = document.getElementById('ItemDesc');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == itemModal) {
+                document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
+                setTimeout(() => {
+                    closeItemModal();
+                }, 150);
+            }
+            }
+
+            function closeItemModal() {
+                document.getElementById('ItemDesc').style.display='none';
+            }
+
         </script>
     </body>
 </html>

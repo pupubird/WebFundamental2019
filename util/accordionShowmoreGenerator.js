@@ -52,7 +52,7 @@ function showmore() {
 }
 function itemsGenerator() {
     return `
-    <div class="collapsed-item-card">
+    <div class="collapsed-item-card" onclick="showItemDesc();">
         <h1 class="sub-header-font s-font-size">ecstasy</h1>
         <img src="assets/stock2.jpg" alt="stock2"
             class="collapsed-item-card-image">
@@ -73,9 +73,4 @@ function tagsGenerator() {
         case 1:
             return 'block';
     }
-}
-
-// for item modal
-function closeModal() {
-    document.getElementById('ItemDesc').style.display = 'none';
 }

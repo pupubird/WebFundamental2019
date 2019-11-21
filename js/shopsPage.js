@@ -191,7 +191,7 @@ export function shopsPage() {
                                         class="social-icon">
                                 </div>
                                 <div class="expand-item-description-buttons">
-                                    <button class="medium-button">view</button>
+                                    <button class="medium-button" onclick="showItemDesc();">view</button>
                                     <button class="medium-button
                                         secondary-highlight-button">+cart
                                     </button>
@@ -201,7 +201,7 @@ export function shopsPage() {
                         <div></div>
                         <div class="collapsedItemsDiv">
                             <div class="collapsedItems">
-                                <div class="collapsed-item-card">
+                                <div class="collapsed-item-card"  onclick="showItemDesc();">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -213,7 +213,7 @@ export function shopsPage() {
                                     </div>
 
                                 </div>
-                                <div class="collapsed-item-card">
+                                <div class="collapsed-item-card"  onclick="showItemDesc();">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -223,7 +223,7 @@ export function shopsPage() {
                                         <p class="tag-primary">new</p>
                                     </div>
                                 </div>
-                                <div class="collapsed-item-card">
+                                <div class="collapsed-item-card"  onclick="showItemDesc();">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -233,7 +233,7 @@ export function shopsPage() {
                                         <p class="tag-primary">new</p>
                                     </div>
                                 </div>
-                                <div class="collapsed-item-card">
+                                <div class="collapsed-item-card" onclick="showItemDesc();">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -243,7 +243,7 @@ export function shopsPage() {
                                         <p class="tag-secondary">20% off</p>
                                     </div>
                                 </div>
-                                <div class="collapsed-item-card">
+                                <div class="collapsed-item-card" onclick="showItemDesc();">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
