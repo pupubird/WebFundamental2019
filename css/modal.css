@@ -29,7 +29,7 @@
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 4; /* Sit on top */
+    z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     height: 100vh;
@@ -46,44 +46,8 @@
     margin: auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid rgb(223, 223, 223);
     width: 80%; /* Could be more or less, depending on screen size */
+    
     opacity: 0;
-}
-
-.modal-content .item-header {
-    margin-bottom: 5%;
-}
-
-.modal-content .item-subheader {
-    margin-bottom: 2%;
-}
-
-.modal-content .item-price {
-    margin-bottom: 2%;
-}
-
-.modal-content .item-desc {
-    width: 100%;
-    height: 50%;
-    text-align: justify;
-    margin-bottom: 4%;
-}
-.item-image{
-    width: 30vw;
-}
-.modal-content .item-button {
-    width: 50%;
-    margin-bottom: 5%;
-}
-.modal-content .prev-next-button {
-    width: 100%;
-}
-
-.modal-content .button-right {
-    margin-left: auto;
-}
-
-.button-right, .button-left {
-    width: 20%;
 }
 
 /* Style the horizontal ruler */

@@ -20,6 +20,7 @@ export function aboutPage() {
     footer.style.display = 'block';
 
     navbarTabLinks[3].classList.add('underline');
+    navbarTabLinks[3].classList.add('sub-header-font-color');
 
     mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
     mobileNavBarTabLinks[3].classList.add('underline');

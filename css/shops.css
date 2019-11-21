@@ -39,7 +39,6 @@
     max-width: 80%;
     margin-bottom: 5%;
     padding:10px;
-    max-height: 85%;
 }
 .expand-item-header{
     display: flex;
@@ -93,7 +92,6 @@
     margin:0% 1% 5%;
     padding:15px;
     position: relative;
-    cursor: pointer;
 }
 .collapsed-item-card .tag-group{
     position: absolute;

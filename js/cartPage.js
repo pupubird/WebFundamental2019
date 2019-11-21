@@ -17,7 +17,10 @@ export function cartPage() {
     footer.style.display = 'block';
 
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
+    navbarTabLinks.forEach(item => { item.classList.remove('sub-header-font-color'); });
+
     navbarTabLinks[2].classList.add('underline');
+    navbarTabLinks[2].classList.add('sub-header-font-color');
 
     mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
     mobileNavBarTabLinks[2].classList.add('underline');

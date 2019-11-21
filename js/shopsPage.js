@@ -17,7 +17,10 @@ export function shopsPage() {
     navbar.style.position = 'fixed';
 
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
+    navbarTabLinks.forEach(item => { item.classList.remove('sub-header-font-color'); });
+
     navbarTabLinks[1].classList.add('underline');
+    navbarTabLinks[1].classList.add('sub-header-font-color');
 
     mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
     mobileNavBarTabLinks[1].classList.add('underline');
@@ -145,8 +148,8 @@ export function shopsPage() {
                                 </select>
                             </div>
                             <!-- filter button -->
-                            <a class="medium-button
-                                tertiary-color" onclick="#">FILTER</a>
+                            <button class="medium-button
+                                tertiary-color">FILTER</but>
                         </div>
                     </div>
 
@@ -188,17 +191,17 @@ export function shopsPage() {
                                         class="social-icon">
                                 </div>
                                 <div class="expand-item-description-buttons">
-                                    <a class="medium-button" onclick="showItemDesc()">view</a>
-                                    <a class="medium-button
-                                        secondary-highlight-button" href="#">+cart
-                                    </a>
+                                    <button class="medium-button">view</button>
+                                    <button class="medium-button
+                                        secondary-highlight-button">+cart
+                                    </button>
                                 </div>
                             </div>
                         </div>
                         <div></div>
                         <div class="collapsedItemsDiv">
                             <div class="collapsedItems">
-                                <div class="collapsed-item-card" onclick="showItemDesc()">
+                                <div class="collapsed-item-card">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -210,7 +213,7 @@ export function shopsPage() {
                                     </div>
 
                                 </div>
-                                <div class="collapsed-item-card" onclick="showItemDesc()">
+                                <div class="collapsed-item-card">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -220,7 +223,7 @@ export function shopsPage() {
                                         <p class="tag-primary">new</p>
                                     </div>
                                 </div>
-                                <div class="collapsed-item-card" onclick="showItemDesc()">
+                                <div class="collapsed-item-card">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -230,7 +233,7 @@ export function shopsPage() {
                                         <p class="tag-primary">new</p>
                                     </div>
                                 </div>
-                                <div class="collapsed-item-card" onclick="showItemDesc()">
+                                <div class="collapsed-item-card">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -240,7 +243,7 @@ export function shopsPage() {
                                         <p class="tag-secondary">20% off</p>
                                     </div>
                                 </div>
-                                <div class="collapsed-item-card" onclick="showItemDesc()">
+                                <div class="collapsed-item-card">
                                     <h1 class="sub-header-font s-font-size">ecstasy</h1>
                                     <img src="assets/stock2.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -264,7 +267,6 @@ export function shopsPage() {
                     <!-- end of content -->
                 </div>
             </div>
-            
     `;
 
     navbar.style.display = "flex";
@@ -277,9 +279,9 @@ export function shopsPage() {
         accordionScript.className = 'accordionscript';
         document.body.appendChild(accordionScript);
     }
+    window.addEventListener('scroll', (e) => {
+        console.log(document.body.scrollHeight);
+    })
 
     document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
-    setTimeout(() => {
-        document.querySelector('.expand-item').style.maxHeight = document.querySelector('.expand-item').offsetHeight + 'px';
-    }, 100);
 }

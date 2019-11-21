@@ -15,9 +15,7 @@
     --action-call-font-family:'Teko', sans-serif;
     --paragraph-font-family:Arial,sans-serif;
 }
-body{
-    overflow-x: hidden;
-}
+
 *{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -31,6 +29,7 @@ body{
     scroll-behavior: smooth;
     transition: all 0.5s;
 }
+
 /* typography */
 /* FONT */
 .header-font{
@@ -101,8 +100,13 @@ body{
 /* actionable items (buttons..) */
 
 /* BUTTONS */
+a {
+    cursor: pointer;
+}
+
 button{
     outline: none;
+    cursor: pointer;
 }
 a{
     cursor: pointer;
