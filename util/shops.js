@@ -83,7 +83,7 @@ function itemsGenerator() {
             break;
     }
     return `
-    <div class="collapsed-item-card" onclick="showItemDesc();">
+    <div class="collapsed-item-card" onclick="modifyModal('${stockDesc}','assets/stock${stockImage}.jpg');">
         <h1 class="sub-header-font s-font-size">${stockDesc}</h1>
         <img src="assets/stock${stockImage}.jpg" alt="stock"
             class="collapsed-item-card-image">
@@ -104,4 +104,20 @@ function tagsGenerator() {
         case 1:
             return 'block';
     }
+}
+
+// filter
+function filter() {
+    window.location.href += '';
+}
+
+// modal
+function modifyModal(title, image) {
+    let modalTitle, modalImage;
+    modalTitle = document.querySelector('.item-header');
+    modalImage = document.querySelector('.item-image');
+
+    modalTitle.textContent = title;
+    modalImage.src = image;
+    showItemDesc();
 }

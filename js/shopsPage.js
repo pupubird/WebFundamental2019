@@ -148,8 +148,8 @@ export function shopsPage() {
                                 </select>
                             </div>
                             <!-- filter button -->
-                            <a class="medium-button href="#"
-                                tertiary-color">FILTER</a>
+                            <a class="medium-button
+                                tertiary-color" onclick="filter();">FILTER</a>
                         </div>
                     </div>
 
@@ -180,15 +180,22 @@ export function shopsPage() {
                                         more</a></p>
                                 <hr>
                                 <div class="social-media-group">
-                                    <img src="assets/fb.png" alt="facebook"
-                                        class="social-icon">
-                                    <img src="assets/ig.png" alt="instagram"
-                                        class="social-icon">
-                                    <img src="assets/twitter.png" alt="twitter"
-                                        class="social-icon">
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <img src="assets/fb.png" alt="facebook"
+                                        class="social-icon" >
+                                    </a>
+                                    
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <img src="assets/ig.png" alt="instagram"
+                                            class="social-icon">
+                                    </a>
+                                    <a href="https://twitter.com/" target="_blank">
+                                        <img src="assets/twitter.png" alt="twitter"
+                                            class="social-icon">
+                                    </a>
                                 </div>
                                 <div class="expand-item-description-buttons">
-                                    <button class="medium-button" onclick="showItemDesc();">view</button>
+                                    <button class="medium-button" onclick="modifyModal('ecstasy','assets/stock5.jpg');">view</button>
                                     <button class="medium-button
                                         secondary-highlight-button">+cart
                                     </button>
@@ -198,7 +205,7 @@ export function shopsPage() {
                         <div></div>
                         <div class="collapsedItemsDiv">
                             <div class="collapsedItems">
-                                <div class="collapsed-item-card"  onclick="showItemDesc();">
+                                <div class="collapsed-item-card"  onclick="modifyModal('oploid','assets/stock6.jpg');">
                                     <h1 class="sub-header-font s-font-size">oploid</h1>
                                     <img src="assets/stock6.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -210,7 +217,7 @@ export function shopsPage() {
                                     </div>
 
                                 </div>
-                                <div class="collapsed-item-card"  onclick="showItemDesc();">
+                                <div class="collapsed-item-card"  onclick="modifyModal('cannabis','assets/stock4.jpg');">
                                     <h1 class="sub-header-font s-font-size">cannabis</h1>
                                     <img src="assets/stock4.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -220,7 +227,7 @@ export function shopsPage() {
                                         <p class="tag-primary">new</p>
                                     </div>
                                 </div>
-                                <div class="collapsed-item-card"  onclick="showItemDesc();">
+                                <div class="collapsed-item-card"  onclick="modifyModal('speed','assets/stock7.jpg');">
                                     <h1 class="sub-header-font s-font-size">speed</h1>
                                     <img src="assets/stock7.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -230,7 +237,7 @@ export function shopsPage() {
                                         <p class="tag-primary">new</p>
                                     </div>
                                 </div>
-                                <div class="collapsed-item-card" onclick="showItemDesc();">
+                                <div class="collapsed-item-card" onclick="modifyModal('poppers','assets/stock8.jpg');">
                                     <h1 class="sub-header-font s-font-size">poppers</h1>
                                     <img src="assets/stock8.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -240,7 +247,7 @@ export function shopsPage() {
                                         <p class="tag-secondary">20% off</p>
                                     </div>
                                 </div>
-                                <div class="collapsed-item-card" onclick="showItemDesc();">
+                                <div class="collapsed-item-card" onclick="modifyModal('cocaine','assets/stock9.jpg');">
                                     <h1 class="sub-header-font s-font-size">cocaine</h1>
                                     <img src="assets/stock9.jpg" alt="stock2"
                                         class="collapsed-item-card-image">
@@ -272,7 +279,7 @@ export function shopsPage() {
     if (!document.querySelector('.accordionscript')) {
         let accordionScript = document.createElement('script');
         accordionScript.type = 'text/javascript';
-        accordionScript.src = 'util/accordionShowmoreGenerator.js';
+        accordionScript.src = 'util/shops.js';
         accordionScript.className = 'accordionscript';
         document.body.appendChild(accordionScript);
     }
