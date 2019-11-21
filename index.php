@@ -76,12 +76,11 @@
                 <div id="signup" class="modal center-vertical">
                     <span onclick="closeModal1()" class="close" title="Close
                         Modal">&times;</span>
-                    <form class="modal-content" action="index.php">
+                    <form class="modal-content" action="signup.php">
                         <div class="container">
                             <p class="header-font m-font-size">Sign Up</p>
                             <p class="sub-header-font xs-font-size">Please fill
                                 in this form to create an account.</p>
-                            <?php include('error.php');?>
                             <hr>
                             <label class="sub-header-font s-font-size"
                                 for="email"><b>Email</b></label>
@@ -115,10 +114,9 @@
                 <div id="login" class="modal">
                     <span class="close" title="Close Modal"
                         onclick="closeModal2()">&times;</span>
-                    <form class="modal-content"  action="index.php">
+                    <form class="modal-content"  action="login.php">
                         <div class="container">
                             <p class="header-font m-font-size">Log In</p>
-                            <?php include('error.php');?>
                             <hr>
                             <label class="sub-header-font s-font-size"
                                 for="email"><b>Email</b></label>
