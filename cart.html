@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,32 +15,33 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/modal.css">
         <link rel="stylesheet" href="css/shops.css">
-        <link rel="stylesheet" href="css/cart.css">
         <!-- critical loading material, to prevent unstyled loading circle due to fetch from network, use embbed styling method -->
         <style>
-            .loading {
-                display: block;
-                width: 80px;
-                height: 80px;
-                position: fixed;
-                top: calc(50vh - 40px);
-                left: calc(50vw - 40px);
-                border-radius: 50%;
-                border: 6px solid;
-                border-color: rgb(218, 184, 36) #1E2A78 #FF1F5A transparent;
-                animation: loadingSpin 8s linear infinite;
-            }
-            @keyframes loadingSpin {
-                0% {
-                    transform: rotate(0deg);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
+        .loading {
+            display: block;
+            width: 80px;
+            height: 80px;
+            position: fixed;
+            top: calc(50vh - 40px);
+            left: calc(50vw - 40px);
+            border-radius: 50%;
+            border: 6px solid;
+            border-color: rgb(218, 184, 36) #1E2A78 #FF1F5A transparent;
+            animation: loadingSpin 8s linear infinite;
+        }
+
+        @keyframes loadingSpin {
+            0% {
+                transform: rotate(0deg);
             }
 
-        </style>
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
     </head>
+
     <body onload="loadStateJs();">
         <div class="navbar-padding"></div>
         <nav class="navbar">
@@ -48,28 +50,23 @@
                     <img class="logo" src="assets/logo.png" alt="logo">
                 </a>
                 <ul class="navbar-tab">
-                    <li><a onclick="loadHomePage();"
-                            class="action-call-font
+                    <li><a onclick="loadHomePage();" class="action-call-font
                             paragraph-font-color
                             s-font-size underline navbar-tab-link">home</a></li>
-                    <li><a onclick="loadShopsPage();"
-                            class="action-call-font
+                    <li><a onclick="loadShopsPage();" class="action-call-font
                             paragraph-font-color
                             s-font-size navbar-tab-link">shops</a></li>
-                    <li><a onclick="loadCartPage();"
-                            class="action-call-font
+                    <li><a onclick="loadCartPage();" class="action-call-font
                             paragraph-font-color
                             s-font-size navbar-tab-link">cart</a></li>
-                    <li><a onclick="loadAboutPage();"
-                            class="action-call-font
+                    <li><a onclick="loadAboutPage();" class="action-call-font
                             paragraph-font-color
                             s-font-size navbar-tab-link">about</a></li>
                 </ul>
             </div>
             <div class="center-horizontal">
                 <div class="navbar-right">
-                    <a href="#"
-                        onclick="showLoginSignup();"
+                    <a href="#" onclick="showLoginSignup();"
                         class="medium-button
                         primary-color action-call-font navbar-tab-link">LOGIN/SIGNUP</a>
                 </div>
@@ -170,87 +167,85 @@
                                 Nulla eleifend tellus sed nunc suscipit
                                 cursus.
                             </p>
-                            <div class="prev-next-button center-vertical">
-                                <img src="assets/stock1.jpg" alt="stock1"
-                                    class="item-image">
-                                <div class="center-horizontal">
-                                    <button class="small-button button-left">Prev</button>
-                                    <button class="medium-button
-                                        secondary-highlight-button item-button">+cart</button>
-                                    <button class="small-button button-right">Next</button>
-                                </div>
+                            <img src="assets/stock1.jpg" alt="stock1"
+                                class="expand-item-image item-image">
+                            <div class="prev-next-button center-horizontal">
+                                <button class="small-button button-left">Prev</button>
+                                <button class="medium-button
+                                    secondary-highlight-button item-button">+cart</button>
+                                <button class="small-button button-right">Next</button>
                             </div>
                         </div>
                     </form>
                 </div>
                 <script>
-                    // for login sign up model------------------
-                    function showLoginSignup(){
-                        document.getElementById('signup').style.display = 'block';
-                        setTimeout(()=>{
-                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
-                        },50);
-                    }
-                    // Get the modal
-                    var modal1 = document.getElementById('signup');
-                    var modal2 = document.getElementById('login');
-                    
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                        
-                      let itemModal = document.getElementById('ItemDesc');
-                      if (event.target == modal1) {
+                // for login sign up model------------------
+                function showLoginSignup() {
+                    document.getElementById('signup').style.display = 'block';
+                    setTimeout(() => {
+                        document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
+                    }, 50);
+                }
+                // Get the modal
+                var modal1 = document.getElementById('signup');
+                var modal2 = document.getElementById('login');
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+
+                    let itemModal = document.getElementById('ItemDesc');
+                    if (event.target == modal1) {
                         document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
                         setTimeout(() => {
-                              closeModal1();
+                            closeModal1();
                         }, 150);
-                      }
-                      if (event.target == modal2) {
-                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
+                    }
+                    if (event.target == modal2) {
+                        document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
                         setTimeout(() => {
                             closeModal2();
                         }, 150);
-                      }
-                      if (event.target == itemModal) {
-                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
-                            setTimeout(() => {
-                                closeItemModal();
-                        }, 150);
-                      }
                     }
-
-                    function closeModal1() {
-                        document.getElementById('signup').style.display='none';
-                    }
-
-                    function closeModal2() {
-                        document.getElementById('login').style.display='none';
-                    }
-
-                    function logIn() {
-                        document.getElementById('login').style.display='block';
-                        document.getElementById('signup').style.display='none';
-                    }
-
-                    function SignUp() {
-                        document.getElementById('signup').style.display='block';
-                        document.getElementById('login').style.display='none';
-                    }
-                    
-                    function showItemDesc() {
-                        document.getElementById('ItemDesc').style.display = 'block';
+                    if (event.target == itemModal) {
+                        document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
                         setTimeout(() => {
-                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
-                        }, 50);
+                            closeItemModal();
+                        }, 150);
                     }
+                }
+
+                function closeModal1() {
+                    document.getElementById('signup').style.display = 'none';
+                }
+
+                function closeModal2() {
+                    document.getElementById('login').style.display = 'none';
+                }
+
+                function logIn() {
+                    document.getElementById('login').style.display = 'block';
+                    document.getElementById('signup').style.display = 'none';
+                }
+
+                function SignUp() {
+                    document.getElementById('signup').style.display = 'block';
+                    document.getElementById('login').style.display = 'none';
+                }
+
+                function showItemDesc() {
+                    document.getElementById('ItemDesc').style.display = 'block';
+                    setTimeout(() => {
+                        document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
+                    }, 50);
+                }
 
 
-                    function closeItemModal() {
-                        document.getElementById('ItemDesc').style.display = 'none';
-                    }
+                function closeItemModal() {
+                    document.getElementById('ItemDesc').style.display = 'none';
+                }
 
                     // end login sign up model------------------
-                    </script>
+            </script>
                 <div class="ham-burger" onclick="expandSideNav();">
                     <div class="ham-burger-line"></div>
                     <div class="ham-burger-line"></div>
@@ -272,7 +267,8 @@
                 mobile-navbar-tab-link">about</a>
         </div>
         <div class="loading" id="loadingDiv"></div>
-        <div class="content-wrapper"></div>
+        <div class="content-wrapper">
+        </div>
         <footer class="center-horizontal footer">
             <div class="container center-horizontal">
                 <div class="item-list center-horizontal">
@@ -312,39 +308,40 @@
         <script src="util/carousel.js"></script>
         <script>
 
-            let interval = 0;
-            // load other pages after the landing page is loaded, to decrease the load time of the other pages to nearly instant.
-            let loadHomePage = Function;
-            let loadShopsPage = Function;
-            let loadCartPage = Function;
-            let loadAboutPage = Function;
-            let loadLoginSignupPage = Function;
+        let interval = 0;
+        // load other pages after the landing page is loaded, to decrease the load time of the other pages to nearly instant.
+        let loadHomePage = Function;
+        let loadShopsPage = Function;
+        let loadCartPage = Function;
+        let loadAboutPage = Function;
+        let loadLoginSignupPage = Function;
 
-            function loadStateJs() {
-                stateScript = document.createElement('script');
-                stateScript.type = 'text/javascript';
-                stateScript.async = true;
-                stateScript.type = 'module';
-                stateScript.src = 'state.js';
-                document.body.appendChild(stateScript);               
-            }
+        function loadStateJs() {
+            stateScript = document.createElement('script');
+            stateScript.type = 'text/javascript';
+            stateScript.async = true;
+            stateScript.type = 'module';
+            stateScript.src = 'state.js';
+            document.body.appendChild(stateScript);
+        }
 
-            // javascript for mobile side nav
-            let mobileSideNav = document.querySelector('.mobile-side-nav');
-            document.body.addEventListener('click', (e) => {
-                if (!e.target.className.includes('mobile-side-nav')
-                    && !e.target.className.includes('ham-burger')) {
-                    collapseSideNav();
-                }
-            })
-            function expandSideNav() {
-                mobileSideNav.style.right = '0px';
-                mobileSideNav.style.boxShadow = '0px 0px 100px rgba(0, 0, 0, 0.25)';
+        // javascript for mobile side nav
+        let mobileSideNav = document.querySelector('.mobile-side-nav');
+        document.body.addEventListener('click', (e) => {
+            if (!e.target.className.includes('mobile-side-nav')
+                && !e.target.className.includes('ham-burger')) {
+                collapseSideNav();
             }
-            function collapseSideNav() {
-                mobileSideNav.style.right = '-50vw';
-                mobileSideNav.style.boxShadow = 'none';
-            }
-        </script>
+        })
+        function expandSideNav() {
+            mobileSideNav.style.right = '0px';
+            mobileSideNav.style.boxShadow = '0px 0px 100px rgba(0, 0, 0, 0.25)';
+        }
+        function collapseSideNav() {
+            mobileSideNav.style.right = '-50vw';
+            mobileSideNav.style.boxShadow = 'none';
+        }
+    </script>
     </body>
+
 </html>

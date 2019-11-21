@@ -1,0 +1,57 @@
+.table-wrapper{
+    max-width: 80vw;
+    margin: 10vh auto;
+}
+.cart-table{
+    width: 80vw;
+    border-spacing: 0px;
+}
+.cart-table tr td{
+    margin: auto;
+    text-align: center;
+}
+.table-product{
+    padding: 5%;
+    text-align: center;
+}
+.table-product img{
+    height: 25vh;
+} 
+.table-quantity div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+.table-quantity p{
+    text-align: center;
+}
+.table-total{
+    padding: 2.5%;
+}
+.checkout{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 5vh;
+}
+.checkout *{
+    margin: 2vh 0;
+}
+.checkout p{
+    text-align: right;
+}
+@media(max-width:700px){
+    
+    .table-product img{
+        height: 10vh;
+    }   
+    
+    .table-wrapper{
+        margin: 5vh auto;
+        max-width: 95vw;
+    }
+    .cart-table{
+        width: 95vw;
+    }
+}
