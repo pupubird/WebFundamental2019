@@ -15,10 +15,6 @@
         .then(({ aboutPage }) => {
             loadAboutPage = aboutPage;
         });
-    await import('/js/loginSignupPage.js')
-        .then(({ loginSignupPage }) => {
-            loadLoginSignupPage = loginSignupPage;
-        });
 
     switch (localStorage.getItem('currentPage')) {
         case 'shops':
@@ -29,9 +25,6 @@
             break;
         case 'about':
             loadAboutPage();
-            break;
-        case 'loginSignup':
-            loadLoginSignupPage();
             break;
         default:
             loadHomePage();
