@@ -54,7 +54,7 @@ function itemsGenerator() {
     return `
     <div class="collapsed-item-card" onclick="showItemDesc();">
         <h1 class="sub-header-font s-font-size">ecstasy</h1>
-        <img src="assets/stock${Math.round((Math.random() * 9)) + 1}.jpg" alt="stock"
+        <img src="assets/stock${Math.round((Math.random() * 8)) + 1}.jpg" alt="stock"
             class="collapsed-item-card-image">
         <p class="paragraph-font xs-font-size">RM
             1.00</p>
