@@ -41,16 +41,17 @@ export function cartPage() {
                     <img src="assets/stock5.jpg">
                 </td>
                 <td class="table-price">
-                    <p class="primary-color s-font-size action-call-font" >RM100</p>
+                    <p class="primary-color s-font-size action-call-font" >RM<span class="item-price">100</span></p>
+                </td>
                 </td>
                 <td class="table-quantity">
                 <div> 
-                    <p class="m-font-size sub-header-font darken-secondary-color">-</p>
-                    <p class="s-font-size sub-header-font primary-color" contenteditable>1</p>
-                    <p class="m-font-size sub-header-font tertiary-color">+</p>
+                    <a onclick="minus(0)" class="m-font-size sub-header-font darken-secondary-color">-</a>
+                    <p class="s-font-size sub-header-font primary-color quantity" contenteditable>1</p>
+                    <a onclick="plus(0)" class="m-font-size sub-header-font tertiary-color">+</a>
                 </div>
                 </td>
-                <td class="table-total tertiary-color action-call-font s-font-size">RM100</td>
+                <td class="table-total tertiary-color action-call-font s-font-size"><p>RM<span class="item-total">100</span></p></td>
             </tr>
             <tr class="table-row">
                 <td class="table-product">
@@ -58,16 +59,17 @@ export function cartPage() {
                     <img src="assets/stock4.jpg">
                 </td>
                 <td class="table-price">
-                    <p class="primary-color s-font-size action-call-font" >RM100</p>
+                    <p class="primary-color s-font-size action-call-font" >RM<span class="item-price">100</span></p>
+                </td>
                 </td>
                 <td class="table-quantity">
                 <div> 
-                    <p class="m-font-size sub-header-font darken-secondary-color">-</p>
-                    <p class="s-font-size sub-header-font primary-color" contenteditable>1</p>
-                    <p class="m-font-size sub-header-font tertiary-color">+</p>
+                    <a onclick="minus(1)" class="m-font-size sub-header-font darken-secondary-color">-</a>
+                    <p class="s-font-size sub-header-font primary-color quantity" contenteditable>1</p>
+                    <a onclick="plus(1)" class="m-font-size sub-header-font tertiary-color">+</a>
                 </div>
                 </td>
-                <td class="table-total tertiary-color action-call-font s-font-size">RM100</td>
+                <td class="table-total tertiary-color action-call-font s-font-size"><p>RM<span class="item-total">100</span></p></td>
             </tr>
             <tr class="table-row">
                 <td class="table-product">
@@ -75,31 +77,38 @@ export function cartPage() {
                     <img src="assets/stock8.jpg">
                 </td>
                 <td class="table-price">
-                    <p class="primary-color s-font-size action-call-font" >RM100</p>
+                    <p class="primary-color s-font-size action-call-font" >RM<span class="item-price">100</span></p>
                 </td>
                 <td class="table-quantity">
                 <div> 
-                    <p class="m-font-size sub-header-font darken-secondary-color">-</p>
-                    <p class="s-font-size sub-header-font primary-color" contenteditable>1</p>
-                    <p class="m-font-size sub-header-font tertiary-color">+</p>
+                    <a onclick="minus(2)" class="m-font-size sub-header-font darken-secondary-color">-</a>
+                    <p class="s-font-size sub-header-font primary-color quantity" contenteditable>1</p>
+                    <a onclick="plus(2)" class="m-font-size sub-header-font tertiary-color">+</a>
                 </div>
                 </td>
-                <td class="table-total tertiary-color action-call-font s-font-size">RM100</td>
+                <td class="table-total tertiary-color action-call-font s-font-size"><p>RM<span class="item-total">100</span></p></td>
             </tr>
             
         </table>
         <div class="checkout">
             <div>
-                <p class="action-call-font primary-color s-font-size">Total: RM100</p>
+                <p class="action-call-font primary-color s-font-size">Total: RM<span class="all-total">100</span></p>
                 <p class="paragraph-font xs-font-size">Discounts: RM0</p>
-                <button class="medium-button">Update</button>
-                <button class="medium-button highlight-button">Checkout</button>
+                <a href="index.html" class="medium-button highlight-button">Checkout</a>
             </div>
         </div
     </div>
     
     
     `;
+
+    if (!document.querySelector('.cartScript')) {
+        let cartScript = document.createElement('script');
+        cartScript.type = 'text/javascript';
+        cartScript.src = 'util/cart.js';
+        cartScript.className = 'cartScript';
+        document.body.appendChild(cartScript);
+    }
     navbar.style.display = "flex";
     document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
 }

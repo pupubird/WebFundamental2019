@@ -276,12 +276,12 @@ export function shopsPage() {
     navbar.style.display = "flex";
     navbar.style.position = 'fixed';
 
-    if (!document.querySelector('.accordionscript')) {
-        let accordionScript = document.createElement('script');
-        accordionScript.type = 'text/javascript';
-        accordionScript.src = 'util/shops.js';
-        accordionScript.className = 'accordionscript';
-        document.body.appendChild(accordionScript);
+    if (!document.querySelector('.shopsScript')) {
+        let shopsScript = document.createElement('script');
+        shopsScript.type = 'text/javascript';
+        shopsScript.src = 'util/shops.js';
+        shopsScript.className = 'shopsScript';
+        document.body.appendChild(shopsScript);
     }
 
     document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
