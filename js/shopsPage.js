@@ -17,10 +17,7 @@ export function shopsPage() {
     navbar.style.position = 'fixed';
 
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
-    navbarTabLinks.forEach(item => { item.classList.remove('sub-header-font-color'); });
-
     navbarTabLinks[1].classList.add('underline');
-    navbarTabLinks[1].classList.add('sub-header-font-color');
 
     mobileNavBarTabLinks.forEach(item => { item.classList.remove('underline') });
     mobileNavBarTabLinks[1].classList.add('underline');

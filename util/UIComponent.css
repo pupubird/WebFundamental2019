@@ -15,7 +15,13 @@
     --action-call-font-family:'Teko', sans-serif;
     --paragraph-font-family:Arial,sans-serif;
 }
-
+*{
+    margin: 0%;
+    padding: 0%;
+    transition: all 0.5s;
+}
+/* typography */
+/* FONT */
 *{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -29,9 +35,6 @@
     scroll-behavior: smooth;
     transition: all 0.5s;
 }
-
-/* typography */
-/* FONT */
 .header-font{
     font-family: var(--header-font-family); 
     color:var(--header-font-color);
@@ -100,13 +103,8 @@
 /* actionable items (buttons..) */
 
 /* BUTTONS */
-a {
-    cursor: pointer;
-}
-
 button{
     outline: none;
-    cursor: pointer;
 }
 a{
     cursor: pointer;
