@@ -26,6 +26,9 @@ body{
 .content-wrapper > div{
     z-index: 1;
 }
+.usernamep{
+    display: none;
+}
 @media(max-width:1000px){
     .stock-image{
         width:40vw;

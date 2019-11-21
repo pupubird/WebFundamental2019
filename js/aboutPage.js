@@ -120,10 +120,10 @@ export function aboutPage() {
                             <div class="form-inner center-horizontal">
                                 <div class="sub-header-font contact-header
                                     s-font-size">Drop a message</div>
-                                <input class="paragraph-font" type="text"
-                                    placeholder="Username">
                                 <input class="paragraph-font" type="email"
                                     placeholder="Email">
+                                <input class="paragraph-font" type="text"
+                                    placeholder="Message Title">
                                 <textarea class="paragraph-font"
                                     placeholder="Message..." rows="5"></textarea>
                                 <button type="submit" href="/" class="action-call-font s-font-size secondary-color">Submit</button>

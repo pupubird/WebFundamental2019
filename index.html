@@ -71,7 +71,12 @@
                     <a href="#"
                         onclick="showLoginSignup();"
                         class="medium-button
-                        primary-color action-call-font navbar-tab-link">LOGIN/SIGNUP</a>
+                        primary-color action-call-font navbar-tab-link"
+                        id="loginSignupButton">LOGIN/SIGNUP</a>
+                    <p class="action-call-font primary-color s-font-size"
+                        id="usernamep">Welcome,
+                        <span
+                            id="username"></span></p>
                 </div>
                 <div id="signup" class="modal center-vertical">
                     <span onclick="closeModal1()" class="close" title="Close
@@ -272,33 +277,43 @@
                 <div class="item-list center-horizontal">
                     <ul class="list-unstyled">
                         <p class="sub-header-font s-font-size">Explore</p>
-                        <li class="paragraph-font xs-font-size"><a>Home</a></li>
-                        <li class="paragraph-font xs-font-size"><a>Shops</a></li>
-                        <li class="paragraph-font xs-font-size"><a>Cart</a></li>
-                        <li class="paragraph-font xs-font-size"><a>About</a></li>
+                        <li class="paragraph-font xs-font-size"><a
+                                onclick="loadHomePage();">Home</a></li>
+                        <li class="paragraph-font xs-font-size"><a
+                                onclick="loadShopsPage();">Shops</a></li>
+                        <li class="paragraph-font xs-font-size"><a
+                                onclick="loadCartPage();">Cart</a></li>
+                        <li class="paragraph-font xs-font-size"><a
+                                onclick="loadAboutPage();">About</a></li>
                     </ul>
                 </div>
                 <div class="item-list center-horizontal">
                     <ul class="list-unstyled">
                         <p class="sub-header-font s-font-size">Office</p>
-                        <li class="paragraph-font xs-font-size"><a>Sitemap</a></li>
-                        <li class="paragraph-font xs-font-size"><a>Location</a></li>
+                        <li class="paragraph-font xs-font-size"><a
+                                href="https://www.google.com/maps/dir/3.0639772,101.604402/sunway+university/@3.0636121,101.6015617,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x31cc4c8f5912644b:0x77612fa0225cad69!2m2!1d101.6036003!2d3.0669114"
+                                target="_blank" class="paragraph-font">Location</a></li>
                     </ul>
                 </div>
                 <div class="item-list center-horizontal">
                     <ul class="list-unstyled">
                         <p class="sub-header-font s-font-size">Connect</p>
-                        <li class="paragraph-font xs-font-size"><a>Facebook</a></li>
-                        <li class="paragraph-font xs-font-size"><a>Instagram</a></li>
-                        <li class="paragraph-font xs-font-size"><a>Twitter</a></li>
-                        <li class="paragraph-font xs-font-size"><a>LinkedIn</a></li>
+                        <li><a class="paragraph-font xs-font-size"
+                                target="_blank" href="https://www.facebook.com">Facebook</a></li>
+                        <li><a class="paragraph-font xs-font-size"
+                                target="_blank"
+                                href="https://www.instagram.com">Instagram</a></li>
+                        <li><a class="paragraph-font xs-font-size"
+                                target="_blank" href="https://www.twitter.com">Twitter</a></li>
+                        <li><a class="paragraph-font xs-font-size"
+                                target="_blank" href="https://www.linkedin.com">LinkedIn</a></li>
                     </ul>
                 </div>
                 <div class="item-list center-horizontal">
                     <ul class="list-unstyled">
                         <p class="sub-header-font s-font-size">Contact</p>
-                        <li class="paragraph-font xs-font-size"><a>60013833</a></li>
-                        <li class="paragraph-font xs-font-size"><a>6018039503</a></li>
+                        <li class="paragraph-font xs-font-size">60013833</li>
+                        <li class="paragraph-font xs-font-size">6018039503</li>
                     </ul>
                 </div>
             </div>
@@ -343,6 +358,22 @@
                 mobileSideNav.style.right = '-50vw';
                 mobileSideNav.style.boxShadow = 'none';
             }
+
+            // javascript for login
+            let url_string = window.location.href;
+            let url = new URL(url_string);
+            let email = url.searchParams.get("email");
+            if(email){
+                let username = email.split('@')[0];
+                document.getElementById('usernamep').style.display = 'block';
+                document.getElementById('username').textContent = email;
+                document.getElementById('loginSignupButton').style.display = 'none';
+            }else{
+                document.getElementById('usernamep').style.display = 'none';
+                document.getElementById('loginSignupButton').style.display = 'block';
+            }
+
+            
         </script>
     </body>
 </html>
