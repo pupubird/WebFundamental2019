@@ -50,6 +50,48 @@
     opacity: 0;
 }
 
+.modal-content .item-header {
+    margin-bottom: 5%;
+}
+
+.modal-content .item-subheader {
+    margin-bottom: 2%;
+}
+
+.modal-content .item-price {
+    margin-bottom: 2%;
+}
+
+.modal-content .item-desc {
+    width: 50%;
+    text-align: justify;
+    margin-bottom: 4%;
+}
+
+.modal-content .item-button {
+    width: 50%;
+    margin-bottom: 5%;
+}
+
+.modal-content .item-image {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 30%;
+}
+
+.modal-content .prev-next-button {
+    width: 100%;
+}
+
+.modal-content .button-right {
+    margin-left: auto;
+}
+
+.button-right, .button-left {
+    width: 20%;
+}
+
 /* Style the horizontal ruler */
 hr {
     border: 1px solid #f1f1f1;
