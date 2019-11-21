@@ -9,15 +9,22 @@ let themeColor = document.getElementById('themeColor');
 
 // state of home page
 export function homePage() {
+    console.log('i am called')
     if (interval) {
         clearInterval(interval);
+    }
+    console.log(footer);
+    if (footer) {
+        footer = document.querySelector('.footer');
+        footer.style.display = 'none';
     }
     localStorage.setItem('currentPage', 'home');
     title.innerText = 'CheapDrugs | Home';
     themeColor.content = '#1E2A78';
-    footer.style.display = 'none';
+    footer.style.display = "none";
     navbar.style.position = 'absolute';
 
+    console.log(footer);
     navbarTabLinks.forEach(item => { item.classList.remove('underline'); });
     navbarTabLinks.forEach(item => { item.classList.remove('sub-header-font-color'); });
 
