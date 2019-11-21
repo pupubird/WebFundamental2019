@@ -40,23 +40,36 @@ export function aboutPage() {
                     </div>
                     <p class="center-horizontal about-paragraph sub-header-font
                         xs-font-size">
-                        CheapDrugs.uy is an e-commerce website that primarily sells drug to
-                        customers throughout the world in a legal manner. Founded in the 1980's,
-                        our mission hadn't changed ever since, this is to maintain the trust
-                        between us and our beloved customers.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenean vitae malesuada quam. Nunc vitae ornare felis.
+                        Morbi eget enim ligula. Cras placerat felis velit,
+                        sit amet pretium ante imperdiet ut.
+                        Nullam cursus tempus tincidunt.
+                        In tristique venenatis urna sit amet placerat.
+                        Maecenas sollicitudin ultricies arcu id dignissim.
+                        Morbi eleifend sem volutpat nibh tempor posuere.
 
                         <br>
                         <br>
 
-                        Else than that, we are always eager to raise awareness regarding to the
-                        various drugs that exist in our society, so that people know the differences
-                        between every drug as well as their uses, side-effects, pros and cons of
-                        drugs. The drug can also serve as an antidepressant for a very short amount of time.
-                        Stimulants often come in pill form but are also consumed via snorting or even as food and drink. 
-                        For example, 
-                        caffeine is found in many beverages, and cocaine is a powder that is snorted.
-                        This way, we believe that drugs will one day be legalised in all countries
-                        for people to use drug openly while thresholding the abuse for every person.
+                        In tempus, dui malesuada faucibus dapibus,
+                        urna quam lobortis lorem,
+                        at ultricies purus felis mollis justo.
+                        Donec sed risus a felis aliquet posuere.
+                        Pellentesque ut imperdiet eros.
+                        Fusce tincidunt purus sollicitudin tempor euismod.
+                        Maecenas turpis enim, hendrerit elementum vulputate et,
+                        gravida rhoncus nulla. Nunc et erat bibendum,
+                        accumsan justo a, semper nibh. Donec felis leo,
+                        aliquet sit amet pulvinar in, molestie ac ante.
+                        Sed ut sodales purus, sit amet faucibus dui.
+                        Nullam nisi felis, laoreet vel feugiat ut,
+                        dictum et nisl. Aliquam fringilla pulvinar interdum.
+                        Fusce suscipit fringilla mi vel finibus.
+                        Cras sollicitudin tincidunt imperdiet.
+                        Nunc ex dolor, sodales in imperdiet sit amet,
+                        pellentesque non tortor.
+                        In hac habitasse platea dictumst.
                     </p>
                     <div class="center-horizontal team-header header-font
                         m-font-size">
@@ -78,7 +91,7 @@ export function aboutPage() {
                             <img src="assets/othello.svg" alt="avatar"
                                 class="center-horizontal activator"
                                 style="height: inherit;">
-                            <p class="about-profile">Chai Chang Cheng<br>Developer</p>
+                            <p class="about-profile">Ding Nick Hong<br>Developer</p>
                         </a>
                         <a class="center-horizontal team-card">
                             <img src="assets/othello-angry.svg" alt="avatar"
@@ -86,7 +99,7 @@ export function aboutPage() {
                             <img src="assets/othello.svg" alt="avatar"
                                 class="center-horizontal activator"
                                 style="height: inherit;">
-                            <p class="about-profile">Lim Xuan Lih<br>Developer</p>
+                            <p class="about-profile">Ding Nick Hong<br>Developer</p>
                         </a>
                         <a class="center-horizontal team-card">
                             <img src="assets/othello-angry.svg" alt="avatar"
@@ -94,7 +107,7 @@ export function aboutPage() {
                             <img src="assets/othello.svg" alt="avatar"
                                 class="center-horizontal activator"
                                 style="height: inherit;">
-                            <p class="about-profile">Keanu Tan<br>Developer</p>
+                            <p class="about-profile">Ding Nick Hong<br>Developer</p>
                         </a>
                         <a class="center-horizontal team-card">
                             <img src="assets/othello-angry.svg" alt="avatar"
@@ -102,7 +115,7 @@ export function aboutPage() {
                             <img src="assets/othello.svg" alt="avatar"
                                 class="center-horizontal activator"
                                 style="height: inherit;">
-                            <p class="about-profile">Jaydon Tan<br>Developer</p>
+                            <p class="about-profile">Ding Nick Hong<br>Developer</p>
                         </a>
                     </div>
                     <p class="center-horizontal team-paragraph sub-header-font

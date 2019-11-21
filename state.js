@@ -33,5 +33,4 @@
     document.getElementById('loadingDiv').style.display = 'none';
     document.querySelector('.content-wrapper').style.display = "block";
     document.querySelector('.navbar').style.display = "flex";
-    document.querySelector('.footer').style.display = 'block';
 })();
