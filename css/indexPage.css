@@ -26,8 +26,13 @@ body{
 .content-wrapper > div{
     z-index: 1;
 }
-.usernamep{
+#usernamep{
     display: none;
+    margin-right: 1vw;
+}
+#logout{
+    display: none;
+    margin-right: 1vw;
 }
 @media(max-width:1000px){
     .stock-image{

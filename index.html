@@ -76,7 +76,11 @@
                     <p class="action-call-font primary-color s-font-size"
                         id="usernamep">Welcome,
                         <span
-                            id="username"></span></p>
+                            id="username"></span>
+                    </p>
+                    <a class="medium-button xs-font-size" id="logout"
+                        onclick="logout();">log
+                        out</a>
                 </div>
                 <div id="signup" class="modal center-vertical">
                     <span onclick="closeModal1()" class="close" title="Close
@@ -366,13 +370,19 @@
             if(email){
                 let username = email.split('@')[0];
                 document.getElementById('usernamep').style.display = 'block';
-                document.getElementById('username').textContent = email;
+                document.getElementById('logout').style.display = 'block';
+                document.getElementById('username').textContent = username;
                 document.getElementById('loginSignupButton').style.display = 'none';
             }else{
                 document.getElementById('usernamep').style.display = 'none';
+                document.getElementById('logout').style.display = 'none';
                 document.getElementById('loginSignupButton').style.display = 'block';
             }
 
+            function logout(){
+                url_string = window.location.href;
+                window.location.href = window.location.href.split('/?')[0]; 
+            }
             
         </script>
     </body>
