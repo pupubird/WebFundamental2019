@@ -284,4 +284,7 @@ export function shopsPage() {
     })
 
     document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
+    setTimeout(() => {
+        document.querySelector('.expand-item').style.maxHeight = document.querySelector('.expand-item').offsetHeight + 'px';
+    }, 100);
 }
