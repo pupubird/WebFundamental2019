@@ -148,8 +148,8 @@ export function shopsPage() {
                                 </select>
                             </div>
                             <!-- filter button -->
-                            <button class="medium-button
-                                tertiary-color">FILTER</but>
+                            <a class="medium-button href="#"
+                                tertiary-color">FILTER</a>
                         </div>
                     </div>
 

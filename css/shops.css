@@ -92,6 +92,7 @@
     margin:0% 1% 5%;
     padding:15px;
     position: relative;
+    cursor: pointer;
 }
 .collapsed-item-card .tag-group{
     position: absolute;
@@ -223,7 +224,6 @@
     .collapsed-item-card{
         width:45%;
         margin: auto;
-        cursor: pointer;
     }
     
     .show-on-mobile{
