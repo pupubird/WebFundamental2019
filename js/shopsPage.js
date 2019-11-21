@@ -279,9 +279,6 @@ export function shopsPage() {
         accordionScript.className = 'accordionscript';
         document.body.appendChild(accordionScript);
     }
-    window.addEventListener('scroll', (e) => {
-        console.log(document.body.scrollHeight);
-    })
 
     document.querySelector('.navbar-padding').style.minHeight = navbar.offsetHeight + 'px';
     setTimeout(() => {

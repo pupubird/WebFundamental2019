@@ -68,7 +68,7 @@
     width: 100%;
 }
 .expand-item-description p{
-    width: 250px;
+    width: 80%;
     text-align: justify;
 }
 .expand-item-description-buttons .medium-button{
@@ -218,16 +218,9 @@
     .expand-item-description-buttons{
         margin: 5%;
     }
-    .hide-on-mobile{
-        display: none;
-    }
     .collapsed-item-card{
         width:45%;
         margin: auto;
-    }
-    
-    .show-on-mobile{
-        display: inline;
     }
     
     .collapsed-item-card .tag-group{
