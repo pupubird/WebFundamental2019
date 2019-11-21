@@ -28,7 +28,6 @@
     transform: translateX(-35px) translateY(-35px);
     font-size: 25px;
 }
-
 /* shops item */
 .expand-item{
     display: flex;
@@ -98,7 +97,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    transform: translateX(-13px) translateY(-18px);
+    transform: translateX(-13px) translateY(95px);
     font-size: 25px;
 }
 .collapsed-item-card-image{
