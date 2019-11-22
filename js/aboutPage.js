@@ -102,7 +102,7 @@ export function aboutPage() {
                             <img src="assets/othello.svg" alt="avatar"
                                 class="center-horizontal activator"
                                 style="height: inherit;">
-                            <p class="about-profile">Jaydon Tan<br>Developer</p>
+                            <p class="about-profile">Kwan Hao Feng<br>Developer</p>
                         </a>
                     </div>
                     <p class="center-horizontal team-paragraph sub-header-font

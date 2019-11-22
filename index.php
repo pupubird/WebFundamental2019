@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/modal.css">
         <link rel="stylesheet" href="css/shops.css">
+        <link rel="stylesheet" href="css/cart.css">
         <!-- critical loading material, to prevent unstyled loading circle due to fetch from network, use embbed styling method -->
         <style>
             .loading {
@@ -71,12 +72,21 @@
                     <a href="#"
                         onclick="showLoginSignup();"
                         class="medium-button
-                        primary-color action-call-font navbar-tab-link">LOGIN/SIGNUP</a>
+                        primary-color action-call-font navbar-tab-link"
+                        id="loginSignupButton">LOGIN/SIGNUP</a>
+                    <p class="action-call-font primary-color s-font-size"
+                        id="usernamep">Welcome,
+                        <span
+                            id="username"></span>
+                    </p>
+                    <a class="medium-button xs-font-size" id="logout"
+                        onclick="logout();">log
+                        out</a>
                 </div>
                 <div id="signup" class="modal center-vertical">
                     <span onclick="closeModal1()" class="close" title="Close
                         Modal">&times;</span>
-                    <form class="modal-content" action="signup.php">
+                    <form class="modal-content" action="#">
                         <div class="container">
                             <p class="header-font m-font-size">Sign Up</p>
                             <p class="sub-header-font xs-font-size">Please fill
@@ -112,9 +122,8 @@
                     </form>
                 </div>
                 <div id="login" class="modal">
-                    <span class="close" title="Close Modal"
-                        onclick="closeModal2()">&times;</span>
-                    <form class="modal-content"  action="login.php">
+                    <span class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content" action="#">
                         <div class="container">
                             <p class="header-font m-font-size">Log In</p>
                             <hr>
@@ -152,33 +161,28 @@
                             <p class="header-font m-font-size item-header">ecstasy</p>
                             <p class="sub-header-font s-font-size
                                 item-subheader">Sensation of Paradise</p>
-                            <p class="sub-header-font s-font-size item-price">RM1.00
+                            <p class="sub-header-font s-font-size">RM1.00
                                 ***** <small>11 reviews</small></p>
-                            <div class="center-horizontal m-center-vertical">
+                            <p class="paragraph-font xs-font-size
+                                item-desc">
+                                3,4-methylenedioxy-methamphetamine (MDMA) is a
+                                synthetic drug that alters mood
+                                and perception (awareness of surrounding objects
+                                and conditions).
+                                It is chemically similar to both stimulants and
+                                hallucinogens,
+                                producing feelings of increased energy,
+                                pleasure,
+                                emotional warmth, and distorted sensory and time
+                                perception.
+                            </p>
+                            <div class="prev-next-button center-vertical">
                                 <img src="assets/stock1.jpg" alt="stock1"
                                     class="item-image">
-                                <p class="paragraph-font xs-font-size
-                                    item-desc">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
-                                    Mauris sollicitudin est quis urna lacinia
-                                    sodales.
-                                    Curabitur et tempus nulla. Fusce rhoncus at
-                                    eros id vehicula.
-                                    Vivamus eu quam ac metus posuere tempor.
-                                    Nullam vel metus eget arcu mollis fringilla.
-                                    Ut luctus efficitur sem id dignissim.
-                                    Sed id metus aliquam mi imperdiet
-                                    scelerisque.
-                                    Nulla eleifend tellus sed nunc suscipit
-                                    cursus.
-                                </p>
-                                <button class="medium-button
-                                    secondary-highlight-button item-button">+cart</button>
-                            </div>
-                            <div class="prev-next-button center-horizontal">
-                                <button class="small-button button-left">Prev</button>
-                                <button class="small-button button-right">Next</button>
+                                <div class="center-horizontal">
+                                    <a href="index.html" class="medium-button
+                                        secondary-highlight-button item-button">+cart</a>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -214,7 +218,7 @@
                       if (event.target == itemModal) {
                             document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
                             setTimeout(() => {
-                                closeModal();
+                                closeItemModal();
                         }, 150);
                       }
                     }
@@ -236,6 +240,19 @@
                         document.getElementById('signup').style.display='block';
                         document.getElementById('login').style.display='none';
                     }
+                    
+                    function showItemDesc() {
+                        document.getElementById('ItemDesc').style.display = 'block';
+                        setTimeout(() => {
+                            document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
+                        }, 50);
+                    }
+
+
+                    function closeItemModal() {
+                        document.getElementById('ItemDesc').style.display = 'none';
+                    }
+
                     // end login sign up model------------------
                     </script>
                 <div class="ham-burger" onclick="expandSideNav();">
@@ -265,35 +282,49 @@
                 <div class="item-list center-horizontal">
                     <ul class="list-unstyled">
                         <p class="sub-header-font s-font-size">Explore</p>
-                        <li class="paragraph-font xs-font-size"><a>Home</a></li>
-                        <li class="paragraph-font xs-font-size"><a>Shops</a></li>
-                        <li class="paragraph-font xs-font-size"><a>Cart</a></li>
-                        <li class="paragraph-font xs-font-size"><a>About</a></li>
+                        <li class="paragraph-font xs-font-size"><a
+                                onclick="loadHomePage();">Home</a></li>
+                        <li class="paragraph-font xs-font-size"><a
+                                onclick="loadShopsPage();">Shops</a></li>
+                        <li class="paragraph-font xs-font-size"><a
+                                onclick="loadCartPage();">Cart</a></li>
+                        <li class="paragraph-font xs-font-size"><a
+                                onclick="loadAboutPage();">About</a></li>
                     </ul>
                 </div>
                 <div class="item-list center-horizontal">
                     <ul class="list-unstyled">
                         <p class="sub-header-font s-font-size">Office</p>
-                        <li class="paragraph-font xs-font-size"><a>Sitemap</a></li>
-                        <li class="paragraph-font xs-font-size"><a>Location</a></li>
+                        <li class="paragraph-font xs-font-size"><a
+                                href="https://www.google.com/maps/dir/3.0639772,101.604402/sunway+university/@3.0636121,101.6015617,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x31cc4c8f5912644b:0x77612fa0225cad69!2m2!1d101.6036003!2d3.0669114"
+                                target="_blank" class="paragraph-font">Location</a></li>
                     </ul>
                 </div>
                 <div class="item-list center-horizontal">
                     <ul class="list-unstyled">
                         <p class="sub-header-font s-font-size">Connect</p>
-                        <li class="paragraph-font xs-font-size"><a>Facebook</a></li>
-                        <li class="paragraph-font xs-font-size"><a>Instagram</a></li>
-                        <li class="paragraph-font xs-font-size"><a>Twitter</a></li>
-                        <li class="paragraph-font xs-font-size"><a>LinkedIn</a></li>
+                        <li><a class="paragraph-font xs-font-size"
+                                target="_blank" href="https://www.facebook.com">Facebook</a></li>
+                        <li><a class="paragraph-font xs-font-size"
+                                target="_blank"
+                                href="https://www.instagram.com">Instagram</a></li>
+                        <li><a class="paragraph-font xs-font-size"
+                                target="_blank" href="https://www.twitter.com">Twitter</a></li>
+                        <li><a class="paragraph-font xs-font-size"
+                                target="_blank" href="https://www.linkedin.com">LinkedIn</a></li>
                     </ul>
                 </div>
                 <div class="item-list center-horizontal">
                     <ul class="list-unstyled">
                         <p class="sub-header-font s-font-size">Contact</p>
-                        <li class="paragraph-font xs-font-size"><a>+60 013833</a></li>
-                        <li class="paragraph-font xs-font-size"><a>+60 18039503</a></li>
+                        <li class="paragraph-font xs-font-size">60013833</li>
+                        <li class="paragraph-font xs-font-size">6018039503</li>
                     </ul>
                 </div>
+            </div>
+            <div class="center-horizontal">
+                <p class="paragraph-font-color sub-header-font xs-font-size">&copy;2019
+                    CheapDrugs, last modified 20 Nov 2019</p>
             </div>
         </footer>
         <script src="util/carousel.js"></script>
@@ -333,29 +364,26 @@
                 mobileSideNav.style.boxShadow = 'none';
             }
 
-            function showItemDesc(){
-                document.getElementById('ItemDesc').style.display = 'block';
-                setTimeout(()=>{
-                    document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '1');
-                },50);
+            // javascript for login
+            let url_string = window.location.href;
+            let url = new URL(url_string);
+            let email = url.searchParams.get("email");
+            if(email){
+                let username = email.split('@')[0];
+                document.getElementById('usernamep').style.display = 'block';
+                document.getElementById('logout').style.display = 'block';
+                document.getElementById('username').textContent = username;
+                document.getElementById('loginSignupButton').style.display = 'none';
+            }else{
+                document.getElementById('usernamep').style.display = 'none';
+                document.getElementById('logout').style.display = 'none';
+                document.getElementById('loginSignupButton').style.display = 'block';
             }
-            // Get the modal
-            var itemModal = document.getElementById('ItemDesc');
+
+            function logout(){
+                window.location.href = url.origin;
+            }
             
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-            if (event.target == itemModal) {
-                document.querySelectorAll('.modal-content').forEach(item => item.style.opacity = '0');
-                setTimeout(() => {
-                    closeItemModal();
-                }, 150);
-            }
-            }
-
-            function closeItemModal() {
-                document.getElementById('ItemDesc').style.display='none';
-            }
-
         </script>
     </body>
 </html>
